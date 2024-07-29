@@ -10,20 +10,14 @@ import config from "@/config";
 
 const links = [
   {
-    href: "/#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "/#testimonials",
-    label: "Reviews",
-  },
-  {
     href: "/#faq",
     label: "FAQ",
   },
 ];
 
-const cta = <ButtonSignin extraStyle="btn-primary" />;
+//const cta = <ButtonSignin extraStyle="btn-primary" />;
+
+const cta = <button className="btn btn-info">Add Your RPC</button>
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
@@ -37,7 +31,7 @@ const Header = () => {
   }, [searchParams]);
 
   return (
-    <header className="bg-base-200">
+    <header className="bg-base-200 sticky top-0 z-50">
       <nav
         className="container flex items-center justify-between px-8 py-4 mx-auto"
         aria-label="Global"
