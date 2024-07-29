@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import blockchains from '@/app/rpcdb';
 import { Suspense } from 'react';
 import Header from '@/components/Header';
+import FAQ from '@/components/FAQ';
 
 const BlockchainDetails = () => {
   const pathname = usePathname();
@@ -74,6 +75,7 @@ const BlockchainDetails = () => {
         ))}
       </div>
     </div>
+    <FAQ />
     </>
   );
 };

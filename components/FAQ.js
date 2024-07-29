@@ -7,25 +7,43 @@ import { useRef, useState } from "react";
 
 const faqList = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
+    question: "What is the RPC node?",
+    answer: <div className="space-y-2 leading-relaxed">An RPC node is a server that allows remote procedure calls (RPC) to interact with a blockchain network, enabling users to query data and submit transactions.</div>,
   },
   {
-    question: "Can I get a refund?",
+    question: "What does RPC mean in crypto?",
     answer: (
-      <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
+      <p className="space-y-2 leading-relaxed">
+        In the context of cryptocurrency, RPC stands for Remote Procedure Call. It is a protocol that allows a program to request a service from a program located on another computer in a network, facilitating communication between different blockchain nodes.
       </p>
     ),
   },
   {
-    question: "I have another question",
+    question: "What is an RPC web3?",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <p className="space-y-2 leading-relaxed">
+        RPC in web3 refers to the use of remote procedure calls to interact with decentralized applications (dApps) and blockchain networks through the web3.js library, enabling functions like reading blockchain data and sending transactions.
+      </p>
+    ),
+  },
+  {
+    question: "What are RPC used for?",
+    answer: (
+      <p className="space-y-2 leading-relaxed">
+        RPCs are used to enable communication between different systems or nodes in a network, allowing them to request and execute procedures or services from each other. In blockchain, they facilitate data retrieval and transaction submission.
+      </p>
+    ),
+  },
+  {
+    question: "What is an RPC endpoint?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        An RPC endpoint is a specific URL or address where an RPC server listens for requests from clients. It serves as the access point for interacting with the blockchain network via RPC calls.
+      </div>
     ),
   },
 ];
+
 
 const Item = ({ item }) => {
   const accordion = useRef(null);
