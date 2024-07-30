@@ -8,10 +8,10 @@ const RpcList = () => {
     <div className="p-6 bg-base-200 min-h-screen">
       {blockchains.map((blockchain, index) => (
         <div key={index} className="flex flex-col mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
-          <h2 id={blockchain.name} className="text-2xl font-bold mb-4">{blockchain.name} RPC</h2>
+          <h2 id={blockchain.name} className="text-2xl font-bold mb-4">{blockchain.name}</h2>
           {blockchain.networks.map((network, idx) => (
             <div key={idx} className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">{network.network}</h3>
+              <h3 className="text-xl font-semibold mb-2">{blockchain.name} {network.network} RPC</h3>
               <table className="table-auto w-full mb-4 border-collapse border border-gray-300">
                 <thead>
                   <tr className="bg-gray-100">

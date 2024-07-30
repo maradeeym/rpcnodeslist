@@ -12,12 +12,7 @@ const blockchains = [
             "chainId": "ALGO",
             "nativeCurrency": "ALGO",
             "blockExplorer": "https://allo.info/"
-          }
-        ]
-      },
-      {
-        "name": "Algorand Testnet",
-        "networks": [
+          },
           {
             "network": "Testnet",
             "rpcUrls": [
@@ -34,7 +29,6 @@ const blockchains = [
             ],
             "chainId": "ALGO",
             "nativeCurrency": "ALGO",
-            "blockExplorer": "https://explorer.bitquery.io/algorand_testnet"
           }
         ]
       },
