@@ -8,7 +8,7 @@ const config = {
     "RPC Node Endpoints for Web3 developers",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "rpcnodelist.com",
-  /*
+  
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (mailgun.supportEmail) otherwise customer support won't work.
     id: "",
@@ -83,7 +83,7 @@ const config = {
     // When someone replies to supportEmail sent by the app, forward it to the email below (otherwise it's lost). If you set supportEmail to empty, this will be ignored.
     forwardRepliesTo: "marc.louvion@gmail.com",
   },
-  */
+  
   colors: {
     // REQUIRED — The DaisyUI theme to use (added to the main layout.js). Leave blank for default (light & dark mode). If you any other theme than light/dark, you need to add it in config.tailwind.js in daisyui.themes.
     theme: "primary",
@@ -91,7 +91,7 @@ const config = {
     // OR you can just do this to use a custom color: main: "#f37055". HEX only.
     main: themes["light"]["primary"],
   },
-  /*
+  
   auth: {
     // REQUIRED — the path to log in users. It's use to protect private routes (like /dashboard). It's used in apiClient (/libs/api.js) upon 401 errors from our API
     loginUrl: "/api/auth/signin",
@@ -99,7 +99,7 @@ const config = {
     callbackUrl: "/dashboard",
     
   },
-  */
+  
 };
 
 export default config;
