@@ -2027,6 +2027,6 @@ const blockchains = [
         ]
       }
     ];
-    export default blockchains;
+    module.exports = blockchains;
 
   

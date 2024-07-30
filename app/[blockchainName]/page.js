@@ -1,6 +1,7 @@
 import React from 'react';
 import blockchains from '@/app/rpcdb';
 import BlockchainDetails from '@/components/BlockchainDetails';
+import config from '@/config';
 
 export async function generateMetadata({ params }) {
   const blockchainName = decodeURIComponent(params.blockchainName);
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }) {
     description: `Find ${blockchain.name} Mainnet and Testnet RPC APIs for Web3 development.`,
     keywords: `${blockchain.name} rpc, rpc node, rpc nodes,`,
     alternates: {
-      canonical: `https://www.rpcnodelist.com/${blockchain.name}`
+      canonical: `https://${config.domainName}/${blockchain.name}`
     },
   };
 }
