@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import blockchains from '@/app/rpcdb';
 import CopyRpcUrl from './CopyRpcUrl';
 
@@ -10,7 +11,9 @@ const RpcList = () => {
           <h2 id={blockchain.name} className="text-xl sm:text-2xl font-bold mb-4">{blockchain.name}</h2>
           {blockchain.networks.map((network, idx) => (
             <div key={idx} className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">{blockchain.name} {network.network} RPC</h3>
+              <Link href={`/${blockchain.name}`} className="text-lg sm:text-xl font-semibold mb-2 text-blue-500 hover:underline">
+                {blockchain.name} {network.network} RPC
+              </Link>
               <div className="overflow-x-auto">
                 <table className="table-auto w-full mb-4 border-collapse border border-gray-300">
                   <thead>
