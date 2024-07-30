@@ -2,12 +2,12 @@ import themes from "daisyui/src/theming/themes";
 
 const config = {
   // REQUIRED
-  appName: "RPC Nodes List",
+  appName: "RPC Node List",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
     "RPC Node Endpoints for Web3 developers",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "shipfa.st",
+  domainName: "rpcnodelist.com",
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (mailgun.supportEmail) otherwise customer support won't work.
     id: "",

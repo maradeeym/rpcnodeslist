@@ -4,7 +4,6 @@ import { getSEOTags } from "@/libs/seo";
 import ClientLayout from "@/components/LayoutClient";
 import config from "@/config";
 import "./globals.css";
-import Header from "@/components/Header";
 
 const font = Inter({ subsets: ["latin"] });
 
