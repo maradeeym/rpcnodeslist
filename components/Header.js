@@ -17,7 +17,7 @@ const links = [
 
 //const cta = <ButtonSignin extraStyle="btn-primary" />;
 
-const cta = <button className="btn btn-info">Add Your RPC</button>
+const cta = <a href="https://x.com/kalliolamartin" target="_blank" rel="noopener noreferrer"><button className="btn btn-info btn-sm">Contact on X</button></a>
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
