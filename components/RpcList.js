@@ -43,7 +43,7 @@ const RpcList = () => {
                             href={network.blockExplorer}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-500 hover:underline"
+                            className="text-blue-500 hover:underline flex-shrink-0"
                           >
                             {network.blockExplorer}
                           </a>
@@ -73,7 +73,7 @@ const RpcList = () => {
                               alert('Please install a Web3 wallet like MetaMask to use this feature.');
                             }
                           }}
-                          className="btn btn-accent"
+                          className="btn btn-accent inline-block"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 212 189" fill="none" className="mr-2 flex-shrink-0 inline-block">
                             <g clipPath="url(#clip0_1_70)">
