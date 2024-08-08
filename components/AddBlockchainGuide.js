@@ -44,7 +44,7 @@ const AddBlockchainGuide = ({ blockchain }) => {
                   alert('Please install a Web3 wallet like MetaMask to use this feature.');
                 }
               }}
-              className="btn btn-accent btn-lg flex items-center"
+              className="btn btn-accent btn-sm flex items-center"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 212 189" fill="none" className="mr-2">
                 <g clipPath="url(#clip0_1_70)">
