@@ -14,7 +14,7 @@ const BlockchainDetails = ({ blockchain }) => {
       <Suspense>
         <Header />
       </Suspense>
-      <div className="p-4 sm:p-6 bg-base-200 min-h-screen">
+      <div className="p-4 sm:p-6 bg-base-200">
         <div className="flex flex-col mb-6 sm:mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
           <h2 id={blockchain.name} className="text-xl sm:text-2xl font-bold mb-4">
             {blockchain.name}

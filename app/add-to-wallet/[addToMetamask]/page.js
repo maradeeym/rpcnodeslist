@@ -2,6 +2,7 @@ import React from 'react';
 import blockchains from '@/app/rpcdb';
 import config from '@/config';
 import AddBlockchainGuide from '@/components/AddBlockchainGuide';
+import AddToWalletButtons from '@/components/AddToWalletButtons';
 
 export async function generateMetadata({ params }) {
   const blockchainName = decodeURIComponent(params.addToMetamask);
@@ -35,6 +36,7 @@ const AddToMetamaskPage = ({ params }) => {
   return (
     <div>
       <AddBlockchainGuide blockchain={blockchain} />
+      <AddToWalletButtons />
     </div>
   );
 };

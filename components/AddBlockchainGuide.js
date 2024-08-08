@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import Header from '@/components/Header';
-import FAQ from '@/components/FAQ';
 import CopyRpcUrl from '@/components/CopyRpcUrl';
 
 
@@ -13,7 +12,7 @@ const AddBlockchainGuide = ({ blockchain }) => {
   return (
     <>
       <Header />
-      <div className="p-4 sm:p-6 bg-base-200 min-h-screen">
+      <div className="p-4 sm:p-6 bg-base-200">
         <div className="flex flex-col mb-6 sm:mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
           <h1 id="add-blockchain" className="text-xl sm:text-2xl font-bold mb-4">
             How to Add {blockchain.name} Network to MetaMask
@@ -130,7 +129,7 @@ const AddBlockchainGuide = ({ blockchain }) => {
           </div>
         </div>
       </div>
-      <FAQ />
+      
     </>
   );
 };
