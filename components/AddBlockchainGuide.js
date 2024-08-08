@@ -17,48 +17,8 @@ const AddBlockchainGuide = ({ blockchain }) => {
           <h1 id="add-blockchain" className="text-xl sm:text-2xl font-bold mb-4">
             How to Add {blockchain.name} Network to MetaMask
           </h1>
-          <div className="mb-4">
-            <h2 className="text-lg sm:text-xl font-semibold mb-2">Step 1: Open MetaMask</h2>
-            <p className="mb-2">Open your MetaMask extension in your browser.</p>
-            {/* <img src={Step1Image} alt="Open MetaMask" className="w-full sm:w-2/3 mx-auto mb-4" /> */}
-          </div>
-          <div className="mb-4">
-            <h2 className="text-lg sm:text-xl font-semibold mb-2">Step 2: Add a New Network</h2>
-            <p className="mb-2">Click on the network dropdown at the top, then select &quot;Add Network&quot;.</p>
-            {/* <img src={Step2Image} alt="Add Network" className="w-full sm:w-2/3 mx-auto mb-4" /> */}
-          </div>
-          <div className="mb-4">
-            <h2 className="text-lg sm:text-xl font-semibold mb-2">Step 3: Enter Network Details</h2>
-            <p className="mb-2">Fill in the following details:</p>
-            <div className="overflow-x-auto">
-              <table className="table-auto w-full mb-4 border-collapse border border-gray-300">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="border px-2 sm:px-4 py-2">Network</th>
-                    <th className="border px-2 sm:px-4 py-2">RPC URL</th>
-                    <th className="border px-2 sm:px-4 py-2">Chain ID</th>
-                    <th className="border px-2 sm:px-4 py-2">Currency Symbol</th>
-                    <th className="border px-2 sm:px-4 py-2">Block Explorer URL</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {blockchain.networks.map((network, idx) => (
-                    <tr key={idx} className="bg-green-50">
-                      <td className="border text-center px-2 sm:px-4 py-2">{network.network}</td>
-                      <td className="border px-2 sm:px-4 py-2 flex items-center">
-                        <CopyRpcUrl url={network.rpcUrls[0]} />
-                      </td>                      
-                      <td className="border text-center px-2 sm:px-4 py-2">{network.chainId}</td>
-                      <td className="border text-center px-2 sm:px-4 py-2">{network.nativeCurrency}</td>
-                      <td className="border text-center px-2 sm:px-4 py-2">{network.blockExplorer}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            {/* <img src={Step3Image} alt="Enter Network Details" className="w-full sm:w-2/3 mx-auto mb-4" /> */}
-          </div>
-          <div className="flex justify-center">
+          <p className="mb-4">Add automatically</p>
+          <div className="flex justify-start mb-4">
             <button
               onClick={() => {
                 const network = blockchain.networks[0];
@@ -126,6 +86,48 @@ const AddBlockchainGuide = ({ blockchain }) => {
               </svg>
               Add {blockchain.name} Network to MetaMask
             </button>
+          </div>
+          <p className="mb-4">or add manually</p>
+          <div className="mb-4">
+            <h2 className="text-lg sm:text-xl font-semibold mb-2">Step 1: Open MetaMask</h2>
+            <p className="mb-2">Open your MetaMask extension in your browser.</p>
+            {/* <img src={Step1Image} alt="Open MetaMask" className="w-full sm:w-2/3 mx-auto mb-4" /> */}
+          </div>
+          <div className="mb-4">
+            <h2 className="text-lg sm:text-xl font-semibold mb-2">Step 2: Add a New Network</h2>
+            <p className="mb-2">Click on the network dropdown at the top, then select &quot;Add Network&quot;.</p>
+            {/* <img src={Step2Image} alt="Add Network" className="w-full sm:w-2/3 mx-auto mb-4" /> */}
+          </div>
+          <div className="mb-4">
+            <h2 className="text-lg sm:text-xl font-semibold mb-2">Step 3: Enter Network Details</h2>
+            <p className="mb-2">Fill in the following details:</p>
+            <div className="overflow-x-auto">
+              <table className="table-auto w-full mb-4 border-collapse border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="border px-2 sm:px-4 py-2">Network</th>
+                    <th className="border px-2 sm:px-4 py-2">RPC URL</th>
+                    <th className="border px-2 sm:px-4 py-2">Chain ID</th>
+                    <th className="border px-2 sm:px-4 py-2">Currency Symbol</th>
+                    <th className="border px-2 sm:px-4 py-2">Block Explorer URL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {blockchain.networks.map((network, idx) => (
+                    <tr key={idx} className="bg-green-50">
+                      <td className="border text-center px-2 sm:px-4 py-2">{network.network}</td>
+                      <td className="border px-2 sm:px-4 py-2 flex items-center">
+                        <CopyRpcUrl url={network.rpcUrls[0]} />
+                      </td>                      
+                      <td className="border text-center px-2 sm:px-4 py-2">{network.chainId}</td>
+                      <td className="border text-center px-2 sm:px-4 py-2">{network.nativeCurrency}</td>
+                      <td className="border text-center px-2 sm:px-4 py-2">{network.blockExplorer}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {/* <img src={Step3Image} alt="Enter Network Details" className="w-full sm:w-2/3 mx-auto mb-4" /> */}
           </div>
         </div>
       </div>
