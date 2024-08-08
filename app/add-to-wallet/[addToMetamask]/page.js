@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `How to add ${blockchain.name} Network to Metamask or Other Wallets | RPC Node List`,
+    title: `How to add ${blockchain.name} to Metamask or Other Wallets | RPC Node List`,
     description: `Find out how to add ${blockchain.name} Mainnet and Testnet RPC APIs to Metamask or other wallets.`,
     keywords: `add ${blockchain.name} to metamask, add ${blockchain.name} to wallet, ${blockchain.name} rpc, ${blockchain.name} rpc node, ${blockchain.name} rpc nodes,`,
     alternates: {
