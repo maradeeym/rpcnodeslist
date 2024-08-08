@@ -33,7 +33,7 @@ const RpcList = () => {
                       <tr key={urlIdx} className="bg-green-50">
                         <td className="border text-center px-2 sm:px-4 py-2">{blockchain.name}</td>
                         <td className="border text-center px-2 sm:px-4 py-2">{network.network}</td>
-                        <td className="border px-2 sm:px-4 py-2 flex items-center justify-between">
+                        <td className="border text-center px-2 sm:px-4 py-2">
                           <CopyRpcUrl url={url} />
                         </td>
                         <td className="border text-center px-2 sm:px-4 py-2">{network.chainId}</td>
@@ -73,9 +73,9 @@ const RpcList = () => {
                               alert('Please install a Web3 wallet like MetaMask to use this feature.');
                             }
                           }}
-                          className="btn btn-accent inline-block"
+                          className="btn btn-sm btn-accent"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 212 189" fill="none" className="mr-2 flex-shrink-0 inline-block">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 212 189" fill="none" className="mr-2 flex-shrink-0">
                             <g clipPath="url(#clip0_1_70)">
                               <path d="M201.338 0L118.218 58.0459L132.889 26.5521L201.338 0Z" fill="#E17726"/>
                               <path d="M10.543 0L92.8295 58.6959L79.1116 26.5521L10.543 0Z" fill="#E27625"/>

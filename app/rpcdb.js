@@ -1706,6 +1706,7 @@ const blockchains = [
           {
             "network": "Mainnet",
             "rpcUrls": [
+              "https://solana.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/solana-mainnet",
               "https://rpc.ankr.com/solana"
             ],
@@ -1716,6 +1717,7 @@ const blockchains = [
           {
             "network": "Devnet",
             "rpcUrls": [
+              "https://solana.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/solana-devnet"
             ],
             "chainId": "SOL",
