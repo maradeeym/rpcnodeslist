@@ -22,6 +22,12 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme={config.colors.theme} className={font.className}>
       {config.domainName && (
         <head>
+          <script
+            src="https://beamanalytics.b-cdn.net/beam.min.js"
+            data-token="58e656ee-c2f8-4e22-b70a-127399633c24"
+            async
+          >
+          </script>
         </head>
       )}
       <body>
