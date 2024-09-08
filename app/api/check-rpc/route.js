@@ -9,7 +9,7 @@ export async function POST(req) {
       params: [],
       id: 1
     }, {
-      timeout: 5000 // 5 seconds timeout
+      timeout: 1000 // 1 seconds timeout
     });
     return new Response(JSON.stringify({ status: 'ok' }), { status: 200 });
   } catch (error) {
