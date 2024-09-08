@@ -3,8 +3,33 @@ import React from 'react';
 import Link from 'next/link';
 import blockchains from '@/app/rpcdb';
 import CopyRpcUrl from './CopyRpcUrl';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const RpcList = () => {
+  const [rpcStatus, setRpcStatus] = useState({});
+
+  useEffect(() => {
+    const checkRpcStatus = async () => {
+      const status = {};
+      for (const blockchain of blockchains) {
+        for (const network of blockchain.networks) {
+          for (const url of network.rpcUrls) {
+            try {
+              const response = await axios.post('/api/check-rpc', { url });
+              status[url] = response.data.status === 'ok';
+            } catch (error) {
+              status[url] = false;
+            }
+          }
+        }
+      }
+      setRpcStatus(status);
+    };
+
+    checkRpcStatus();
+  }, []);
+
   return (
     <div className="p-4 sm:p-6 bg-base-200 min-h-screen">
       {blockchains.map((blockchain, index) => (
@@ -29,9 +54,18 @@ const RpcList = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {network.rpcUrls.map((url, urlIdx) => (
+                  {network.rpcUrls.map((url, urlIdx) => (
                       <tr key={urlIdx} className="bg-green-50">
-                        <td className="border text-center px-2 sm:px-4 py-2">{blockchain.name}</td>
+                        <td className="border text-center px-2 sm:px-4 py-2">
+                        <div className="flex items-center justify-center">
+                          {rpcStatus[url] ? (
+                            <span className="mr-2 animate-pulse">✅</span>
+                          ) : (
+                            <span className="mr-2">🔴</span>
+                          )}
+                          {blockchain.name}
+                        </div>
+                        </td>
                         <td className="border text-center px-2 sm:px-4 py-2">{network.network}</td>
                         <td className="border text-center px-2 sm:px-4 py-2">
                           <CopyRpcUrl url={url} />
