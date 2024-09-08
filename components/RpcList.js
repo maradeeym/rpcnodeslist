@@ -1,13 +1,13 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import blockchains from '@/app/rpcdb';
 import CopyRpcUrl from './CopyRpcUrl';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const RpcList = () => {
   const [rpcStatus, setRpcStatus] = useState({});
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
     const checkRpcStatus = async () => {
@@ -30,9 +30,20 @@ const RpcList = () => {
     checkRpcStatus();
   }, []);
 
+  const filteredBlockchains = blockchains.filter(blockchain =>
+    blockchain.name.toLowerCase().includes(filter.toLowerCase())
+  );
+
   return (
     <div className="p-4 sm:p-6 bg-base-200 min-h-screen">
-      {blockchains.map((blockchain, index) => (
+      <input
+        type="text"
+        placeholder="Search for blockchain..."
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
+        className="input input-bordered w-full mb-4"
+      />
+      {filteredBlockchains.map((blockchain, index) => (
         <div key={index} className="flex flex-col mb-6 sm:mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
           <h2 id={blockchain.name} className="text-xl sm:text-2xl font-bold mb-4">{blockchain.name}</h2>
           {blockchain.networks.map((network, idx) => (

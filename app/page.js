@@ -5,6 +5,8 @@ import BlockchainButtons from '@/components/BlockchainButtons';
 import FAQ from '@/components/FAQ';
 import AddToWalletButtons from '@/components/AddToWalletButtons';
 import SimpleHero from '@/components/SimpleHero';
+import BlockchainFilter from '@/components/BlockchainFilter';
+
 
 export default function Home() {
   return (
@@ -14,7 +16,6 @@ export default function Home() {
       </Suspense>
       <main>
         <SimpleHero />
-        <BlockchainButtons />
         <RpcList />
         <FAQ />
         <AddToWalletButtons />
