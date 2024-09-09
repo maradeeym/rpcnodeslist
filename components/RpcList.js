@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import blockchains from '@/app/rpcdb';
 import CopyRpcUrl from './CopyRpcUrl';
-import axios from 'axios';
 
 const RpcList = () => {
   const [rpcStatus, setRpcStatus] = useState({});
@@ -12,18 +11,29 @@ const RpcList = () => {
   useEffect(() => {
     const checkRpcStatus = async () => {
       const status = {};
+      const requests = [];
+
       for (const blockchain of blockchains) {
         for (const network of blockchain.networks) {
           for (const url of network.rpcUrls) {
-            try {
-              const response = await axios.post('/api/check-rpc', { url });
-              status[url] = response.data.status === 'ok';
-            } catch (error) {
-              status[url] = false;
-            }
+            requests.push(
+              fetch('/api/check-rpc', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ url }),
+              }).then(response => response.json().then(data => {
+                status[url] = data.status === 'ok';
+              })).catch(() => {
+                status[url] = false;
+              })
+            );
           }
         }
       }
+
+      await Promise.all(requests);
       setRpcStatus(status);
     };
 
@@ -68,14 +78,16 @@ const RpcList = () => {
                   {network.rpcUrls.map((url, urlIdx) => (
                       <tr key={urlIdx} className="bg-green-50">
                         <td className="border text-center px-2 sm:px-4 py-2">
-                        <div className="flex items-center justify-center">
-                          {rpcStatus[url] ? (
-                            <span className="mr-2 animate-pulse">✅</span>
-                          ) : (
-                            <span className="mr-2">🔴</span>
-                          )}
-                          {blockchain.name}
-                        </div>
+                          <div className="flex items-center justify-center">
+                            {rpcStatus[url] === undefined ? (
+                              <span className="mr-2 animate-pulse">⏳</span> // Awaiting symbol
+                            ) : rpcStatus[url] ? (
+                              <span className="mr-2 animate-pulse">✅</span> // Online icon
+                            ) : (
+                              <span className="mr-2">🔴</span> // Offline icon
+                            )}
+                            {blockchain.name}
+                          </div>
                         </td>
                         <td className="border text-center px-2 sm:px-4 py-2">{network.network}</td>
                         <td className="border text-center px-2 sm:px-4 py-2">

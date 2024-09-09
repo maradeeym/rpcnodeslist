@@ -3,7 +3,6 @@ import React, { Suspense, useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import FAQ from '@/components/FAQ';
 import CopyRpcUrl from './CopyRpcUrl';
-import axios from 'axios';
 
 const BlockchainDetails = ({ blockchain }) => {
   const [rpcStatus, setRpcStatus] = useState({});
@@ -11,16 +10,30 @@ const BlockchainDetails = ({ blockchain }) => {
   useEffect(() => {
     const checkRpcStatus = async () => {
       const status = {};
+      const requests = [];
+
       for (const network of blockchain.networks) {
         for (const url of network.rpcUrls) {
-          try {
-            const response = await axios.post('/api/check-rpc', { url });
-            status[url] = response.data.status === 'ok';
-          } catch (error) {
-            status[url] = false;
-          }
+          requests.push(
+            fetch('/api/check-rpc', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ url }),
+            })
+              .then(response => response.json())
+              .then(data => {
+                status[url] = data.status === 'ok';
+              })
+              .catch(() => {
+                status[url] = false;
+              })
+          );
         }
       }
+
+      await Promise.all(requests);
       setRpcStatus(status);
     };
 
@@ -62,7 +75,9 @@ const BlockchainDetails = ({ blockchain }) => {
                       <tr key={urlIdx} className="bg-green-50">
                         <td className="border text-center px-2 sm:px-4 py-2">
                           <div className="flex items-center justify-center">
-                            {rpcStatus[url] ? (
+                            {rpcStatus[url] === undefined ? (
+                              <span className="mr-2 animate-pulse">⏳</span> // Awaiting symbol
+                            ) : rpcStatus[url] ? (
                               <span className="mr-2 animate-pulse">✅</span> // Online icon
                             ) : (
                               <span className="mr-2">🔴</span> // Offline icon
