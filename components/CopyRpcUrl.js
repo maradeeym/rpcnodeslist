@@ -16,7 +16,7 @@ const CopyRpcUrl = ({ url }) => {
   return (
     <div className="relative">
       <div className="flex items-center justify-between">
-        <span>{url}</span>
+        <a href={url} className="text-blue-500 hover:underline">{url}</a>
         <button
           onClick={copyToClipboard}
           className="btn btn-outline btn-sm mx-4"

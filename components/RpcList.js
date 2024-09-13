@@ -91,7 +91,9 @@ const RpcList = () => {
                         </td>
                         <td className="border text-center px-2 sm:px-4 py-2">{network.network}</td>
                         <td className="border text-center px-2 sm:px-4 py-2">
-                          <CopyRpcUrl url={url} />
+                          <div className="flex items-center justify-between">
+                            <CopyRpcUrl url={url} />
+                          </div>
                         </td>
                         <td className="border text-center px-2 sm:px-4 py-2">{network.chainId}</td>
                         <td className="border text-center px-2 sm:px-4 py-2">{network.nativeCurrency}</td>
