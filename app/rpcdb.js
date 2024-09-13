@@ -61,7 +61,6 @@ const blockchains = [
               "https://api.tatum.io/v3/blockchain/node/arb-one-mainnet",
               "https://arbitrum.blockpi.network/v1/rpc/public",
               "https://rpc.ankr.com/arbitrum",
-              "https://arbitrum.drpc.org"
             ],
             "chainId": "0xa4b1",
             "nativeCurrency": "ETH",
