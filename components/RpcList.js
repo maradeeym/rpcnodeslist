@@ -16,13 +16,21 @@ const RpcList = () => {
       for (const blockchain of blockchains) {
         for (const network of blockchain.networks) {
           for (const url of network.rpcUrls) {
+            // Prepare params for Solana requests
+            const params = url.includes("solana") ? {
+              blockNumber: 430, // or any other block number you want to use
+              encoding: "json",
+              transactionDetails: "full",
+              rewards: false
+            } : {};
+
             requests.push(
               fetch('/api/check-rpc', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ url }),
+                body: JSON.stringify({ url, params }), // Include params in the request body
               }).then(response => response.json().then(data => {
                 status[url] = data.status === 'ok';
               })).catch(() => {

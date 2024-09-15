@@ -1,3 +1,4 @@
+/*
 import GoogleProvider from "next-auth/providers/google";
 import EmailProvider from "next-auth/providers/email";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
@@ -56,3 +57,4 @@ export const authOptions = {
     logo: `https://${config.domainName}/logoAndName.png`,
   },
 };
+*/

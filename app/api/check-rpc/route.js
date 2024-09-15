@@ -11,14 +11,15 @@ export async function POST(req) {
   }
 
   try {
+    // Default to Ethereum method
     const response = await axios.post(url, {
-        jsonrpc: "2.0",
-        method: "eth_blockNumber", // Changed back to eth_blockNumber
-        params: [], // No parameters needed for eth_blockNumber
-        id: 1
-      }, {
-        timeout: 5000 // Kept the increased timeout
-      });
+      jsonrpc: "2.0",
+      method: "eth_blockNumber", // Use Ethereum method
+      params: [],
+      id: 1
+    }, {
+      timeout: 5000
+    });
 
     // Cache the response
     cache.set(url, response.data);
