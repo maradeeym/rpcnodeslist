@@ -45,7 +45,7 @@ const blockchains = [
             "blockExplorer": "https://arb-blueberry.gelatoscout.com"
           },
           {
-            "network": "Arbitrum Nova",
+            "network": "Nova",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/arb-nova-mainnet",
               "https://arbitrum-nova.drpc.org"
@@ -55,7 +55,7 @@ const blockchains = [
             "blockExplorer": "https://nova.arbiscan.io/"
           },
           {
-            "network": "Arbitrum One Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://arbitrum.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/arb-one-mainnet",
@@ -67,7 +67,7 @@ const blockchains = [
             "blockExplorer": "https://arbiscan.io/"
           },
           {
-            "network": "Arbitrum One Sepolia",
+            "network": "Sepolia",
             "rpcUrls": [
               "https://arbitrum-sepolia.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/arb-testnet"
@@ -105,7 +105,7 @@ const blockchains = [
         "name": "Aurora",
         "networks": [
           {
-            "network": "Aurora Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://aurora.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/aurora-mainnet"
@@ -115,7 +115,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.aurora.dev/"
           },
           {
-            "network": "Aurora Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://aurora-testnet.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/aurora-testnet"
@@ -130,7 +130,7 @@ const blockchains = [
         "name": "Avalanche",
         "networks": [
           {
-            "network": "Avalanche Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://avalanche.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/avax-mainnet",
@@ -143,7 +143,7 @@ const blockchains = [
             "blockExplorer": "https://snowtrace.io/"
           },
           {
-            "network": "Avalanche Fuji",
+            "network": "Fuji",
             "rpcUrls": [
               "https://avalanche-fuji.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/avax-testnet",
@@ -184,7 +184,7 @@ const blockchains = [
         "name": "Berachain",
         "networks": [
           {
-            "network": "Berachain bArtio",
+            "network": "bArtio",
             "rpcUrls": [
               "https://bartio.drpc.org"
             ],
@@ -198,7 +198,7 @@ const blockchains = [
         "name": "BNB Smart Chain",
         "networks": [
           {
-            "network": "BNB Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://bsc.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/bsc-mainnet",
@@ -211,7 +211,7 @@ const blockchains = [
             "blockExplorer": "https://bscscan.com/"
           },
           {
-            "network": "BNB Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://bsc-testnet.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/bnb-testnet",
@@ -246,7 +246,7 @@ const blockchains = [
         "name": "Bitcoin",
         "networks": [
           {
-            "network": "Bitcoin Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/bitcoin-mainnet",
               "https://bitcoin.drpc.org/"
@@ -256,7 +256,7 @@ const blockchains = [
             "blockExplorer": "https://btcscan.org/"
           },
           {
-            "network": "Bitcoin Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/bitcoin-testnet",
               "https://bitcoin-testnet.drpc.org/"
@@ -299,7 +299,7 @@ const blockchains = [
         "name": "Blast",
         "networks": [
           {
-            "network": "Blast Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://blast.drpc.org/"
             ],
@@ -308,7 +308,7 @@ const blockchains = [
             "blockExplorer": "https://blastscan.io"
           },
           {
-            "network": "Blast Sepolia",
+            "network": "Sepolia",
             "rpcUrls": [
               "https://blast-sepolia.drpc.org/"
             ],
@@ -345,7 +345,7 @@ const blockchains = [
         "name": "Celo",
         "networks": [
           {
-            "network": "Celo Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://celo.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/celo-mainnet",
@@ -357,7 +357,7 @@ const blockchains = [
             "blockExplorer": "https://celoscan.io/"
           },
           {
-            "network": "Celo Alfajores Testnet",
+            "network": "Alfajores Testnet",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/celo-testnet",
               "https://celo-alfajores.drpc.org"
@@ -395,7 +395,7 @@ const blockchains = [
         "name": "Core",
         "networks": [
           {
-            "network": "Core Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://core.drpc.org/"
             ],
@@ -404,7 +404,7 @@ const blockchains = [
             "blockExplorer": "https://scan.coredao.org"
           },
           {
-            "network": "Core Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://core-testnet.drpc.org/"
             ],
@@ -418,7 +418,7 @@ const blockchains = [
         "name": "Cronos",
         "networks": [
           {
-            "network": "Cronos Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://cronos.drpc.org/",
               "https://evm-cronos.crypto.org"
@@ -428,7 +428,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.cronos.org"
           },
           {
-            "network": "Cronos Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/cro-testnet",
               "https://cronos-testnet.drpc.org/"
@@ -443,7 +443,7 @@ const blockchains = [
         "name": "Dymension",
         "networks": [
           {
-            "network": "Dymension Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://dymension.drpc.org/"
             ],
@@ -485,7 +485,7 @@ const blockchains = [
         "name": "Ethereum",
         "networks": [
           {
-            "network": "Ethereum Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://go.getblock.io/aefd01aa907c4805ba3c00a9e5b48c6b",
               "https://eth.drpc.org",
@@ -547,7 +547,7 @@ const blockchains = [
         "name": "Evmos",
         "networks": [
           {
-            "network": "Evmos Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://evmos.drpc.org/"
             ],
@@ -556,7 +556,7 @@ const blockchains = [
             "blockExplorer": "https://escan.live"
           },
           {
-            "network": "Evmos Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://evmos-testnet.drpc.org/"
             ],
@@ -570,7 +570,7 @@ const blockchains = [
         "name": "Fantom",
         "networks": [
           {
-            "network": "Fantom Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://fantom.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/fantom-mainnet",
@@ -582,7 +582,7 @@ const blockchains = [
             "blockExplorer": "https://ftmscan.com"
           },
           {
-            "network": "Fantom Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://fantom-testnet.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/fantom-testnet",
@@ -598,7 +598,7 @@ const blockchains = [
         "name": "Filecoin",
         "networks": [
           {
-            "network": "Filecoin Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://filecoin.drpc.org/"
             ],
@@ -607,7 +607,7 @@ const blockchains = [
             "blockExplorer": "https://filfox.info/en"
           },
           {
-            "network": "Filecoin Calibration Testnet",
+            "network": "Calibration Testnet",
             "rpcUrls": [
               "https://filecoin-calibration.drpc.org/"
             ],
@@ -685,7 +685,7 @@ const blockchains = [
         "name": "Fuse",
         "networks": [
           {
-            "network": "Fuse Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://fuse.drpc.org/",
               "https://rpc.fuse.io"
@@ -700,7 +700,7 @@ const blockchains = [
         "name": "Gnosis",
         "networks": [
           {
-            "network": "Gnosis Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://gnosis.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/gno-mainnet",
@@ -712,7 +712,7 @@ const blockchains = [
             "blockExplorer": "https://gnosisscan.io/"
           },
           {
-            "network": "Gnosis Chiado Testnet",
+            "network": "Chiado Testnet",
             "rpcUrls": [
               "https://gnosis-chiado.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/gno-testnet"
@@ -727,7 +727,7 @@ const blockchains = [
         "name": "Haqq",
         "networks": [
           {
-            "network": "HAQQ Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/haqq-mainnet",
               "https://haqq.drpc.org/"
@@ -737,7 +737,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.haqq.network/"
           },
           {
-            "network": "HAQQ Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/haqq-testnet",
               "https://haqq-testnet.drpc.org"
@@ -802,7 +802,7 @@ const blockchains = [
         "name": "Immutable zkEVM",
         "networks": [
           {
-            "network": "Immutable zkEVM Mainnet",
+            "network": "zkEVM Mainnet",
             "rpcUrls": [
               "https://immutable-zkevm.drpc.org/"
             ],
@@ -811,7 +811,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.immutable.com"
           },
           {
-            "network": "Immutable zkEVM Testnet",
+            "network": "zkEVM Testnet",
             "rpcUrls": [
               "https://immutable-zkevm-testnet.drpc.org/"
             ],
@@ -862,7 +862,7 @@ const blockchains = [
         "name": "Kava",
         "networks": [
           {
-            "network": "Kava Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://kava.drpc.org/"
             ],
@@ -871,7 +871,7 @@ const blockchains = [
             "blockExplorer": "https://kavascan.com/"
           },
           {
-            "network": "Kava Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://kava-testnet.drpc.org/"
             ],
@@ -885,7 +885,7 @@ const blockchains = [
         "name": "Klaytn",
         "networks": [
           {
-            "network": "Klaytn Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://klaytn.drpc.org",
               "https://klaytn-baobab.drpc.org",
@@ -896,7 +896,7 @@ const blockchains = [
             "blockExplorer": "https://scope.klaytn.com"
           },
           {
-            "network": "Klaytn Baobab Testnet",
+            "network": "Baobab Testnet",
             "rpcUrls": [
               "https://klaytn-baobab.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/klaytn-baobab"
@@ -951,7 +951,7 @@ const blockchains = [
         "name": "Linea",
         "networks": [
           {
-            "network": "Linea Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://linea.drpc.org"
             ],
@@ -960,7 +960,7 @@ const blockchains = [
             "blockExplorer": "https://lineascan.build/"
           },
           {
-            "network": "Linea Sepolia Testnet",
+            "network": "Sepolia Testnet",
             "rpcUrls": [
               "https://linea-sepolia.drpc.org"
             ],
@@ -974,7 +974,7 @@ const blockchains = [
         "name": "Lisk",
         "networks": [
           {
-            "network": "Lisk Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://lisk.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/lisk-mainnet"
@@ -1023,7 +1023,7 @@ const blockchains = [
         "name": "Manta",
         "networks": [
           {
-            "network": "Manta Pacfic Mainnet",
+            "network": "Pacfic Mainnet",
             "rpcUrls": [
               "https://manta-pacific.drpc.org"
             ],
@@ -1032,7 +1032,7 @@ const blockchains = [
             "blockExplorer": "https://pacific-explorer.manta.network"
           },
           {
-            "network": "Manta Pacific Sepolia Testnet",
+            "network": "Pacific Sepolia Testnet",
             "rpcUrls": [
               "https://manta-pacific-sepolia.drpc.org"
             ],
@@ -1046,7 +1046,7 @@ const blockchains = [
         "name": "Mantle",
         "networks": [
           {
-            "network": "Mantle Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://mantle.drpc.org"
             ],
@@ -1055,7 +1055,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.mantle.xyz/"
           },
           {
-            "network": "Mantle Sepolia Testnet",
+            "network": "Sepolia Testnet",
             "rpcUrls": [
               "https://mantle-sepolia.drpc.org"
             ],
@@ -1069,7 +1069,7 @@ const blockchains = [
         "name": "Metis",
         "networks": [
           {
-            "network": "Metis Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://metis.drpc.org/"
             ],
@@ -1083,7 +1083,7 @@ const blockchains = [
         "name": "Mode",
         "networks": [
           {
-            "network": "Mode Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://mode.drpc.org/"
             ],
@@ -1092,7 +1092,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.mode.network"
           },
           {
-            "network": "Mode Sepolia Testnet",
+            "network": "Sepolia Testnet",
             "rpcUrls": [
               "https://mode-testnet.drpc.org/"
             ],
@@ -1106,7 +1106,7 @@ const blockchains = [
         "name": "Moonbeam",
         "networks": [
           {
-            "network": "Moonbeam Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://moonbeam.drpc.org/"
             ],
@@ -1115,7 +1115,7 @@ const blockchains = [
             "blockExplorer": "https://moonbeam.moonscan.io"
           },
           {
-            "network": "Moonbeam Moonbase Alpha",
+            "network": "Moonbase Alpha",
             "rpcUrls": [
               "https://moonbase-alpha.drpc.org"
             ],
@@ -1129,7 +1129,7 @@ const blockchains = [
         "name": "Moonriver",
         "networks": [
           {
-            "network": "Moonriver Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://moonriver.drpc.org/",
               "https://rpc.moonriver.moonbeam.network",
@@ -1191,7 +1191,7 @@ const blockchains = [
         "name": "Near",
         "networks": [
           {
-            "network": "Near Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/near-mainnet",
               "https://near.drpc.org/",
@@ -1217,7 +1217,7 @@ const blockchains = [
         "name": "Neon EVM",
         "networks": [
           {
-            "network": "Neon EVM Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://neon-evm.drpc.org/"
             ],
@@ -1226,7 +1226,7 @@ const blockchains = [
             "blockExplorer": "https://neonscan.org"
           },
           {
-            "network": "Neon EVM Devnet",
+            "network": "Devnet",
             "rpcUrls": [
               "https://neon-evm-devnet.drpc.org/"
             ],
@@ -1286,7 +1286,7 @@ const blockchains = [
         "name": "Optimism",
         "networks": [
           {
-            "network": "Optimism Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://optimism.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/optimism-mainnet"
@@ -1296,7 +1296,7 @@ const blockchains = [
             "blockExplorer": "https://optimistic.etherscan.io/"
           },
           {
-            "network": "Optimism Sepolia Testnet",
+            "network": "Sepolia Testnet",
             "rpcUrls": [
               "https://optimism-sepolia.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/optimism-testnet"
@@ -1348,7 +1348,7 @@ const blockchains = [
         "name": "Playnance",
         "networks": [
           {
-            "network": "Playnance Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://playnance.drpc.org/"
             ],
@@ -1362,7 +1362,7 @@ const blockchains = [
         "name": "Polkadot",
         "networks": [
           {
-            "network": "Polkadot Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://polkadot.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/dot-mainnet"
@@ -1386,7 +1386,7 @@ const blockchains = [
         "name": "Polygon",
         "networks": [
           {
-            "network": "Polygon POS Mainnet",
+            "network": "POS Mainnet",
             "rpcUrls": [
               "https://polygon.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/polygon-mainnet",
@@ -1399,7 +1399,7 @@ const blockchains = [
             "blockExplorer": "https://polygonscan.com/"
           },
           {
-            "network": "Polygon Amoy Testnet",
+            "network": "Amoy Testnet",
             "rpcUrls": [
               "https://api.tatum.io/v3/blockchain/node/polygon-amoy",
               "https://polygon-amoy.drpc.org"
@@ -1409,7 +1409,7 @@ const blockchains = [
             "blockExplorer": "https://www.oklink.com/amoy"
           },
           {
-            "network": "Polygon Blackberry Testnet",
+            "network": "Blackberry Testnet",
             "rpcUrls": [
               "https://polygon-blackberry-testnet.drpc.org/"
             ],
@@ -1418,7 +1418,7 @@ const blockchains = [
             "blockExplorer": "https://polygon-blackberry.gelatoscout.com/"
           },
           {
-            "network": "Polygon zkEVM Mainnet",
+            "network": "zkEVM Mainnet",
             "rpcUrls": [
               "https://polygon-zkevm.drpc.org"
             ],
@@ -1427,7 +1427,7 @@ const blockchains = [
             "blockExplorer": "https://zkevm.polygonscan.com/"
           },
           {
-            "network": "Polygon zkEVM Cardona",
+            "network": "zkEVM Cardona",
             "rpcUrls": [
               "https://polygon-zkevm-cardona.drpc.org"
             ],
@@ -1441,7 +1441,7 @@ const blockchains = [
         "name": "re.al",
         "networks": [
           {
-            "network": "re.al Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://real.drpc.org/"
             ],
@@ -1478,7 +1478,7 @@ const blockchains = [
         "name": "Ronin",
         "networks": [
           {
-            "network": "Ronin Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://ronin.drpc.org/"
             ],
@@ -1492,7 +1492,7 @@ const blockchains = [
         "name": "Rootstock",
         "networks": [
           {
-            "network": "Rootstock Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://rootstock.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/rsk-mainnet"
@@ -1502,7 +1502,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.rsk.co"
           },
           {
-            "network": "Rootstock Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://rootstock-testnet.drpc.org",
               "https://api.tatum.io/v3/blockchain/node/rsk-testnet"
@@ -1517,7 +1517,7 @@ const blockchains = [
         "name": "Scroll",
         "networks": [
           {
-            "network": "Scroll Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://scroll.drpc.org"
             ],
@@ -1526,7 +1526,7 @@ const blockchains = [
             "blockExplorer": "https://scrollscan.com/"
           },
           {
-            "network": "Scroll Sepolia Testnet",
+            "network": "Sepolia Testnet",
             "rpcUrls": [
               "https://scroll-sepolia.drpc.org"
             ],
@@ -1636,7 +1636,7 @@ const blockchains = [
         "name": "Taiko",
         "networks": [
           {
-            "network": "Taiko Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://taiko.drpc.org/"
             ],
@@ -1645,7 +1645,7 @@ const blockchains = [
             "blockExplorer": "https://taikoscan.io"
           },
           {
-            "network": "Taiko Hekla",
+            "network": "Hekla",
             "rpcUrls": [
               "https://taiko-hekla.drpc.org"
             ],
@@ -1659,7 +1659,7 @@ const blockchains = [
         "name": "Telos",
         "networks": [
           {
-            "network": "Telos Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://evm.telos.detroitledger.tech/evm",
               "https://telos.drpc.org/",
@@ -1670,7 +1670,7 @@ const blockchains = [
             "blockExplorer": "https://teloscan.io"
           },
           {
-            "network": "Telos Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://telos-testnet.drpc.org/"
             ],
@@ -1698,7 +1698,7 @@ const blockchains = [
         "name": "Thundercore",
         "networks": [
           {
-            "network": "Thundercore Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://thundercore.drpc.org/"
             ],
@@ -1707,7 +1707,7 @@ const blockchains = [
             "blockExplorer": "https://viewblock.io/thundercore"
           },
           {
-            "network": "Thundercore Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://thundercore-testnet.drpc.org/"
             ],
@@ -1760,7 +1760,7 @@ const blockchains = [
         "name": "Vara",
         "networks": [
           {
-            "network": "Vara Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://vara-testnet.drpc.org"
             ],
@@ -1843,7 +1843,7 @@ const blockchains = [
         "name": "ZetaChain",
         "networks": [
           {
-            "network": "Zetachain Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://zeta-chain.drpc.org/"
             ],
@@ -1852,7 +1852,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.zetachain.com/"
           },
           {
-            "network": "Zetachain Testnet",
+            "network": "Testnet",
             "rpcUrls": [
               "https://zeta-chain-testnet.drpc.org"
             ],
@@ -1889,7 +1889,7 @@ const blockchains = [
         "name": "zkSync Era",
         "networks": [
           {
-            "network": "zkSync Era Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://zksync.drpc.org"
             ],
@@ -1898,7 +1898,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.zksync.io/"
           },
           {
-            "network": "zkSync Era Sepolia",
+            "network": "Sepolia",
             "rpcUrls": [
               "https://zksync-sepolia.drpc.org"
             ],
@@ -1912,7 +1912,7 @@ const blockchains = [
         "name": "Zora",
         "networks": [
           {
-            "network": "Zora Mainnet",
+            "network": "Mainnet",
             "rpcUrls": [
               "https://zora.drpc.org/"
             ],
@@ -1921,7 +1921,7 @@ const blockchains = [
             "blockExplorer": "https://explorer.zora.energy"
           },
           {
-            "network": "Zora Sepolia",
+            "network": "Sepolia",
             "rpcUrls": [
               "https://zora-sepolia.drpc.org/"
             ],
