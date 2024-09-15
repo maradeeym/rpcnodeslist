@@ -38,8 +38,8 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
             >
               <Dialog.Panel className="relative w-full max-w-3xl h-full overflow-visible transform text-left align-middle shadow-xl transition-all rounded-xl bg-base-100 p-6 md:p-8">
                 <div className="flex justify-between items-center mb-4">
-                  <Dialog.Title as="h2" className="font-semibold">
-                    I&apos;m a modal
+                  <Dialog.Title as="h2" className="font-semibold text-2xl">
+                    Add Your Endpoint.
                   </Dialog.Title>
                   <button
                     className="btn btn-square btn-ghost btn-sm"
@@ -56,7 +56,36 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
                   </button>
                 </div>
 
-                <section>And here is my content</section>
+                <section className="space-y-4">
+                    <p className="py-4 text-gray-700">
+                      To increase visibility and attract more users, add your RPC endpoint to RPCNodeList.com. <br /><br />
+                      After completing payment, simply email us your RPC details, and we’ll list it within 24 hours, making it easier for developers to find and use your service.
+                    </p>
+                  <div>
+                    <h3 className="font-semibold">Add Single RPC</h3>
+                    <p className="text-gray-700 my-1">
+                      Price: <strong>$29/year</strong>
+                    </p>
+                    <a 
+                      href="https://buy.stripe.com/6oEfZF47u8ggaPu144" 
+                      className="btn btn-sm btn-primary my-1"
+                    >
+                      List your RPC
+                    </a>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Add Unlimited RPCs</h3>
+                    <p className="text-gray-700 my-1">
+                      Price: <strong>$199/year</strong>
+                    </p>
+                    <a 
+                      href="https://buy.stripe.com/5kA28PfQc7ccaPu9AB" 
+                      className="btn btn-sm btn-primary my-1"
+                    >
+                      List your RPCs
+                    </a>
+                  </div>
+                </section>
               </Dialog.Panel>
             </Transition.Child>
           </div>

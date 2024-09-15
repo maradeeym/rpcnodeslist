@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/app/icon.png";
 import config from "@/config";
+import Modal from "@/components/Modal"; // Import Modal
 
 const links = [
   {
@@ -14,15 +15,21 @@ const links = [
   },
 ];
 
-//const cta = <ButtonSignin extraStyle="btn-primary" />;
-
-const cta = <a href="https://x.com/kalliolamartin" target="_blank" rel="noopener noreferrer"><button className="btn btn-info btn-sm">Contact on X</button></a>
-
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
 const Header = () => {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Add state for modal
+
+  const cta = (
+    <button 
+      className="btn btn-info btn-sm" 
+      onClick={() => setIsModalOpen(true)} // Open modal on button click
+    >
+      Add Your RPC
+    </button>
+  );
 
   // setIsOpen(false) when the route changes (i.e: when the user clicks on a link on mobile)
   useEffect(() => {
@@ -165,6 +172,12 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal Component */}
+      <Modal
+      isModalOpen={isModalOpen} 
+      setIsModalOpen={setIsModalOpen} 
+      />
     </header>
   );
 };
