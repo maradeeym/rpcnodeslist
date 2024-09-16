@@ -53,13 +53,13 @@ const RpcList = () => {
   );
 
   return (
-    <div className="p-4 sm:p-6 bg-base-200 min-h-screen">
+    <div className="p-4 sm:p-6 bg-base-200 min-h-screen flex flex-col items-center">
       <input
         type="text"
         placeholder="Search for blockchain..."
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
-        className="input input-bordered w-full mb-4"
+        className="input input-bordered mb-4 mx-auto max-w-screen-2xl w-full"
       />
       {filteredBlockchains.map((blockchain, index) => (
         <div key={index} className="flex flex-col mb-6 sm:mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
