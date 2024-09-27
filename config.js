@@ -5,7 +5,7 @@ const config = {
   appName: "RPC Node List",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "RPC Node Endpoints for Web3 developers",
+    "List of blockchain RPC endpoints for web3 developers",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "rpcnodelist.com",
   
