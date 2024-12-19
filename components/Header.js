@@ -23,12 +23,14 @@ const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // Add state for modal
 
   const cta = (
-    <button 
-      className="btn btn-info btn-sm" 
-      onClick={() => setIsModalOpen(true)} // Open modal on button click
-    >
-      Add Your RPC
-    </button>
+    <div className="flex items-center gap-4">
+      <button
+        className="btn btn-info btn-sm"
+        onClick={() => setIsModalOpen(true)}
+      >
+        Add Your RPC
+      </button>
+    </div>
   );
 
   // setIsOpen(false) when the route changes (i.e: when the user clicks on a link on mobile)
