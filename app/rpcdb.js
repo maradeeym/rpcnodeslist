@@ -1610,6 +1610,29 @@ const blockchains = [
         ]
       },
       {
+        "name": "Sonic",
+        "networks": [
+          {
+            "network": "Mainnet",
+            "rpcUrls": [
+              "https://sonic.drpc.org"
+            ],
+            "chainId": "0x92",
+            "nativeCurrency": "S",
+            "blockExplorer": "https://sonicscan.org"
+          },
+          {
+            "network": "Blaze Testnet",
+            "rpcUrls": [
+              "https://sonic-testnet.drpc.org"
+            ],
+            "chainId": "0xdede",
+            "nativeCurrency": "S",
+            "blockExplorer": "https://testnet.sonicscan.org"
+          }
+        ]
+      },
+      {
         "name": "Stellar",
         "networks": [
           {
