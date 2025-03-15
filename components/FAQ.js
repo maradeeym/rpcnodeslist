@@ -7,30 +7,22 @@ import { useRef, useState } from "react";
 
 const faqList = [
   {
-    question: "What is the RPC node?",
-    answer: <div className="space-y-2 leading-relaxed">An RPC node is a server that allows remote procedure calls (RPC) to interact with a blockchain network, enabling users to query data and submit transactions.</div>,
+    question: "What is an RPC node in blockchain?",
+    answer: <div className="space-y-2 leading-relaxed">An RPC node is a server that processes remote procedure calls (RPC) to interact with a blockchain network, allowing users to query data and submit transactions.</div>,
   },
   {
-    question: "What does RPC mean in crypto?",
+    question: "How does RPC facilitate blockchain communication?",
     answer: (
       <p className="space-y-2 leading-relaxed">
-        In the context of cryptocurrency, RPC stands for Remote Procedure Call. It is a protocol that allows a program to request a service from a program located on another computer in a network, facilitating communication between different blockchain nodes.
+        RPC, or Remote Procedure Call, enables programs to request services from other programs on different computers within a network, facilitating seamless communication between blockchain nodes.
       </p>
     ),
   },
   {
-    question: "What is an RPC web3?",
+    question: "What is the role of RPC in web3 development?",
     answer: (
       <p className="space-y-2 leading-relaxed">
-        RPC in web3 refers to the use of remote procedure calls to interact with decentralized applications (dApps) and blockchain networks through the web3.js library, enabling functions like reading blockchain data and sending transactions.
-      </p>
-    ),
-  },
-  {
-    question: "What are RPC used for?",
-    answer: (
-      <p className="space-y-2 leading-relaxed">
-        RPCs are used to enable communication between different systems or nodes in a network, allowing them to request and execute procedures or services from each other. In blockchain, they facilitate data retrieval and transaction submission.
+        In web3, RPC is crucial for interacting with decentralized applications (dApps) and blockchain networks, allowing developers to read blockchain data and send transactions using libraries like web3.js.
       </p>
     ),
   },
@@ -38,8 +30,16 @@ const faqList = [
     question: "What is an RPC endpoint?",
     answer: (
       <div className="space-y-2 leading-relaxed">
-        An RPC endpoint is a specific URL or address where an RPC server listens for requests from clients. It serves as the access point for interacting with the blockchain network via RPC calls.
+        An RPC endpoint is a specific URL or address where an RPC server listens for requests from clients, serving as the access point for interacting with the blockchain network via RPC calls.
       </div>
+    ),
+  },
+  {
+    question: "How do I choose an RPC provider?",
+    answer: (
+      <p className="space-y-2 leading-relaxed">
+        When choosing an RPC provider, consider factors like reliability, speed, security, and support for the specific blockchain networks you plan to interact with.
+      </p>
     ),
   },
 ];
