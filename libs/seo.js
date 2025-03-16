@@ -88,7 +88,7 @@ export const renderSchemaTags = () => {
           url: `https://${config.domainName}/`,
           author: {
             "@type": "Person",
-            name: "Marc Lou",
+            name: "",
           },
           datePublished: "2023-08-01",
           applicationCategory: "EducationalApplication",
@@ -97,13 +97,6 @@ export const renderSchemaTags = () => {
             ratingValue: "4.8",
             ratingCount: "12",
           },
-          offers: [
-            {
-              "@type": "Offer",
-              price: "9.00",
-              priceCurrency: "USD",
-            },
-          ],
         }),
       }}
     ></script>
