@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
     description: `Find ${blockchain.name} Mainnet and Testnet RPC APIs for Web3 development.`,
     keywords: `${blockchain.name} rpc, rpc node, rpc nodes,`,
     alternates: {
-      canonical: `https://${config.domainName}/${blockchain.name}`
+      canonical: `https://${config.domainName}/${blockchain.name.toLowerCase()}`
     },
   };
 }

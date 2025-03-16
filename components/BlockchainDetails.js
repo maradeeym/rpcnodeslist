@@ -54,6 +54,7 @@ const BlockchainDetails = ({ blockchain }) => {
           <h2 id={blockchain.name} className="text-xl sm:text-2xl font-bold mb-4">
             {blockchain.name} RPC URL and chain id
           </h2>
+          
           {blockchain.networks.map((network, idx) => (
             <div key={idx} className="mb-4 sm:mb-6">
               <h3 className="text-lg sm:text-xl font-semibold mb-2">{network.network} RPCs</h3>

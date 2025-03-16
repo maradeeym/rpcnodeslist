@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
     description: `Find out how to add ${blockchain.name} Mainnet and Testnet RPC APIs to Metamask or other wallets.`,
     keywords: `add ${blockchain.name} to metamask, add ${blockchain.name} to wallet, ${blockchain.name} rpc, ${blockchain.name} rpc node, ${blockchain.name} rpc nodes,`,
     alternates: {
-      canonical: `https://${config.domainName}/add-to-wallet/${blockchain.name}`
+      canonical: `https://${config.domainName}/add-to-wallet/${blockchain.name.toLowerCase()}`
     },
   };
 }
