@@ -2134,7 +2134,7 @@ const blockchains = [
         ],
         "chainId": "",
         "nativeCurrency": "ETH",
-        "blockExplorer": "https://explorer.goat.network"
+        "blockExplorer": ""
       },
       {
         "network": "Sepolia",
@@ -2155,7 +2155,71 @@ const blockchains = [
         "blockExplorer": ""
       }
     ]
+  },
+  {
+    "name": "Mezo",
+    "networks": [
+      {
+        "network": "Mezo Testnet",
+        "rpcUrls": [
+          "https://mezo-testnet.drpc.org",
+          "https://rpc.test.mezo.org"
+        ],
+        "chainId": "0x7b7b",
+        "nativeCurrency": "BTC",
+        "blockExplorer": "https://explorer.test.mezo.org"
+      }
+    ]
+  },
+  {
+    "name": "Swell",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://swell.drpc.org",
+          "https://rpc.ankr.com/swell",
+          "https://rpc.ankr.com/swell"
+        ],
+        "chainId": "0x783",
+        "nativeCurrency": "ETH",
+        "blockExplorer": ""
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://swell-testnet.drpc.org"
+        ],
+        "chainId": "0x784",
+        "nativeCurrency": "ETH",
+        "blockExplorer": ""
+      }
+    ]
+  },
+  {
+    "name": "Soneium",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://soneium.drpc.org"
+        ],
+        "chainId": "0x74c",
+        "nativeCurrency": "ETH",
+        "blockExplorer": ""
+      },
+      {
+        "network": "Minato Testnet",
+        "rpcUrls": [
+          "https://soneium-minato.drpc.org"
+        ],
+        "chainId": "0x79a",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://soneium-minato.blockscout.com"
+      }
+    ]
   }
+
 ];module.exports = blockchains;
 
   
