@@ -2218,6 +2218,34 @@ const blockchains = [
         "blockExplorer": "https://soneium-minato.blockscout.com"
       }
     ]
+  },
+  {
+    "name": "Lens Network",
+    "networks": [
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://lens-testnet.drpc.org"
+        ],
+        "chainId": "0x90f7",
+        "nativeCurrency": "GRASS",
+        "blockExplorer": "https://block-explorer.testnet.lens.dev"
+      }
+    ]
+  },
+  {
+    "name": "Merlin",
+    "networks": [
+      {
+        "network": "Merlin Mainnet",
+        "rpcUrls": [
+          "https://merlin.drpc.org"
+        ],
+        "chainId": "0x1068",
+        "nativeCurrency": "BTC",
+        "blockExplorer": ""
+      }
+    ]
   }
 
 ];module.exports = blockchains;
