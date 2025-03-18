@@ -388,7 +388,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/chiliz-mainnet",
           "https://rpc.ankr.com/chiliz"
         ],
         "chainId": "88888",
@@ -398,7 +397,6 @@ const blockchains = [
       {
         "network": "Spicy Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/chiliz-testnet",
           "https://spicy-rpc.chiliz.com"
         ],
         "chainId": "88882",
@@ -449,7 +447,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/cro-testnet",
           "https://cronos-testnet.drpc.org/",
           "https://evm-t3.cronos.org"
         ],
@@ -495,7 +492,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/eos-mainnet",
           "https://eos.greymass.com"
         ],
         "chainId": "EOS",
@@ -512,7 +508,6 @@ const blockchains = [
         "rpcUrls": [
           "https://go.getblock.io/aefd01aa907c4805ba3c00a9e5b48c6b",
           "https://eth.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/ethereum-mainnet",
           "https://eth.meowrpc.com",
           "https://ethereum.publicnode.com",
           "https://cloudflare-eth.com"
@@ -524,7 +519,6 @@ const blockchains = [
       {
         "network": "Holesky Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/ethereum-holesky",
           "https://holesky.drpc.org",
           "https://ethereum-holesky.publicnode.com"
         ],
@@ -536,7 +530,6 @@ const blockchains = [
         "network": "Sepolia Testnet",
         "rpcUrls": [
           "https://sepolia.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/ethereum-sepolia",
           "https://rpc2.sepolia.org",
           "https://eth-sepolia.g.alchemy.com/v2/demo",
           "https://ethereum-sepolia.publicnode.com"
@@ -553,7 +546,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/ethereum-classic-mainnet",
           "https://etc.rivet.link"
         ],
         "chainId": "61",
@@ -563,7 +555,6 @@ const blockchains = [
       {
         "network": "Mordor Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/ethereum-classic-testnet",
           "https://mordor.etccooperative.org"
         ],
         "chainId": "63",
@@ -604,7 +595,6 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://fantom.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/fantom-mainnet",
           "https://rpc.ftm.tools",
           "https://fantom.api.onfinality.io/public",
           "https://rpc.fantom.network"
@@ -617,7 +607,6 @@ const blockchains = [
         "network": "Testnet",
         "rpcUrls": [
           "https://fantom-testnet.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/fantom-testnet",
           "https://rpc.testnet.fantom.network"
         ],
         "chainId": "0xfa2",
@@ -657,7 +646,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/flare-mainnet",
           "https://flare-api.flare.network/ext/C/rpc"
         ],
         "chainId": "14",
@@ -667,7 +655,6 @@ const blockchains = [
       {
         "network": "Coston Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/flare-coston",
           "https://coston-api.flare.network/ext/C/rpc"
         ],
         "chainId": "16",
@@ -677,7 +664,6 @@ const blockchains = [
       {
         "network": "Coston2 Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/flare-coston2",
           "https://coston2-api.flare.network/ext/C/rpc"
         ],
         "chainId": "114",
@@ -687,7 +673,6 @@ const blockchains = [
       {
         "network": "Songbird Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/flare-songbird",
           "https://songbird-api.flare.network/ext/C/rpc"
         ],
         "chainId": "19",
@@ -702,7 +687,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/flow-mainnet",
           "https://rest-mainnet.onflow.org"
         ],
         "chainId": "FLOW",
@@ -712,7 +696,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/flow-testnet",
           "https://rest-testnet.onflow.org"
         ],
         "chainId": "FLOW",
@@ -744,7 +727,6 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://gnosis.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/gno-mainnet",
           "https://rpc.gnosischain.com",
           "https://gnosis.api.onfinality.io/public",
           "https://rpc.ankr.com/gnosis"
@@ -757,7 +739,6 @@ const blockchains = [
         "network": "Chiado Testnet",
         "rpcUrls": [
           "https://gnosis-chiado.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/gno-testnet",
           "https://rpc.chiadochain.net"
         ],
         "chainId": "0x27d8",
@@ -772,7 +753,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/haqq-mainnet",
           "https://haqq.drpc.org/",
           "https://rpc.eth.haqq.network"
         ],
@@ -783,7 +763,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/haqq-testnet",
           "https://haqq-testnet.drpc.org",
           "https://rpc.eth.testedge2.haqq.network"
         ],
@@ -800,7 +779,6 @@ const blockchains = [
         "network": "One Shard 0 Mainnet",
         "rpcUrls": [
           "https://harmony-0.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/one-mainnet-s0",
           "https://api.harmony.one",
           "https://api.s0.b.hmny.io",
           "https://harmony-mainnet.chainstacklabs.com"
@@ -827,7 +805,6 @@ const blockchains = [
       {
         "network": "EON Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/eon-mainnet",
           "https://eon-rpc.horizenlabs.io/ethv1"
         ],
         "chainId": "7332",
@@ -837,7 +814,6 @@ const blockchains = [
       {
         "network": "EON Gobi Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/eon-testnet",
           "https://gobi-rpc.horizenlabs.io/ethv1"
         ],
         "chainId": "1663",
@@ -892,7 +868,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/kadena-mainnet",
           "https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/pact"
         ],
         "chainId": "KDA",
@@ -902,7 +877,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/kadena-testnet",
           "https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact"
         ],
         "chainId": "KDA",
@@ -942,7 +916,6 @@ const blockchains = [
       {
         "network": "KCC Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/kcs-mainnet",
           "https://rpc-mainnet.kcc.network",
           "https://kcc-rpc.com"
         ],
@@ -953,7 +926,6 @@ const blockchains = [
       {
         "network": "KCC Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/kcs-testnet",
           "https://rpc-testnet.kcc.network"
         ],
         "chainId": "321",
@@ -969,7 +941,6 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://kusama.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/ksm-mainnet",
           "wss://kusama-rpc.polkadot.io"
         ],
         "chainId": "",
@@ -1010,7 +981,6 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://lisk.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/lisk-mainnet",
           "https://rpc.lisk.com"
         ],
         "chainId": "0x46f",
@@ -1035,8 +1005,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/litecoin-core-mainnet",
-          "https://api.tatum.io/v3/blockchain/node/litecoin-mainnet",
           "https://ltc.getblock.io/mainnet/"
         ],
         "chainId": "",
@@ -1046,8 +1014,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/litecoin-core-testnet",
-          "https://api.tatum.io/v3/blockchain/node/litecoin-testnet"
         ],
         "chainId": "",
         "nativeCurrency": "LTC",
@@ -1207,7 +1173,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/egld-mainnet",
           "https://gateway.multiversx.com"
         ],
         "chainId": "EGLD",
@@ -1217,7 +1182,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/egld-testnet",
           "https://testnet-gateway.multiversx.com"
         ],
         "chainId": "EGLD",
@@ -1257,7 +1221,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/near-mainnet",
           "https://near.drpc.org/",
           "https://rpc.ankr.com/near",
           "https://rpc.mainnet.near.org"
@@ -1269,7 +1232,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/near-testnet",
           "https://near-testnet.drpc.org/",
           "https://rpc.testnet.near.org"
         ],
@@ -1310,7 +1272,6 @@ const blockchains = [
       {
         "network": "Emerald Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/oasis-mainnet",
           "https://emerald.oasis.dev"
         ],
         "chainId": "42262",
@@ -1320,7 +1281,6 @@ const blockchains = [
       {
         "network": "Emerald Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/oasis-testnet",
           "https://testnet.emerald.oasis.dev"
         ],
         "chainId": "42261",
@@ -1361,7 +1321,6 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://optimism.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/optimism-mainnet",
           "https://mainnet.optimism.io"
         ],
         "chainId": "0xa",
@@ -1372,7 +1331,6 @@ const blockchains = [
         "network": "Sepolia Testnet",
         "rpcUrls": [
           "https://optimism-sepolia.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/optimism-testnet",
           "https://sepolia.optimism.io"
         ],
         "chainId": "0xaa37dc",
@@ -1387,7 +1345,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/palm-mainnet",
           "https://palm-mainnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b"
         ],
         "chainId": "11297108109",
@@ -1397,7 +1354,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/palm-testnet",
           "https://palm-testnet.infura.io/v3/3a961d6501e54add9a41aa53f15de99b"
         ],
         "chainId": "11297108099",
@@ -1443,7 +1399,6 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://polkadot.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/dot-mainnet",
           "wss://rpc.polkadot.io"
         ],
         "chainId": "",
@@ -1453,7 +1408,6 @@ const blockchains = [
       {
         "network": "Westend Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/dot-testnet",
           "wss://westend-rpc.polkadot.io"
         ],
         "chainId": "",
@@ -1469,7 +1423,6 @@ const blockchains = [
         "network": "POS Mainnet",
         "rpcUrls": [
           "https://polygon.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/polygon-mainnet",
           "https://matic-mainnet.chainstacklabs.com",
           "https://polygon-rpc.com",
           "https://polygon.api.onfinality.io/public",
@@ -1482,7 +1435,6 @@ const blockchains = [
       {
         "network": "Amoy Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/polygon-amoy",
           "https://polygon-amoy.drpc.org",
           "https://rpc-amoy.polygon.technology"
         ],
@@ -1543,7 +1495,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/ripple-mainnet",
           "https://s1.ripple.com:51234",
           "https://ripple.drpc.org"
         ],
@@ -1554,7 +1505,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/ripple-testnet",
           "https://s.altnet.rippletest.net:51234",
           "https://ripple-testnet.drpc.org"
         ],
@@ -1595,7 +1545,6 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://rootstock.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/rsk-mainnet",
           "https://public-node.rsk.co"
         ],
         "chainId": "0x1e",
@@ -1606,7 +1555,6 @@ const blockchains = [
         "network": "Testnet",
         "rpcUrls": [
           "https://rootstock-testnet.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/rsk-testnet",
           "https://public-node.testnet.rsk.co"
         ],
         "chainId": "0x1f",
@@ -1661,7 +1609,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/bch-mainnet",
           "https://smartbch.fountainhead.cash/mainnet",
           "https://smartbch.greyh.at"
         ],
@@ -1672,7 +1619,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/bch-testnet",
           "https://rpc-testnet.smartbch.org"
         ],
         "chainId": "10001",
@@ -1688,7 +1634,6 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://solana.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/solana-mainnet",
           "https://rpc.ankr.com/solana",
           "https://api.mainnet-beta.solana.com"
         ],
@@ -1710,7 +1655,6 @@ const blockchains = [
         "network": "Devnet",
         "rpcUrls": [
           "https://solana-devnet.drpc.org",
-          "https://api.tatum.io/v3/blockchain/node/solana-devnet",
           "https://api.devnet.solana.com"
         ],
         "chainId": "901",
@@ -1750,7 +1694,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/stellar-mainnet",
           "https://horizon.stellar.org"
         ],
         "chainId": "",
@@ -1760,7 +1703,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/stellar-testnet",
           "https://horizon-testnet.stellar.org"
         ],
         "chainId": "",
@@ -1827,7 +1769,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/tezos-mainnet",
           "https://mainnet.tezos.marigold.dev"
         ],
         "chainId": "",
@@ -1876,7 +1817,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/tron-mainnet",
           "https://tron.drpc.org",
           "https://api.trongrid.io"
         ],
@@ -1887,7 +1827,6 @@ const blockchains = [
       {
         "network": "Shasta Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/tron-testnet",
           "https://tron-shasta.drpc.org",
           "https://api.shasta.trongrid.io"
         ],
@@ -1952,7 +1891,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/vechain-mainnet",
           "https://sync-mainnet.vechain.org"
         ],
         "chainId": "100009",
@@ -1962,7 +1900,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/vechain-testnet",
           "https://sync-testnet.vechain.org"
         ],
         "chainId": "100010",
@@ -1977,7 +1914,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/xdc-mainnet",
           "https://rpc.xinfin.network"
         ],
         "chainId": "50",
@@ -1987,7 +1923,6 @@ const blockchains = [
       {
         "network": "Apothem Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/xdc-testnet",
           "https://rpc.apothem.network"
         ],
         "chainId": "51",
@@ -2002,7 +1937,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/zcash-mainnet",
           "https://mainnet.lightwalletd.com:9067"
         ],
         "chainId": "ZEC",
@@ -2012,7 +1946,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/zcash-testnet",
           "https://testnet.lightwalletd.com:9067"
         ],
         "chainId": "ZEC",
@@ -2052,7 +1985,6 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/zilliqa-mainnet",
           "https://api.zilliqa.com"
         ],
         "chainId": "",
@@ -2062,7 +1994,6 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://api.tatum.io/v3/blockchain/node/zilliqa-testnet",
           "https://dev-api.zilliqa.com"
         ],
         "chainId": "",
@@ -2155,8 +2086,76 @@ const blockchains = [
         "blockExplorer": "https://explorer.zircuit.com"
       }
     ]
+  },
+  {
+    "name": "Sophon",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.sophon.xyz"
+        ],
+        "chainId": "50104",
+        "nativeCurrency": "SOPH",
+        "blockExplorer": "https://explorer.sophon.xyz/"
+      }
+    ]
+  },
+  {
+    "name": "GOAT Network",
+    "networks": [
+      {
+        "network": "Alpha Mainnet",
+        "rpcUrls": [
+          "https://goat-mainnet-alpha.drpc.org"
+        ],
+        "chainId": "0x929",
+        "nativeCurrency": "BTC",
+        "blockExplorer": "https://explorer.goat.network"
+      },
+      {
+        "network": "Testnet3",
+        "rpcUrls": [
+          "https://goat-testnet3.drpc.org"
+        ],
+        "chainId": "0xbeb0",
+        "nativeCurrency": "BTC",
+        "blockExplorer": ""
+      }
+    ]
+  },
+  {
+    "name": "Ethereum Beacon",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://eth-beacon-chain.drpc.org/rest/"
+        ],
+        "chainId": "",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.goat.network"
+      },
+      {
+        "network": "Sepolia",
+        "rpcUrls": [
+          "https://eth-beacon-chain-sepolia.drpc.org/rest/"
+        ],
+        "chainId": "",
+        "nativeCurrency": "ETH",
+        "blockExplorer": ""
+      },
+      {
+        "network": "Holesky",
+        "rpcUrls": [
+          "https://eth-beacon-chain-holesky.drpc.org/rest/"
+        ],
+        "chainId": "",
+        "nativeCurrency": "ETH",
+        "blockExplorer": ""
+      }
+    ]
   }
-    ];
-    module.exports = blockchains;
+];module.exports = blockchains;
 
   
