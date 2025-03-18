@@ -2237,7 +2237,7 @@ const blockchains = [
     "name": "Merlin",
     "networks": [
       {
-        "network": "Merlin Mainnet",
+        "network": "Mainnet",
         "rpcUrls": [
           "https://merlin.drpc.org"
         ],
