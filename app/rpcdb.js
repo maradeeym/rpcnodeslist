@@ -2160,7 +2160,7 @@ const blockchains = [
     "name": "Mezo",
     "networks": [
       {
-        "network": "Mezo Testnet",
+        "network": "Testnet",
         "rpcUrls": [
           "https://mezo-testnet.drpc.org",
           "https://rpc.test.mezo.org"
