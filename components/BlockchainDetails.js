@@ -141,7 +141,6 @@ const BlockchainDetails = ({ blockchain }) => {
           ))}
         </div>
       </div>
-      <FAQ />
     </>
   );
 };
