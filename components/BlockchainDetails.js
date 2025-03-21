@@ -1,7 +1,6 @@
 "use client";
 import React, { Suspense, useState, useEffect } from 'react';
 import Header from '@/components/Header';
-import FAQ from '@/components/FAQ';
 import CopyRpcUrl from './CopyRpcUrl';
 
 const BlockchainDetails = ({ blockchain }) => {
