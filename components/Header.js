@@ -22,6 +22,12 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false); // Add state for modal
 
+  const CTA = (
+    <a href="https://github.com/maradeeym/rpcnodeslist/blob/main/app/rpcdb.js" target="_blank" rel="noopener noreferrer" className="btn btn-info mx-4 text-white">
+      Add your RPC
+    </a>
+  );
+
   // setIsOpen(false) when the route changes (i.e: when the user clicks on a link on mobile)
   useEffect(() => {
     setIsOpen(false);
@@ -92,6 +98,8 @@ const Header = () => {
         </div>
 
         {/* CTA on large screens */}
+        {CTA}
+
       </nav>
 
       {/* Mobile menu, show/hide based on menu state. */}
