@@ -59,7 +59,7 @@ const RpcList = () => {
         placeholder="Search for blockchain..."
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
-        className="input input-bordered mb-4 mx-auto max-w-screen-2xl w-full"
+        className="input input-bordered mb-14 w-96"
       />
       {filteredBlockchains.map((blockchain, index) => (
         <div key={index} className="flex flex-col mb-6 sm:mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
@@ -74,7 +74,6 @@ const RpcList = () => {
                   <thead>
                     <tr className="bg-gray-100">
                       <th className="border px-2 sm:px-4 py-2">Blockchain</th>
-                      <th className="border px-2 sm:px-4 py-2">Network</th>
                       <th className="border px-2 sm:px-4 py-2">RPC URL</th>
                       <th className="border px-2 sm:px-4 py-2">Chain ID</th>
                       <th className="border px-2 sm:px-4 py-2">Native Currency</th>
@@ -97,7 +96,6 @@ const RpcList = () => {
                             {blockchain.name}
                           </div>
                         </td>
-                        <td className="border text-center px-2 sm:px-4 py-2">{network.network}</td>
                         <td className="border text-center px-2 sm:px-4 py-2">
                           <div className="flex items-center justify-between">
                             <CopyRpcUrl url={url} />

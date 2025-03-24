@@ -51,7 +51,7 @@ const BlockchainDetails = ({ blockchain }) => {
       <div className="p-4 sm:p-6 bg-base-200">
         <div className="flex flex-col mb-6 sm:mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
           <h1 id={blockchain.name} className="text-xl sm:text-2xl font-bold mb-4">
-            {blockchain.name} RPC URL and chain id
+            {blockchain.name} RPC Endpoints
           </h1>
           
           {blockchain.networks.map((network, idx) => (
@@ -62,7 +62,6 @@ const BlockchainDetails = ({ blockchain }) => {
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="border px-2 sm:px-4 py-2">Blockchain</th>
-                    <th className="border px-2 sm:px-4 py-2">Network</th>
                     <th className="border px-2 sm:px-4 py-2">RPC URL</th>
                     <th className="border px-2 sm:px-4 py-2">Chain ID</th>
                     <th className="border px-2 sm:px-4 py-2">Native Currency</th>
@@ -85,7 +84,6 @@ const BlockchainDetails = ({ blockchain }) => {
                             {blockchain.name}
                           </div>
                         </td>
-                        <td className="border text-center px-2 sm:px-4 py-2">{network.network}</td>
                         <td className="border text-center px-2 sm:px-4 py-2">
                           <CopyRpcUrl url={url} />
                         </td>

@@ -7,7 +7,7 @@ const SimpleHero = () => {
       <div className="flex justify-center">
       </div>
         <h1 className="font-extrabold text-2xl sm:text-4xl lg:text-6xl tracking-tight md:-mb-4 text-center">
-            Blockchain RPC Endpoints for < br/> Web3 developers
+            Find RPC Endpoints for <br/> Any Blockchain
         </h1>
       </div>
     </div>
