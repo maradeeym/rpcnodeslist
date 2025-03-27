@@ -2246,6 +2246,43 @@ const blockchains = [
         "blockExplorer": ""
       }
     ]
+  },
+  {
+    "name": "SEI",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://sei.drpc.org",
+          "https://evm-rpc.sei-apis.com",
+          "https://node.histori.xyz/sei-mainnet/8ry9f6t9dct1se2hlagxnd9n2a"
+        ],
+        "chainId": "1329",
+        "nativeCurrency": "SEI",
+        "blockExplorer": "https://seitrace.com"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://sei-testnet.drpc.org",
+          "https://evm-ws-testnet.sei-apis.com",
+          "https://node.histori.xyz/sei-testnet/8ry9f6t9dct1se2hlagxnd9n2a"
+        ],
+        "chainId": "1328",
+        "nativeCurrency": "SEI",
+        "blockExplorer": "https://seitrace.com"
+      },
+      {
+        "network": "Devnet",
+        "rpcUrls": [
+          "https://sei-devnet.drpc.org",
+          "https://evm-rpc.arctic-1.seinetwork.io"
+        ],
+        "chainId": "713715",
+        "nativeCurrency": "SEI",
+        "blockExplorer": "https://seistream.app"
+      }
+    ]
   }
 
 ];module.exports = blockchains;
