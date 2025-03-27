@@ -1429,7 +1429,7 @@ const blockchains = [
           "https://polygon-bor.publicnode.com"
         ],
         "chainId": "0x89",
-        "nativeCurrency": "MATIC",
+        "nativeCurrency": "POL",
         "blockExplorer": "https://polygonscan.com/"
       },
       {
@@ -1439,7 +1439,7 @@ const blockchains = [
           "https://rpc-amoy.polygon.technology"
         ],
         "chainId": "0x13882",
-        "nativeCurrency": "MATIC",
+        "nativeCurrency": "POL",
         "blockExplorer": "https://www.oklink.com/amoy"
       },
       {
