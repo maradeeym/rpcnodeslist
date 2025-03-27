@@ -2265,7 +2265,7 @@ const blockchains = [
         "network": "Testnet",
         "rpcUrls": [
           "https://sei-testnet.drpc.org",
-          "https://evm-ws-testnet.sei-apis.com",
+          "https://evm-rpc-testnet.sei-apis.com",
           "https://node.histori.xyz/sei-testnet/8ry9f6t9dct1se2hlagxnd9n2a"
         ],
         "chainId": "1328",
