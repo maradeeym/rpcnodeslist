@@ -2,6 +2,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import CopyRpcUrl from './CopyRpcUrl';
+import DRPCBox from './drpcbox'; 
 
 const BlockchainDetails = ({ blockchain }) => {
   const [rpcStatus, setRpcStatus] = useState({});
@@ -53,7 +54,7 @@ const BlockchainDetails = ({ blockchain }) => {
           <h1 id={blockchain.name} className="text-xl sm:text-2xl font-bold mb-4">
             {blockchain.name} RPC Endpoints
           </h1>
-          
+          <DRPCBox />
           {blockchain.networks.map((network, idx) => (
             <div key={idx} className="mb-4 sm:mb-6">
               <h2 className="text-lg sm:text-xl font-semibold mb-2">{network.network} RPCs</h2>
