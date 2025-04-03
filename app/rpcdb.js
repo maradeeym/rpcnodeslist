@@ -2290,7 +2290,8 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://rpc.hyperliquid.xyz/evm"
+          "https://rpc.hyperliquid.xyz/evm",
+          "https://hyperliquid.drpc.org"
         ],
         "chainId": "999",
         "nativeCurrency": "HYPE",
