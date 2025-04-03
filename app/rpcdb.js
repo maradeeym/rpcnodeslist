@@ -2283,6 +2283,29 @@ const blockchains = [
         "blockExplorer": "https://seistream.app"
       }
     ]
+  },
+  {
+    "name": "Hyperliquid",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.hyperliquid.xyz/evm"
+        ],
+        "chainId": "999",
+        "nativeCurrency": "HYPE",
+        "blockExplorer": "https://app.hyperliquid.xyz/explorer"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.hyperliquid-testnet.xyz/evm"
+        ],
+        "chainId": "998",
+        "nativeCurrency": "HYPE",
+        "blockExplorer": "https://app.hyperliquid-testnet.xyz/explorer"
+      },
+    ]
   }
 
 ];module.exports = blockchains;
