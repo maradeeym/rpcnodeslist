@@ -201,6 +201,16 @@ const blockchains = [
         "chainId": "0x138de",
         "nativeCurrency": "BERA",
         "blockExplorer": "https://berascan.com/"
+      },
+      {
+        "network": "Bepolia",
+        "rpcUrls": [
+          "https://berachain-bepolia.drpc.org",
+          "https://bepolia.rpc.berachain.com"
+        ],
+        "chainId": "80069",
+        "nativeCurrency": "BERA",
+        "blockExplorer": "https://bepolia.beratrail.io/"
       }
     ]
   },
