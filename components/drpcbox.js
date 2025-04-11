@@ -38,7 +38,7 @@ const DRPCBox = () => {
         </div>
         
         <Link 
-          href="https://drpc.org?ref=e3c7c5" 
+          href="https://drpc.org?ref=e3c7c5&utm_source=rpcnodelist" 
           className="group flex items-center justify-center w-full py-3 px-4 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-all duration-200"
         >
           Connect via dRPC
