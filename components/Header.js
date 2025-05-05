@@ -9,16 +9,13 @@ import config from "@/config";
 import Modal from "@/components/Modal"; // Import Modal
 
 const links = [
-  {
-    href: "/#faq",
-    label: "FAQ",
-  },
+  // FAQ link removed as there is no FAQ section
 ];
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
 const Header = () => {
-  const searchParams = useSearchParams();
+  const searchParams =  useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false); // Add state for modal
 
