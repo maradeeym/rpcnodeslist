@@ -16,7 +16,10 @@ export const viewport = {
 
 // This adds default SEO tags to all pages in our app.
 // You can override them in each page passing params to getSOTags() function.
-export const metadata = getSEOTags();
+export const metadata = getSEOTags({
+  title: 'RPC Node List | RPC Endpoints for All Blockchains',
+  description: 'Find RPC node endpoints for all blockchain networks.',
+});
 
 export default function RootLayout({ children }) {
   return (
