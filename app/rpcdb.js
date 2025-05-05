@@ -2108,6 +2108,15 @@ const blockchains = [
         "chainId": "50104",
         "nativeCurrency": "SOPH",
         "blockExplorer": "https://explorer.sophon.xyz/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.testnet.sophon.xyz"
+        ],
+        "chainId": "531050104",
+        "nativeCurrency": "SOPH",
+        "blockExplorer": "https://explorer.sophon.xyz/"
       }
     ]
   },
