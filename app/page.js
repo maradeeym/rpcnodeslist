@@ -61,7 +61,7 @@ export default function HomePage() {
         
         {filteredBlockchains.length === 0 && (
           <div className="text-center py-8">
-            <p className="text-lg">No blockchains found matching "{searchQuery}"</p>
+            <p className="text-lg">No blockchains found matching &quot;{searchQuery}&quot;</p>
           </div>
         )}
       </main>
