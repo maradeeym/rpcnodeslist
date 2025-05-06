@@ -2242,11 +2242,22 @@ const blockchains = [
     "name": "Lens Network",
     "networks": [
       {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.lens.xyz",
+          "https://lens.drpc.org"
+        ],
+        "chainId": "232",
+        "nativeCurrency": "GHO",
+        "blockExplorer": "https://explorer.lens.xyz/"
+      },
+      {
         "network": "Testnet",
         "rpcUrls": [
+          "https://rpc.testnet.lens.dev",
           "https://lens-testnet.drpc.org"
         ],
-        "chainId": "0x90f7",
+        "chainId": "37111",
         "nativeCurrency": "GRASS",
         "blockExplorer": "https://block-explorer.testnet.lens.dev"
       }
