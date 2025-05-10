@@ -2362,6 +2362,45 @@ const blockchains = [
         "blockExplorer": "https://chainscan-galileo.0g.ai"
       },
     ]
+  },
+  {
+    "name": "Ozean",
+    "networks": [
+      {
+        "network": "Poseidon Testnet",
+        "rpcUrls": [
+          "https://ozean-poseidon-testnet.drpc.org",
+        ],
+        "chainId": "7849306",
+        "nativeCurrency": "USDX",
+        "blockExplorer": ""
+      }
+    ]
+  },
+  {
+    "name": "Ink",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc-qnd.inkonchain.com",
+          "https://ink.drpc.org"
+        ],
+        "chainId": "57073",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.inkonchain.com"
+      },
+      {
+        "network": "Sepolia Testnet",
+        "rpcUrls": [
+          "https://ink-sepolia.drpc.org",
+          "https://rpc-gel-sepolia.inkonchain.com"
+        ],
+        "chainId": "763373",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer-sepolia.inkonchain.com"
+      }
+    ]
   }
 
 ];module.exports = blockchains;
