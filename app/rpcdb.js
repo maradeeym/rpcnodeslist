@@ -2337,6 +2337,31 @@ const blockchains = [
         "blockExplorer": "https://app.hyperliquid-testnet.xyz/explorer"
       },
     ]
+  },
+  {
+    "name": "0G",
+    "networks": [
+      {
+        "network": "Newton Testnet",
+        "rpcUrls": [
+          "https://0g-newton-testnet.drpc.org",
+          "https://lightnode-json-rpc-0g.grandvalleys.com"
+        ],
+        "chainId": "16600",
+        "nativeCurrency": "A0GI",
+        "blockExplorer": "https://chainscan-newton.0g.ai"
+      },
+      {
+        "network": "Galileo Testnet",
+        "rpcUrls": [
+          "https://0g-galileo-testnet.drpc.org",
+          "https://evmrpc-testnet.0g.ai"
+        ],
+        "chainId": "80087",
+        "nativeCurrency": "OG",
+        "blockExplorer": "https://chainscan-galileo.0g.ai"
+      },
+    ]
   }
 
 ];module.exports = blockchains;
