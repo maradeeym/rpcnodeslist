@@ -2401,6 +2401,31 @@ const blockchains = [
         "blockExplorer": "https://explorer-sepolia.inkonchain.com"
       }
     ]
+  },
+  {
+    "name": "Gravity Alpha",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.gravity.xyz",
+          "https://rpc.ankr.com/gravity"
+        ],
+        "chainId": "1625",
+        "nativeCurrency": "G",
+        "blockExplorer": "https://explorer.gravity.xyz/"
+      },
+      {
+        "network": "Sepolia",
+        "rpcUrls": [
+          "https://rpc-sepolia.gravity.xyz",
+          "https://gravity-alpha-sepolia.drpc.org"
+        ],
+        "chainId": "13505",
+        "nativeCurrency": "G",
+        "blockExplorer": "https://explorer-sepolia.gravity.xyz"
+      }
+    ]
   }
 
 ];module.exports = blockchains;
