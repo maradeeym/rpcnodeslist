@@ -2426,6 +2426,54 @@ const blockchains = [
         "blockExplorer": "https://explorer-sepolia.gravity.xyz"
       }
     ]
+  },
+  {
+    "name": "KUB",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.bitkubchain.io"
+        ],
+        "chainId": "96",
+        "nativeCurrency": "KUB",
+        "blockExplorer": "https://www.kubscan.com/"
+      },
+      {
+        "network": "Sepolia",
+        "rpcUrls": [
+          "https://rpc-testnet.bitkubchain.io"
+        ],
+        "chainId": "25925",
+        "nativeCurrency": "tKUB",
+        "blockExplorer": "https://testnet.kubscan.com/"
+      }
+    ]
+  },
+  {
+    "name": "Superseed",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://mainnet.superseed.xyz",
+          "https://superseed.drpc.org"
+        ],
+        "chainId": "5330",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.superseed.xyz/"
+      },
+      {
+        "network": "Sepolia Testnet",
+        "rpcUrls": [
+          "https://sepolia.superseed.xyz",
+          "https://superseed-sepolia.drpc.org"
+        ],
+        "chainId": "53302",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://sepolia-explorer.superseed.xyz/"
+      }
+    ]
   }
 
 ];module.exports = blockchains;

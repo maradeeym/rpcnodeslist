@@ -17,7 +17,7 @@ const DRPCBox = () => {
             />
           </div>
           <div>
-            <p className="text-xl font-bold text-slate-800">dRPC</p>
+            <h2 className="text-xl font-bold text-slate-800">dRPC</h2>
             <p className="text-sm text-slate-500">Decentralized RPC Network</p>
           </div>
         </div>
