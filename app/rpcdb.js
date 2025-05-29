@@ -2474,8 +2474,30 @@ const blockchains = [
         "blockExplorer": "https://sepolia-explorer.superseed.xyz/"
       }
     ]
-  }
-
+  },
+  {
+    "name": "Hemi",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.hemi.network/rpc"
+        ],
+        "chainId": "43111",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.hemi.xyz/"
+      },
+      {
+        "network": "Sepolia Testnet",
+        "rpcUrls": [
+          "https://testnet.rpc.hemi.network/rpc"
+        ],
+        "chainId": "743111",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://testnet.explorer.hemi.xyz/"
+      }
+    ]
+  },
 ];module.exports = blockchains;
 
   
