@@ -2481,7 +2481,8 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://rpc.hemi.network/rpc"
+          "https://rpc.hemi.network/rpc",
+          "https://hemi.drpc.org"
         ],
         "chainId": "43111",
         "nativeCurrency": "ETH",
@@ -2490,11 +2491,51 @@ const blockchains = [
       {
         "network": "Sepolia Testnet",
         "rpcUrls": [
-          "https://testnet.rpc.hemi.network/rpc"
+          "https://testnet.rpc.hemi.network/rpc",
+          "https://hemi-testnet.drpc.org"
         ],
         "chainId": "743111",
         "nativeCurrency": "ETH",
         "blockExplorer": "https://testnet.explorer.hemi.xyz/"
+      }
+    ]
+  },
+  {
+    "name": "MegaETH",
+    "networks": [
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://megaeth-testnet.drpc.org"
+        ],
+        "chainId": "6342",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://megaexplorer.xyz"
+      }
+    ]
+  },
+  {
+    "name": "Morph",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.morphl2.io",
+          "https://rpc-quicknode.morphl2.io"
+        ],
+        "chainId": "2818",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.morphl2.io/"
+      },
+      {
+        "network": "Holesky Testnet",
+        "rpcUrls": [
+          "https://rpc-holesky.morphl2.io",
+          "https://rpc-quicknode-holesky.morphl2.io"
+        ],
+        "chainId": "2810",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer-holesky.morphl2.io/"
       }
     ]
   },
