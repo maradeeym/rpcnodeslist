@@ -381,14 +381,14 @@ const blockchains = [
         "blockExplorer": "https://celoscan.io/"
       },
       {
-        "network": "Alfajores Testnet",
+        "network": "Celo Sepolia",
         "rpcUrls": [
-          "https://celo-alfajores.drpc.org",
-          "https://alfajores-forno.celo-testnet.org"
+          "https://celo-sepolia.drpc.org",
+          "https://forno.celo-sepolia.celo-testnet.org/"
         ],
         "chainId": "0xaef3",
         "nativeCurrency": "CELO",
-        "blockExplorer": "https://alfajores.celoscan.io/"
+        "blockExplorer": "https://sepolia.celoscan.io/"
       }
     ]
   },
