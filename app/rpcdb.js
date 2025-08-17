@@ -60,7 +60,8 @@ const blockchains = [
           "https://arbitrum.drpc.org",
           "https://arbitrum.blockpi.network/v1/rpc/public",
           "https://rpc.ankr.com/arbitrum",
-          "https://arb1.arbitrum.io/rpc"
+          "https://arb1.arbitrum.io/rpc",
+          "https://arbitrum.api.onfinality.io/public"
         ],
         "chainId": "0xa4b1",
         "nativeCurrency": "ETH",
