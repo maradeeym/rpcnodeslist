@@ -386,7 +386,7 @@ const blockchains = [
           "https://celo-sepolia.drpc.org",
           "https://forno.celo-sepolia.celo-testnet.org/"
         ],
-        "chainId": "0xaef3",
+        "chainId": "0xAA044C",
         "nativeCurrency": "CELO",
         "blockExplorer": "https://sepolia.celoscan.io/"
       }
