@@ -755,6 +755,17 @@ const blockchains = [
         "chainId": "0x27d8",
         "nativeCurrency": "XDAI",
         "blockExplorer": "https://blockscout.chiadochain.net"
+      },
+      {
+        "network": "Beacon Chain",
+        "rpcUrls": [
+          "https://gnosis-beacon-chain.drpc.org",
+          "https://gnosis-beacon-api.publicnode.com",
+          "https://rpc-gbc.gnosischain.com"
+        ],
+        "chainId": "",
+        "nativeCurrency": "mGNO",
+        "blockExplorer": "https://beacon.gnosisscan.io/"
       }
     ]
   },
@@ -2539,7 +2550,7 @@ const blockchains = [
         "blockExplorer": "https://explorer-holesky.morphl2.io/"
       }
     ]
-  },
+  }
 ];module.exports = blockchains;
 
   
