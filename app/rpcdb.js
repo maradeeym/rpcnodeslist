@@ -2550,7 +2550,38 @@ const blockchains = [
         "blockExplorer": "https://explorer-holesky.morphl2.io/"
       }
     ]
-  }
+  },
+  {
+    "name": "Plasma",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.plasma.to",
+          "https://plasma.drpc.org"
+        ],
+        "chainId": "9745",
+        "nativeCurrency": "XPL",
+        "blockExplorer": "https://plasmascan.to/"
+      }
+    ]
+  },
+  {
+    "name": "Shibarium",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://shibarium.drpc.org",
+          "https://rpc.shibrpc.com",
+          "https://www.shibrpc.com"
+        ],
+        "chainId": "109",
+        "nativeCurrency": "BONE",
+        "blockExplorer": "https://www.shibariumscan.io/"
+      }
+    ]
+  },
 ];module.exports = blockchains;
 
   
