@@ -1617,7 +1617,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://www.shibrpc.com",
-          "https://rpc.shibrpc.com"
+          "https://rpc.shibrpc.com",
+          "https://shibarium.drpc.org"
         ],
         "chainId": "109",
         "nativeCurrency": "BONE",
@@ -2565,23 +2566,7 @@ const blockchains = [
         "blockExplorer": "https://plasmascan.to/"
       }
     ]
-  },
-  {
-    "name": "Shibarium",
-    "networks": [
-      {
-        "network": "Mainnet",
-        "rpcUrls": [
-          "https://shibarium.drpc.org",
-          "https://rpc.shibrpc.com",
-          "https://www.shibrpc.com"
-        ],
-        "chainId": "109",
-        "nativeCurrency": "BONE",
-        "blockExplorer": "https://www.shibariumscan.io/"
-      }
-    ]
-  },
+  }
 ];module.exports = blockchains;
 
   
