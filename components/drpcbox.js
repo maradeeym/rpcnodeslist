@@ -25,7 +25,7 @@ const DRPCBox = () => {
         <div className="space-y-3 mb-6">
           <div className="flex items-start">
             <Globe className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-            <p className="text-sm text-slate-700">95+ blockchain RPCs</p>
+            <p className="text-sm text-slate-700">100+ blockchain RPCs</p>
           </div>
           <div className="flex items-start">
             <Zap className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
@@ -33,7 +33,7 @@ const DRPCBox = () => {
           </div>
           <div className="flex items-start">
             <Shield className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-            <p className="text-sm text-slate-700">AI-driven load balancer</p>
+            <p className="text-sm text-slate-700">For builders and traders</p>
           </div>
         </div>
         
