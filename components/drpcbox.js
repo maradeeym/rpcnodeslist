@@ -32,7 +32,7 @@ const DRPCBox = () => {
             <p className="text-sm text-slate-700">No rate limits</p>
           </div>
           <div className="flex items-start">
-            <Shield className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+            <ArrowRight className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
             <p className="text-sm text-slate-700">For builders and traders</p>
           </div>
         </div>
