@@ -1887,8 +1887,7 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://vara.drpc.org",
-          "wss://rpc.vara.network"
+          "https://vara.drpc.org"
         ],
         "chainId": "",
         "nativeCurrency": "VARA",
@@ -1897,8 +1896,7 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://vara-testnet.drpc.org",
-          "wss://rpc.testnet.vara.network"
+          "https://vara-testnet.drpc.org"
         ],
         "chainId": "",
         "nativeCurrency": "VARA",
