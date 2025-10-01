@@ -1,6 +1,7 @@
 const blockchains = [
   {
     "name": "Algorand",
+    "logo": "https://assets.coingecko.com/coins/images/4380/large/download.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -33,6 +34,7 @@ const blockchains = [
   },
   {
     "name": "Arbitrum",
+    "logo": "https://assets.coingecko.com/coins/images/16547/large/photo_2023-03-29_21.47.00.jpeg",
     "networks": [
       {
         "network": "Blueberry Testnet",
@@ -81,6 +83,7 @@ const blockchains = [
   },
   {
     "name": "Astar",
+    "logo": "https://assets.coingecko.com/coins/images/22617/large/astr.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -105,6 +108,7 @@ const blockchains = [
   },
   {
     "name": "Aurora",
+    "logo": "https://assets.coingecko.com/coins/images/20582/large/aurora.jpeg",
     "networks": [
       {
         "network": "Mainnet",
@@ -130,6 +134,7 @@ const blockchains = [
   },
   {
     "name": "Avalanche",
+    "logo": "https://assets.coingecko.com/coins/images/12559/large/Avalanche_Circle_RedWhite_Trans.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -157,6 +162,7 @@ const blockchains = [
   },
   {
     "name": "Base",
+    "logo": "https://avatars.githubusercontent.com/u/108554348?s=200&v=4",
     "networks": [
       {
         "network": "Mainnet",
@@ -182,6 +188,7 @@ const blockchains = [
   },
   {
     "name": "Berachain",
+    "logo": "https://assets.coingecko.com/coins/images/30462/large/bera.jpg",
     "networks": [
       {
         "network": "bArtio",
@@ -217,6 +224,7 @@ const blockchains = [
   },
   {
     "name": "BNB Smart Chain",
+    "logo": "https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -268,6 +276,7 @@ const blockchains = [
   },
   {
     "name": "Bitcoin",
+    "logo": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -291,6 +300,7 @@ const blockchains = [
   },
   {
     "name": "Bitcoin Cash",
+    "logo": "https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png",
     "networks": [
       {
         "network": "Rostrum Mainnet",
@@ -305,6 +315,7 @@ const blockchains = [
   },
   {
     "name": "BitTorrent",
+    "logo": "https://assets.coingecko.com/coins/images/22457/large/btt_logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -319,6 +330,7 @@ const blockchains = [
   },
   {
     "name": "Blast",
+    "logo": "https://assets.coingecko.com/coins/images/35494/large/Blast.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -344,6 +356,7 @@ const blockchains = [
   },
   {
     "name": "Boba",
+    "logo": "https://assets.coingecko.com/coins/images/20285/large/BOBA.png",
     "networks": [
       {
         "network": "BNB Mainnet",
@@ -369,6 +382,7 @@ const blockchains = [
   },
   {
     "name": "Celo",
+    "logo": "https://assets.coingecko.com/coins/images/11090/large/InjXBNx9_400x400.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -395,6 +409,7 @@ const blockchains = [
   },
   {
     "name": "Chiliz",
+    "logo": "https://assets.coingecko.com/coins/images/8834/large/Chiliz.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -418,6 +433,7 @@ const blockchains = [
   },
   {
     "name": "Core",
+    "logo": "https://coin-images.coingecko.com/coins/images/28938/large/COREDAO_Logomark_Icon_Grad_variant.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -443,6 +459,7 @@ const blockchains = [
   },
   {
     "name": "Cronos",
+    "logo": "https://coin-images.coingecko.com/coins/images/7310/large/cro_token_logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -469,6 +486,7 @@ const blockchains = [
   },
   {
     "name": "Dymension",
+    "logo": "https://coin-images.coingecko.com/coins/images/34182/large/dym.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -484,6 +502,7 @@ const blockchains = [
   },
   {
     "name": "Elastos",
+    "logo": "https://assets.coingecko.com/coins/images/2780/large/Elastos.png",
     "networks": [
       {
         "network": "Smart Chain Mainnet",
@@ -499,6 +518,7 @@ const blockchains = [
   },
   {
     "name": "EOS",
+    "logo": "https://assets.coingecko.com/coins/images/738/large/eos-eos-logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -513,6 +533,7 @@ const blockchains = [
   },
   {
     "name": "Ethereum",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -553,6 +574,7 @@ const blockchains = [
   },
   {
     "name": "Ethereum Classic",
+    "logo": "https://assets.coingecko.com/coins/images/453/large/ethereum-classic-logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -576,6 +598,7 @@ const blockchains = [
   },
   {
     "name": "Evmos",
+    "logo": "https://assets.coingecko.com/coins/images/24023/large/evmos.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -601,6 +624,7 @@ const blockchains = [
   },
   {
     "name": "Fantom",
+    "logo": "https://assets.coingecko.com/coins/images/4001/large/Fantom_round.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -628,6 +652,7 @@ const blockchains = [
   },
   {
     "name": "Filecoin",
+    "logo": "https://assets.coingecko.com/coins/images/12817/large/filecoin.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -653,6 +678,7 @@ const blockchains = [
   },
   {
     "name": "Flare",
+    "logo": "https://assets.coingecko.com/coins/images/28624/large/FLR-icon200x200.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -694,6 +720,7 @@ const blockchains = [
   },
   {
     "name": "Flow",
+    "logo": "https://assets.coingecko.com/coins/images/13446/large/5f6294c0c7a8cda55cb1c936_Flow_Wordmark.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -717,6 +744,7 @@ const blockchains = [
   },
   {
     "name": "Fuse",
+    "logo": "https://assets.coingecko.com/coins/images/10347/large/vUXKHEe.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -733,6 +761,7 @@ const blockchains = [
   },
   {
     "name": "Gnosis",
+    "logo": "https://assets.coingecko.com/coins/images/11062/large/Identity-Primary-DarkBG.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -771,6 +800,7 @@ const blockchains = [
   },
   {
     "name": "Haqq",
+    "logo": "https://coin-images.coingecko.com/coins/images/27668/large/islm.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -796,6 +826,7 @@ const blockchains = [
   },
   {
     "name": "Harmony",
+    "logo": "https://assets.coingecko.com/coins/images/4344/large/Y88JAze.png",
     "networks": [
       {
         "network": "One Shard 0 Mainnet",
@@ -823,6 +854,7 @@ const blockchains = [
   },
   {
     "name": "Horizen",
+    "logo": "https://assets.coingecko.com/coins/images/691/large/horizen.png",
     "networks": [
       {
         "network": "EON Mainnet",
@@ -846,6 +878,7 @@ const blockchains = [
   },
   {
     "name": "Immutable zkEVM",
+    "logo": "https://assets.coingecko.com/coins/images/17233/large/immutableX-symbol-BLK-RGB.png",
     "networks": [
       {
         "network": "zkEVM Mainnet",
@@ -871,6 +904,7 @@ const blockchains = [
   },
   {
     "name": "IoTeX",
+    "logo": "https://assets.coingecko.com/coins/images/3334/large/iotex-logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -886,6 +920,7 @@ const blockchains = [
   },
   {
     "name": "Kadena",
+    "logo": "https://assets.coingecko.com/coins/images/3693/large/Logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -909,6 +944,7 @@ const blockchains = [
   },
   {
     "name": "Kava",
+    "logo": "https://assets.coingecko.com/coins/images/9761/large/kava.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -934,6 +970,7 @@ const blockchains = [
   },
   {
     "name": "Kucoin",
+    "logo": "https://assets.coingecko.com/coins/images/1047/large/sa9z79.png",
     "networks": [
       {
         "network": "KCC Mainnet",
@@ -958,6 +995,7 @@ const blockchains = [
   },
   {
     "name": "Kusama",
+    "logo": "https://assets.coingecko.com/coins/images/9568/large/m4zRhP5e_400x400.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -972,6 +1010,7 @@ const blockchains = [
   },
   {
     "name": "Linea",
+    "logo": "https://coin-images.coingecko.com/coins/images/68507/large/linea-logo.jpeg",
     "networks": [
       {
         "network": "Mainnet",
@@ -997,6 +1036,7 @@ const blockchains = [
   },
   {
     "name": "Lisk",
+    "logo": "https://assets.coingecko.com/coins/images/385/large/Lisk_Symbol_-_Blue.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1022,6 +1062,7 @@ const blockchains = [
   },
   {
     "name": "Litecoin",
+    "logo": "https://assets.coingecko.com/coins/images/2/large/litecoin.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1044,6 +1085,7 @@ const blockchains = [
   },
   {
     "name": "Manta",
+    "logo": "https://coin-images.coingecko.com/coins/images/34289/large/manta.jpg",
     "networks": [
       {
         "network": "Pacfic Mainnet",
@@ -1069,6 +1111,7 @@ const blockchains = [
   },
   {
     "name": "Mantle",
+    "logo": "https://assets.coingecko.com/coins/images/30980/large/token-logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1094,6 +1137,7 @@ const blockchains = [
   },
   {
     "name": "Metis",
+    "logo": "https://assets.coingecko.com/coins/images/15595/large/metis.jpeg",
     "networks": [
       {
         "network": "Mainnet",
@@ -1109,6 +1153,7 @@ const blockchains = [
   },
   {
     "name": "Mode",
+    "logo": "https://coin-images.coingecko.com/coins/images/34979/large/MODE.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -1134,6 +1179,7 @@ const blockchains = [
   },
   {
     "name": "Monad",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Testnet",
@@ -1148,6 +1194,7 @@ const blockchains = [
   },
   {
     "name": "Moonbeam",
+    "logo": "https://assets.coingecko.com/coins/images/22459/large/glmr.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1173,6 +1220,7 @@ const blockchains = [
   },
   {
     "name": "Moonriver",
+    "logo": "https://assets.coingecko.com/coins/images/17984/large/9285.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1190,6 +1238,7 @@ const blockchains = [
   },
   {
     "name": "MultiversX",
+    "logo": "https://assets.coingecko.com/coins/images/12335/large/egld-token-logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1213,6 +1262,7 @@ const blockchains = [
   },
   {
     "name": "Nahmii",
+    "logo": "https://assets.coingecko.com/coins/images/11805/large/NII_Token.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -1238,6 +1288,7 @@ const blockchains = [
   },
   {
     "name": "Near",
+    "logo": "https://assets.coingecko.com/coins/images/10365/large/near.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -1264,6 +1315,7 @@ const blockchains = [
   },
   {
     "name": "Neon EVM",
+    "logo": "https://assets.coingecko.com/coins/images/26519/large/Neon.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1289,6 +1341,7 @@ const blockchains = [
   },
   {
     "name": "Oasis",
+    "logo": "https://assets.coingecko.com/coins/images/13162/large/rose.png",
     "networks": [
       {
         "network": "Emerald Mainnet",
@@ -1312,6 +1365,7 @@ const blockchains = [
   },
   {
     "name": "OKT Chain",
+    "logo": "https://assets.coingecko.com/coins/images/13708/large/WeChat_Image_20220118095654.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1337,6 +1391,7 @@ const blockchains = [
   },
   {
     "name": "Optimism",
+    "logo": "https://assets.coingecko.com/coins/images/25244/large/Optimism.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1362,6 +1417,7 @@ const blockchains = [
   },
   {
     "name": "Palm",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1385,6 +1441,7 @@ const blockchains = [
   },
   {
     "name": "Pando",
+    "logo": "https://assets.coingecko.com/coins/images/17764/large/pando.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1400,6 +1457,7 @@ const blockchains = [
   },
   {
     "name": "Playnance",
+    "logo": "https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1415,6 +1473,7 @@ const blockchains = [
   },
   {
     "name": "Polkadot",
+    "logo": "https://assets.coingecko.com/coins/images/12171/large/polkadot.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1438,6 +1497,7 @@ const blockchains = [
   },
   {
     "name": "Polygon",
+    "logo": "https://assets.coingecko.com/coins/images/4713/large/polygon.png",
     "networks": [
       {
         "network": "POS Mainnet",
@@ -1496,6 +1556,7 @@ const blockchains = [
   },
   {
     "name": "re.al",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1511,6 +1572,7 @@ const blockchains = [
   },
   {
     "name": "Ripple",
+    "logo": "https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1536,6 +1598,7 @@ const blockchains = [
   },
   {
     "name": "Ronin",
+    "logo": "https://coin-images.coingecko.com/coins/images/20009/large/photo_2024-04-06_22-52-24.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -1560,6 +1623,7 @@ const blockchains = [
   },
   {
     "name": "Rootstock",
+    "logo": "https://assets.coingecko.com/coins/images/3626/large/rbtc.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1585,6 +1649,7 @@ const blockchains = [
   },
   {
     "name": "Scroll",
+    "logo": "https://coin-images.coingecko.com/coins/images/50571/large/scroll.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -1610,6 +1675,7 @@ const blockchains = [
   },
   {
     "name": "Shibarium",
+    "logo": "https://coin-images.coingecko.com/coins/images/16916/large/bone_icon.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1626,6 +1692,7 @@ const blockchains = [
   },
   {
     "name": "SmartBCH",
+    "logo": "https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1650,6 +1717,7 @@ const blockchains = [
   },
   {
     "name": "Solana",
+    "logo": "https://assets.coingecko.com/coins/images/4128/large/solana.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1686,6 +1754,7 @@ const blockchains = [
   },
   {
     "name": "Sonic",
+    "logo": "https://assets.coingecko.com/coins/images/35670/large/sonic.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -1711,6 +1780,7 @@ const blockchains = [
   },
   {
     "name": "Stellar",
+    "logo": "https://assets.coingecko.com/coins/images/100/large/Stellar_symbol_black_RGB.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1734,6 +1804,7 @@ const blockchains = [
   },
   {
     "name": "Taiko",
+    "logo": "https://assets.coingecko.com/coins/images/33835/large/taiko.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1759,6 +1830,7 @@ const blockchains = [
   },
   {
     "name": "Telos",
+    "logo": "https://assets.coingecko.com/coins/images/7588/large/telos.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1786,6 +1858,7 @@ const blockchains = [
   },
   {
     "name": "Tezos",
+    "logo": "https://assets.coingecko.com/coins/images/976/large/Tezos-logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1809,6 +1882,7 @@ const blockchains = [
   },
   {
     "name": "Thundercore",
+    "logo": "https://assets.coingecko.com/coins/images/7950/large/Thunder_Token_256x256.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1834,6 +1908,7 @@ const blockchains = [
   },
   {
     "name": "Tron",
+    "logo": "https://assets.coingecko.com/coins/images/1094/large/tron-logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1868,6 +1943,7 @@ const blockchains = [
   },
   {
     "name": "Ubiq",
+    "logo": "https://assets.coingecko.com/coins/images/241/large/ubiq.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1883,6 +1959,7 @@ const blockchains = [
   },
   {
     "name": "Vara",
+    "logo": "https://assets.coingecko.com/coins/images/30073/large/vara-network-cmc.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1906,6 +1983,7 @@ const blockchains = [
   },
   {
     "name": "Vechain",
+    "logo": "https://assets.coingecko.com/coins/images/1167/large/VeChain-Logo-768x725.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1929,6 +2007,7 @@ const blockchains = [
   },
   {
     "name": "XDC",
+    "logo": "https://assets.coingecko.com/coins/images/2912/large/xdc-icon.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1952,6 +2031,7 @@ const blockchains = [
   },
   {
     "name": "Zcash",
+    "logo": "https://assets.coingecko.com/coins/images/486/large/circle-zcash-color.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -1975,6 +2055,7 @@ const blockchains = [
   },
   {
     "name": "ZetaChain",
+    "logo": "https://assets.coingecko.com/coins/images/24651/large/zetachain.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -2000,6 +2081,7 @@ const blockchains = [
   },
   {
     "name": "Zilliqa",
+    "logo": "https://assets.coingecko.com/coins/images/2687/large/Zilliqa-logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2023,6 +2105,7 @@ const blockchains = [
   },
   {
     "name": "zkSync Era",
+    "logo": "https://assets.coingecko.com/coins/images/28206/large/ftxG9_TJ_400x400.jpeg",
     "networks": [
       {
         "network": "Mainnet",
@@ -2048,6 +2131,7 @@ const blockchains = [
   },
   {
     "name": "Zora",
+    "logo": "https://assets.coingecko.com/coins/images/34753/large/Zora-Logo-Round-200px.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2073,6 +2157,7 @@ const blockchains = [
   },
   {
     "name": "Zircuit",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2108,6 +2193,7 @@ const blockchains = [
   },
   {
     "name": "Sophon",
+    "logo": "https://assets.coingecko.com/coins/images/37898/large/Sophon_Token.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2131,6 +2217,7 @@ const blockchains = [
   },
   {
     "name": "GOAT Network",
+    "logo": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png",
     "networks": [
       {
         "network": "Alpha Mainnet",
@@ -2154,6 +2241,7 @@ const blockchains = [
   },
   {
     "name": "Ethereum Beacon",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2186,6 +2274,7 @@ const blockchains = [
   },
   {
     "name": "Mezo",
+    "logo": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png",
     "networks": [
       {
         "network": "Testnet",
@@ -2201,6 +2290,7 @@ const blockchains = [
   },
   {
     "name": "Swell",
+    "logo": "https://assets.coingecko.com/coins/images/29169/large/SWELL-Token-Light.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2226,6 +2316,7 @@ const blockchains = [
   },
   {
     "name": "Soneium",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2249,6 +2340,7 @@ const blockchains = [
   },
   {
     "name": "Lens Network",
+    "logo": "https://assets.coingecko.com/coins/images/31841/large/lens-protocol-logo-black.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2274,6 +2366,7 @@ const blockchains = [
   },
   {
     "name": "Merlin",
+    "logo": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2288,6 +2381,7 @@ const blockchains = [
   },
   {
     "name": "SEI",
+    "logo": "https://assets.coingecko.com/coins/images/28205/large/Sei_Logo_-_Transparent.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2325,6 +2419,7 @@ const blockchains = [
   },
   {
     "name": "Hyperliquid",
+    "logo": "https://assets.coingecko.com/coins/images/38250/large/HYPE.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2349,6 +2444,7 @@ const blockchains = [
   },
   {
     "name": "0G",
+    "logo": "https://assets.coingecko.com/coins/images/37142/large/token_logo.png",
     "networks": [
       {
         "network": "Newton Testnet",
@@ -2374,6 +2470,7 @@ const blockchains = [
   },
   {
     "name": "Ozean",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Poseidon Testnet",
@@ -2388,6 +2485,7 @@ const blockchains = [
   },
   {
     "name": "Ink",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2413,6 +2511,7 @@ const blockchains = [
   },
   {
     "name": "Gravity Alpha",
+    "logo": "https://assets.coingecko.com/coins/images/39078/large/gravity.jpeg",
     "networks": [
       {
         "network": "Mainnet",
@@ -2438,6 +2537,7 @@ const blockchains = [
   },
   {
     "name": "KUB",
+    "logo": "https://assets.coingecko.com/coins/images/15760/large/KUB.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2461,6 +2561,7 @@ const blockchains = [
   },
   {
     "name": "Superseed",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2486,6 +2587,7 @@ const blockchains = [
   },
   {
     "name": "Hemi",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2511,6 +2613,7 @@ const blockchains = [
   },
   {
     "name": "MegaETH",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Testnet",
@@ -2525,6 +2628,7 @@ const blockchains = [
   },
   {
     "name": "Morph",
+    "logo": "https://assets.coingecko.com/coins/images/31966/large/morph.jpg",
     "networks": [
       {
         "network": "Mainnet",
@@ -2550,6 +2654,7 @@ const blockchains = [
   },
   {
     "name": "Plasma",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2565,6 +2670,7 @@ const blockchains = [
   },
   {
     "name": "Worldchain",
+    "logo": "https://assets.coingecko.com/coins/images/31069/large/worldcoin.jpeg",
     "networks": [
       {
         "network": "Mainnet",
@@ -2590,6 +2696,7 @@ const blockchains = [
   },
   {
     "name": "Starknet",
+    "logo": "https://assets.coingecko.com/coins/images/26433/large/starknet.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2615,6 +2722,7 @@ const blockchains = [
   },
   {
     "name": "Aptos",
+    "logo": "https://assets.coingecko.com/coins/images/26455/large/aptos_round.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2640,6 +2748,7 @@ const blockchains = [
   },
   {
     "name": "Sui",
+    "logo": "https://assets.coingecko.com/coins/images/26375/large/sui_asset.jpeg",
     "networks": [
       {
         "network": "Mainnet",
@@ -2665,6 +2774,7 @@ const blockchains = [
   },
   {
     "name": "TON",
+    "logo": "https://assets.coingecko.com/coins/images/17980/large/ton_symbol.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2690,6 +2800,7 @@ const blockchains = [
   },
   {
     "name": "Injective",
+    "logo": "https://assets.coingecko.com/coins/images/12882/large/Secondary_Symbol.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2715,6 +2826,7 @@ const blockchains = [
   },
   {
     "name": "Fraxtal",
+    "logo": "https://assets.coingecko.com/coins/images/13422/large/FRAX_icon.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2740,6 +2852,7 @@ const blockchains = [
   },
   {
     "name": "X Layer",
+    "logo": "https://assets.coingecko.com/coins/images/1042/large/okex.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2765,6 +2878,7 @@ const blockchains = [
   },
   {
     "name": "Redstone",
+    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2790,6 +2904,7 @@ const blockchains = [
   },
   {
     "name": "Cyber",
+    "logo": "https://assets.coingecko.com/coins/images/36609/large/cyber.jpg",
     "networks": [
       {
         "network": "Mainnet",

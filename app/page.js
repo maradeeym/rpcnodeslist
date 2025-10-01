@@ -40,7 +40,16 @@ export default function HomePage() {
           {filteredBlockchains.map((blockchain, idx) => (
             <div key={idx} className="card bg-base-100 shadow-xl">
               <div className="card-body">
-                <h2 className="card-title text-xl">{blockchain.name}</h2>
+                <h2 className="card-title text-xl">
+                  {blockchain.logo && (
+                    <img
+                      src={blockchain.logo}
+                      alt={`${blockchain.name} logo`}
+                      className="w-8 h-8 rounded-full"
+                    />
+                  )}
+                  {blockchain.name}
+                </h2>
                 <div className="divider my-2"></div>
                 <ul className="space-y-2">
                   {blockchain.networks.map((network, networkIdx) => {
