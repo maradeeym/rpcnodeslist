@@ -1419,8 +1419,7 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://polkadot.drpc.org",
-          "wss://rpc.polkadot.io"
+          "https://polkadot.drpc.org"
         ],
         "chainId": "",
         "nativeCurrency": "DOT",
@@ -1429,7 +1428,7 @@ const blockchains = [
       {
         "network": "Westend Testnet",
         "rpcUrls": [
-          "wss://westend-rpc.polkadot.io"
+          "https://westend.dotters.network/polkadot"
         ],
         "chainId": "",
         "nativeCurrency": "DOT",
