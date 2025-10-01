@@ -962,8 +962,7 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://kusama.drpc.org",
-          "wss://kusama-rpc.polkadot.io"
+          "https://kusama.drpc.org"
         ],
         "chainId": "",
         "nativeCurrency": "KSM",
