@@ -2566,6 +2566,256 @@ const blockchains = [
         "blockExplorer": "https://plasmascan.to/"
       }
     ]
+  },
+  {
+    "name": "Worldchain",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://worldchain-mainnet.g.alchemy.com/public",
+          "https://worldchain.drpc.org"
+        ],
+        "chainId": "480",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://worldchain-mainnet.explorer.alchemy.com/"
+      },
+      {
+        "network": "Sepolia Testnet",
+        "rpcUrls": [
+          "https://worldchain-sepolia.g.alchemy.com/public",
+          "https://worldchain-sepolia.drpc.org"
+        ],
+        "chainId": "4801",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://worldchain-sepolia.explorer.alchemy.com/"
+      }
+    ]
+  },
+  {
+    "name": "Starknet",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://starknet-mainnet.public.blastapi.io",
+          "https://starknet.drpc.org"
+        ],
+        "chainId": "SN_MAIN",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://starkscan.co/"
+      },
+      {
+        "network": "Sepolia Testnet",
+        "rpcUrls": [
+          "https://starknet-sepolia.public.blastapi.io",
+          "https://starknet-sepolia.drpc.org"
+        ],
+        "chainId": "SN_SEPOLIA",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://sepolia.starkscan.co/"
+      }
+    ]
+  },
+  {
+    "name": "Aptos",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://fullnode.mainnet.aptoslabs.com/v1",
+          "https://aptos.drpc.org"
+        ],
+        "chainId": "1",
+        "nativeCurrency": "APT",
+        "blockExplorer": "https://explorer.aptoslabs.com/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://fullnode.testnet.aptoslabs.com/v1",
+          "https://aptos-testnet.drpc.org"
+        ],
+        "chainId": "2",
+        "nativeCurrency": "APT",
+        "blockExplorer": "https://explorer.aptoslabs.com/?network=testnet"
+      }
+    ]
+  },
+  {
+    "name": "Sui",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://fullnode.mainnet.sui.io",
+          "https://sui.drpc.org"
+        ],
+        "chainId": "35834a8a",
+        "nativeCurrency": "SUI",
+        "blockExplorer": "https://suiscan.xyz/mainnet/home"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://fullnode.testnet.sui.io",
+          "https://sui-testnet.drpc.org"
+        ],
+        "chainId": "4c78adac",
+        "nativeCurrency": "SUI",
+        "blockExplorer": "https://suiscan.xyz/testnet/home"
+      }
+    ]
+  },
+  {
+    "name": "TON",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://toncenter.com/api/v2/jsonRPC",
+          "https://ton.drpc.org"
+        ],
+        "chainId": "",
+        "nativeCurrency": "TON",
+        "blockExplorer": "https://tonscan.org/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://testnet.toncenter.com/api/v2/jsonRPC",
+          "https://ton-testnet.drpc.org"
+        ],
+        "chainId": "",
+        "nativeCurrency": "TON",
+        "blockExplorer": "https://testnet.tonscan.org/"
+      }
+    ]
+  },
+  {
+    "name": "Injective",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://sentry.lcd.injective.network:443",
+          "https://injective.drpc.org"
+        ],
+        "chainId": "injective-1",
+        "nativeCurrency": "INJ",
+        "blockExplorer": "https://explorer.injective.network/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://testnet.sentry.lcd.injective.network:443",
+          "https://injective-testnet.drpc.org"
+        ],
+        "chainId": "injective-888",
+        "nativeCurrency": "INJ",
+        "blockExplorer": "https://testnet.explorer.injective.network/"
+      }
+    ]
+  },
+  {
+    "name": "Fraxtal",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.frax.com",
+          "https://fraxtal.drpc.org"
+        ],
+        "chainId": "0xfc",
+        "nativeCurrency": "frxETH",
+        "blockExplorer": "https://fraxscan.com/"
+      },
+      {
+        "network": "Holesky Testnet",
+        "rpcUrls": [
+          "https://rpc.testnet.frax.com",
+          "https://fraxtal-testnet.drpc.org"
+        ],
+        "chainId": "0x9d2",
+        "nativeCurrency": "frxETH",
+        "blockExplorer": "https://holesky.fraxscan.com/"
+      }
+    ]
+  },
+  {
+    "name": "X Layer",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.xlayer.tech",
+          "https://xlayerrpc.okx.com"
+        ],
+        "chainId": "0xc4",
+        "nativeCurrency": "OKB",
+        "blockExplorer": "https://www.okx.com/web3/explorer/xlayer"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://testrpc.xlayer.tech",
+          "https://xlayertestrpc.okx.com"
+        ],
+        "chainId": "0xc3",
+        "nativeCurrency": "OKB",
+        "blockExplorer": "https://www.okx.com/web3/explorer/xlayer-test"
+      }
+    ]
+  },
+  {
+    "name": "Redstone",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.redstonechain.com",
+          "https://redstone.drpc.org"
+        ],
+        "chainId": "0x2bc",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.redstone.xyz/"
+      },
+      {
+        "network": "Holesky Testnet",
+        "rpcUrls": [
+          "https://rpc.holesky.redstone.xyz",
+          "https://redstone-holesky.drpc.org"
+        ],
+        "chainId": "0x445b",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.holesky.redstone.xyz/"
+      }
+    ]
+  },
+  {
+    "name": "Cyber",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://cyber.alt.technology",
+          "https://rpc.cyber.co"
+        ],
+        "chainId": "0x1df6",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://cyberscan.co/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://cyber-testnet.alt.technology",
+          "https://rpc.testnet.cyber.co"
+        ],
+        "chainId": "0x1df5",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://testnet.cyberscan.co/"
+      }
+    ]
   }
 ];module.exports = blockchains;
 
