@@ -59,8 +59,15 @@ const NetworkDetails = ({ blockchain, network }) => {
       </Suspense>
       <div className="p-4 sm:p-6 bg-base-200">
         <div className="flex flex-col mb-6 sm:mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
-          <h1 className="text-xl sm:text-2xl font-bold mb-4">
-            {blockchain.name} {network.network} RPC Endpoints
+          <h1 className="text-xl sm:text-2xl font-bold mb-4 flex items-center gap-3">
+            {blockchain.logo && (
+              <img
+                src={blockchain.logo}
+                alt={`${blockchain.name} logo`}
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+              />
+            )}
+            <span>{blockchain.name} {network.network} RPC Endpoints</span>
           </h1>
           
           {/* Navigation links to other networks */}

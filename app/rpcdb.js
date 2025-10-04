@@ -1754,7 +1754,7 @@ const blockchains = [
   },
   {
     "name": "Sonic",
-    "logo": "https://assets.coingecko.com/coins/images/35670/large/sonic.jpg",
+    "logo": "https://coin-images.coingecko.com/coins/images/38108/large/200x200_Sonic_Logo.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2193,7 +2193,7 @@ const blockchains = [
   },
   {
     "name": "Sophon",
-    "logo": "https://assets.coingecko.com/coins/images/37898/large/Sophon_Token.png",
+    "logo": "https://coin-images.coingecko.com/coins/images/38680/large/sophon_logo_200.png",
     "networks": [
       {
         "network": "Mainnet",
@@ -2419,7 +2419,7 @@ const blockchains = [
   },
   {
     "name": "Hyperliquid",
-    "logo": "https://assets.coingecko.com/coins/images/38250/large/HYPE.png",
+    "logo": "https://coin-images.coingecko.com/coins/images/50882/large/hyperliquid.jpg",
     "networks": [
       {
         "network": "Mainnet",
