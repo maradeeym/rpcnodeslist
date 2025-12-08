@@ -2718,6 +2718,15 @@ const blockchains = [
         "chainId": "2201",
         "nativeCurrency": "gUSDT",
         "blockExplorer": "https://testnet.stablescan.xyz"
+      },
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.stable.xyz"
+        ],
+        "chainId": "0x3dc",
+        "nativeCurrency": "gUSDT",
+        "blockExplorer": "https://stablescan.xyz"
       }
     ]
   },
