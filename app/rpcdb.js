@@ -1179,16 +1179,28 @@ const blockchains = [
   },
   {
     "name": "Monad",
-    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
+    "logo": "https://logo.svgcdn.com/token-branded/monad.svg",
     "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.monad.xyz",
+          "https://rpc1.monad.xyz",
+          "https://rpc3.monad.xyz",
+          "https://monad-mainnet.drpc.org"
+        ],
+        "chainId": "0x8f",
+        "nativeCurrency": "MON",
+        "blockExplorer": "https://monadscan.com"
+      },
       {
         "network": "Testnet",
         "rpcUrls": [
           "https://monad-testnet.drpc.org",
         ],
         "chainId": "0x279f",
-        "nativeCurrency": "",
-        "blockExplorer": ""
+        "nativeCurrency": "MON",
+        "blockExplorer": "https://testnet.monadscan.com"
       },
     ]
   },
@@ -2691,6 +2703,21 @@ const blockchains = [
         "chainId": "4801",
         "nativeCurrency": "ETH",
         "blockExplorer": "https://worldchain-sepolia.explorer.alchemy.com/"
+      }
+    ]
+  },
+  {
+    "name": "Stable",
+    "logo": "/stable-logotype-dark.svg",
+    "networks": [
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.testnet.stable.xyz"
+        ],
+        "chainId": "2201",
+        "nativeCurrency": "gUSDT",
+        "blockExplorer": "https://testnet.stablescan.xyz"
       }
     ]
   },
