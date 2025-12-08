@@ -2497,7 +2497,7 @@ const blockchains = [
   },
   {
     "name": "Ink",
-    "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
+    "logo": "https://docs.inkonchain.com/logo/ink-logo-light.svg",
     "networks": [
       {
         "network": "Mainnet",
