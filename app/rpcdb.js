@@ -1869,6 +1869,21 @@ const blockchains = [
     ]
   },
   {
+    "name": "Tempo",
+    "logo": "/tempo-logo.jpg",
+    "networks": [
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.testnet.tempo.xyz"
+        ],
+        "chainId": "0xa5bd",
+        "nativeCurrency": "USD",
+        "blockExplorer": "https://explore.tempo.xyz"
+      }
+    ]
+  },
+  {
     "name": "Tezos",
     "logo": "https://assets.coingecko.com/coins/images/976/large/Tezos-logo.png",
     "networks": [
