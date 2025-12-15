@@ -2392,6 +2392,21 @@ const blockchains = [
     ]
   },
   {
+    "name": "Midnight",
+    "logo": "https://assets.coingecko.com/coins/images/71015/standard/midnight.png?1765193080",
+    "networks": [
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.testnet-02.midnight.network/"
+        ],
+        "chainId": "",
+        "nativeCurrency": "NIGHT",
+        "blockExplorer": "https://www.midnightexplorer.com/"
+      }
+    ]
+  },
+  {
     "name": "Merlin",
     "logo": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png",
     "networks": [
