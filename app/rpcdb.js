@@ -1873,11 +1873,20 @@ const blockchains = [
     "logo": "/tempo-logo.jpg",
     "networks": [
       {
-        "network": "Testnet",
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.tempo.xyz"
+        ],
+        "chainId": "0x1079",
+        "nativeCurrency": "USD",
+        "blockExplorer": "https://explore.tempo.xyz"
+      },
+      {
+        "network": "Moderato Testnet",
         "rpcUrls": [
           "https://rpc.testnet.tempo.xyz"
         ],
-        "chainId": "0xa5bd",
+        "chainId": "0xA5BF",
         "nativeCurrency": "USD",
         "blockExplorer": "https://explore.tempo.xyz"
       }
@@ -3415,6 +3424,21 @@ const blockchains = [
         "chainId": "",
         "nativeCurrency": "WAXP",
         "blockExplorer": "https://testnet.waxblock.io/"
+      }
+    ]
+  },
+  {
+    "name": "Robinhood Chain",
+    "logo": "https://assets.coingecko.com/coins/images/6422/large/HOOD.png",
+    "networks": [
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.testnet.chain.robinhood.com"
+        ],
+        "chainId": "0xB636",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.testnet.chain.robinhood.com/"
       }
     ]
   },
