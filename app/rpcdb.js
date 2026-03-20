@@ -1873,11 +1873,20 @@ const blockchains = [
     "logo": "/tempo-logo.jpg",
     "networks": [
       {
-        "network": "Testnet",
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.tempo.xyz"
+        ],
+        "chainId": "0x1079",
+        "nativeCurrency": "USD",
+        "blockExplorer": "https://explore.tempo.xyz"
+      },
+      {
+        "network": "Moderato Testnet",
         "rpcUrls": [
           "https://rpc.testnet.tempo.xyz"
         ],
-        "chainId": "0xa5bd",
+        "chainId": "0xA5BF",
         "nativeCurrency": "USD",
         "blockExplorer": "https://explore.tempo.xyz"
       }
@@ -2991,6 +3000,470 @@ const blockchains = [
         "chainId": "0x1df5",
         "nativeCurrency": "ETH",
         "blockExplorer": "https://testnet.cyberscan.co/"
+      }
+    ]
+  },
+  {
+    "name": "Abstract",
+    "logo": "https://assets.coingecko.com/coins/images/36237/large/abstract.jpg",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://api.mainnet.abs.xyz"
+        ],
+        "chainId": "0xAB5",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://abscan.org/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://api.testnet.abs.xyz"
+        ],
+        "chainId": "0x2B74",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://sepolia.abscan.org/"
+      }
+    ]
+  },
+  {
+    "name": "Apechain",
+    "logo": "https://assets.coingecko.com/coins/images/24383/large/apecoin.jpg",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.apechain.com/http"
+        ],
+        "chainId": "0x8173",
+        "nativeCurrency": "APE",
+        "blockExplorer": "https://apescan.io/"
+      },
+      {
+        "network": "Curtis Testnet",
+        "rpcUrls": [
+          "https://rpc.curtis.apechain.com/http"
+        ],
+        "chainId": "0x8157",
+        "nativeCurrency": "APE",
+        "blockExplorer": "https://curtis.apescan.io/"
+      }
+    ]
+  },
+  {
+    "name": "BOB",
+    "logo": "https://assets.coingecko.com/coins/images/37069/large/bob.jpg",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.gobob.xyz"
+        ],
+        "chainId": "0xED88",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.gobob.xyz/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://testnet.rpc.gobob.xyz"
+        ],
+        "chainId": "0xC57AD",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://testnet-explorer.gobob.xyz/"
+      }
+    ]
+  },
+  {
+    "name": "Canto",
+    "logo": "https://assets.coingecko.com/coins/images/26959/large/canto.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://canto.gravitychain.io",
+          "https://jsonrpc.canto.nodestake.top",
+          "https://canto.drpc.org"
+        ],
+        "chainId": "0x1E14",
+        "nativeCurrency": "CANTO",
+        "blockExplorer": "https://tuber.build/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://canto-testnet.plexnode.wtf"
+        ],
+        "chainId": "0x1E15",
+        "nativeCurrency": "CANTO",
+        "blockExplorer": "https://testnet.tuber.build/"
+      }
+    ]
+  },
+  {
+    "name": "Celestia",
+    "logo": "https://assets.coingecko.com/coins/images/31967/large/tia.jpg",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.lunaroasis.net",
+          "https://celestia-rpc.publicnode.com"
+        ],
+        "chainId": "",
+        "nativeCurrency": "TIA",
+        "blockExplorer": "https://celenium.io/"
+      },
+      {
+        "network": "Mocha Testnet",
+        "rpcUrls": [
+          "https://rpc-mocha.pops.one",
+          "https://celestia-testnet-rpc.publicnode.com"
+        ],
+        "chainId": "",
+        "nativeCurrency": "TIA",
+        "blockExplorer": "https://mocha.celenium.io/"
+      }
+    ]
+  },
+  {
+    "name": "Conflux",
+    "logo": "https://assets.coingecko.com/coins/images/13079/large/3vuYMbjN.png",
+    "networks": [
+      {
+        "network": "eSpace Mainnet",
+        "rpcUrls": [
+          "https://evm.confluxrpc.com",
+          "https://conflux-espace-public.unifra.io"
+        ],
+        "chainId": "0x406",
+        "nativeCurrency": "CFX",
+        "blockExplorer": "https://evm.confluxscan.io/"
+      },
+      {
+        "network": "eSpace Testnet",
+        "rpcUrls": [
+          "https://evmtestnet.confluxrpc.com"
+        ],
+        "chainId": "0x47",
+        "nativeCurrency": "CFX",
+        "blockExplorer": "https://evmtestnet.confluxscan.io/"
+      }
+    ]
+  },
+  {
+    "name": "Dogecoin",
+    "logo": "https://assets.coingecko.com/coins/images/5/large/dogecoin.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.ankr.com/dogecoin",
+          "https://dogecoin.drpc.org"
+        ],
+        "chainId": "",
+        "nativeCurrency": "DOGE",
+        "blockExplorer": "https://dogechain.info/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.ankr.com/dogecoin_testnet"
+        ],
+        "chainId": "",
+        "nativeCurrency": "DOGE",
+        "blockExplorer": "https://blockexplorer.one/dogecoin/testnet"
+      }
+    ]
+  },
+  {
+    "name": "Hedera",
+    "logo": "https://assets.coingecko.com/coins/images/3688/large/hbar.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://mainnet.hashio.io/api"
+        ],
+        "chainId": "0x127",
+        "nativeCurrency": "HBAR",
+        "blockExplorer": "https://hashscan.io/mainnet/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://testnet.hashio.io/api"
+        ],
+        "chainId": "0x128",
+        "nativeCurrency": "HBAR",
+        "blockExplorer": "https://hashscan.io/testnet/"
+      }
+    ]
+  },
+  {
+    "name": "IOTA EVM",
+    "logo": "https://assets.coingecko.com/coins/images/692/large/IOTA_Swirl.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://json-rpc.evm.iotaledger.net"
+        ],
+        "chainId": "0x2276",
+        "nativeCurrency": "IOTA",
+        "blockExplorer": "https://explorer.evm.iota.org/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://json-rpc.evm.testnet.iotaledger.net"
+        ],
+        "chainId": "0x433",
+        "nativeCurrency": "IOTA",
+        "blockExplorer": "https://explorer.evm.testnet.iotaledger.net/"
+      }
+    ]
+  },
+  {
+    "name": "Kaia",
+    "logo": "https://assets.coingecko.com/coins/images/9672/large/KAIA_Token.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://public-en.node.kaia.io",
+          "https://rpc.ankr.com/klaytn",
+          "https://klaytn.drpc.org"
+        ],
+        "chainId": "0x2019",
+        "nativeCurrency": "KAIA",
+        "blockExplorer": "https://kaiascan.io/"
+      },
+      {
+        "network": "Kairos Testnet",
+        "rpcUrls": [
+          "https://public-en-kairos.node.kaia.io",
+          "https://rpc.ankr.com/klaytn_testnet"
+        ],
+        "chainId": "0x3E9",
+        "nativeCurrency": "KAIA",
+        "blockExplorer": "https://kairos.kaiascan.io/"
+      }
+    ]
+  },
+  {
+    "name": "Oasys",
+    "logo": "https://assets.coingecko.com/coins/images/25569/large/oasys.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.mainnet.oasys.games"
+        ],
+        "chainId": "0xF8",
+        "nativeCurrency": "OAS",
+        "blockExplorer": "https://scan.oasys.games/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.testnet.oasys.games"
+        ],
+        "chainId": "0x249C",
+        "nativeCurrency": "OAS",
+        "blockExplorer": "https://scan.testnet.oasys.games/"
+      }
+    ]
+  },
+  {
+    "name": "opBNB",
+    "logo": "https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://opbnb-mainnet-rpc.bnbchain.org",
+          "https://opbnb.publicnode.com",
+          "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
+        ],
+        "chainId": "0xCC",
+        "nativeCurrency": "BNB",
+        "blockExplorer": "https://opbnbscan.com/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://opbnb-testnet-rpc.bnbchain.org",
+          "https://opbnb-testnet.publicnode.com"
+        ],
+        "chainId": "0x15EB",
+        "nativeCurrency": "BNB",
+        "blockExplorer": "https://testnet.opbnbscan.com/"
+      }
+    ]
+  },
+  {
+    "name": "Stacks",
+    "logo": "https://assets.coingecko.com/coins/images/2069/large/Stacks_logo_full.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://stacks-node-api.mainnet.stacks.co"
+        ],
+        "chainId": "",
+        "nativeCurrency": "STX",
+        "blockExplorer": "https://explorer.hiro.so/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://stacks-node-api.testnet.stacks.co"
+        ],
+        "chainId": "",
+        "nativeCurrency": "STX",
+        "blockExplorer": "https://explorer.hiro.so/?chain=testnet"
+      }
+    ]
+  },
+  {
+    "name": "Story",
+    "logo": "https://assets.coingecko.com/coins/images/39173/large/story.jpg",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://mainnet.storyrpc.io",
+          "https://story.drpc.org"
+        ],
+        "chainId": "0x5EC",
+        "nativeCurrency": "IP",
+        "blockExplorer": "https://storyscan.xyz/"
+      },
+      {
+        "network": "Aeneid Testnet",
+        "rpcUrls": [
+          "https://aeneid.storyrpc.io"
+        ],
+        "chainId": "0x523",
+        "nativeCurrency": "IP",
+        "blockExplorer": "https://aeneid.storyscan.xyz/"
+      }
+    ]
+  },
+  {
+    "name": "Unichain",
+    "logo": "https://assets.coingecko.com/coins/images/12504/large/uni.jpg",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://mainnet.unichain.org",
+          "https://unichain.drpc.org"
+        ],
+        "chainId": "0x82",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://uniscan.xyz/"
+      },
+      {
+        "network": "Sepolia Testnet",
+        "rpcUrls": [
+          "https://sepolia.unichain.org"
+        ],
+        "chainId": "0x515",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://sepolia.uniscan.xyz/"
+      }
+    ]
+  },
+  {
+    "name": "Viction",
+    "logo": "https://assets.coingecko.com/coins/images/2586/large/viction.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.viction.xyz",
+          "https://viction.drpc.org"
+        ],
+        "chainId": "0x58",
+        "nativeCurrency": "VIC",
+        "blockExplorer": "https://www.vicscan.xyz/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc-testnet.viction.xyz"
+        ],
+        "chainId": "0x59",
+        "nativeCurrency": "VIC",
+        "blockExplorer": "https://testnet.vicscan.xyz/"
+      }
+    ]
+  },
+  {
+    "name": "WAX",
+    "logo": "https://assets.coingecko.com/coins/images/1372/large/WAX_Coin_Tickers_P_512px.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://wax.greymass.com",
+          "https://api.wax.liquidstudios.io"
+        ],
+        "chainId": "",
+        "nativeCurrency": "WAXP",
+        "blockExplorer": "https://waxblock.io/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://testnet.waxsweden.org"
+        ],
+        "chainId": "",
+        "nativeCurrency": "WAXP",
+        "blockExplorer": "https://testnet.waxblock.io/"
+      }
+    ]
+  },
+  {
+    "name": "Robinhood Chain",
+    "logo": "https://assets.coingecko.com/coins/images/6422/large/HOOD.png",
+    "networks": [
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://rpc.testnet.chain.robinhood.com"
+        ],
+        "chainId": "0xB636",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://explorer.testnet.chain.robinhood.com/"
+      }
+    ]
+  },
+  {
+    "name": "WEMIX",
+    "logo": "https://assets.coingecko.com/coins/images/12998/large/wemix-200.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://api.wemix.com",
+          "https://wemix-mainnet.rpc.thirdweb.com"
+        ],
+        "chainId": "0x457",
+        "nativeCurrency": "WEMIX",
+        "blockExplorer": "https://explorer.wemix.com/"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://api.test.wemix.com"
+        ],
+        "chainId": "0x458",
+        "nativeCurrency": "WEMIX",
+        "blockExplorer": "https://testnet.explorer.wemix.com/"
       }
     ]
   }
