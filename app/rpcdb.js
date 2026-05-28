@@ -63,7 +63,8 @@ const blockchains = [
           "https://arbitrum.blockpi.network/v1/rpc/public",
           "https://rpc.ankr.com/arbitrum",
           "https://arb1.arbitrum.io/rpc",
-          "https://arbitrum.api.onfinality.io/public"
+          "https://arbitrum.api.onfinality.io/public",
+          "https://rpc.swiftnodes.io/rpc/arbitrum?key=demo"
         ],
         "chainId": "0xa4b1",
         "nativeCurrency": "ETH",
@@ -89,7 +90,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://evm.astar.network",
-          "https://astar.public.blastapi.io"
+          "https://astar.public.blastapi.io",
+          "https://rpc.swiftnodes.io/rpc/astar?key=demo"
         ],
         "chainId": "0x250",
         "nativeCurrency": "ASTR",
@@ -114,7 +116,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://aurora.drpc.org",
-          "https://mainnet.aurora.dev"
+          "https://mainnet.aurora.dev",
+          "https://rpc.swiftnodes.io/rpc/aurora?key=demo"
         ],
         "chainId": "0x4e454152",
         "nativeCurrency": "ETH",
@@ -142,7 +145,8 @@ const blockchains = [
           "https://avalanche.drpc.org",
           "https://api.avax.network/ext/bc/C/rpc",
           "https://rpc.ankr.com/avalanche",
-          "https://avalanche.api.onfinality.io/public/ext/bc/P"
+          "https://avalanche.api.onfinality.io/public/ext/bc/P",
+          "https://rpc.swiftnodes.io/rpc/avalanche?key=demo"
         ],
         "chainId": "0xa86a",
         "nativeCurrency": "AVAX",
@@ -168,7 +172,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://base.drpc.org",
-          "https://mainnet.base.org"
+          "https://mainnet.base.org",
+          "https://rpc.swiftnodes.io/rpc/base?key=demo"
         ],
         "chainId": "0x2105",
         "nativeCurrency": "ETH",
@@ -204,7 +209,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://berachain.drpc.org",
-          "https://rpc.berachain.com"
+          "https://rpc.berachain.com",
+          "https://rpc.swiftnodes.io/rpc/berachain?key=demo"
         ],
         "chainId": "0x138de",
         "nativeCurrency": "BERA",
@@ -235,7 +241,8 @@ const blockchains = [
           "https://binance.nodereal.io",
           "https://bsc-dataseed.binance.org",
           "https://bsc-dataseed1.binance.org",
-          "https://bsc-dataseed2.binance.org"
+          "https://bsc-dataseed2.binance.org",
+          "https://rpc.swiftnodes.io/rpc/bsc?key=demo"
         ],
         "chainId": "0x38",
         "nativeCurrency": "BNB",
@@ -256,7 +263,8 @@ const blockchains = [
         "network": "opBNB Mainnet",
         "rpcUrls": [
           "https://opbnb.drpc.org/",
-          "https://opbnb-mainnet-rpc.bnbchain.org"
+          "https://opbnb-mainnet-rpc.bnbchain.org",
+          "https://rpc.swiftnodes.io/rpc/opbnb?key=demo"
         ],
         "chainId": "0xcc",
         "nativeCurrency": "BNB",
@@ -336,7 +344,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://blast.drpc.org/",
-          "https://rpc.blast.io"
+          "https://rpc.blast.io",
+          "https://rpc.swiftnodes.io/rpc/blast?key=demo"
         ],
         "chainId": "0x13e31",
         "nativeCurrency": "ETH",
@@ -372,7 +381,8 @@ const blockchains = [
         "network": "Ethereum Mainnet",
         "rpcUrls": [
           "https://boba-eth.drpc.org/",
-          "https://mainnet.boba.network"
+          "https://mainnet.boba.network",
+          "https://rpc.swiftnodes.io/rpc/boba?key=demo"
         ],
         "chainId": "0x120",
         "nativeCurrency": "ETH",
@@ -389,7 +399,8 @@ const blockchains = [
         "rpcUrls": [
           "https://celo.drpc.org",
           "https://rpc.ankr.com/celo",
-          "https://forno.celo.org"
+          "https://forno.celo.org",
+          "https://rpc.swiftnodes.io/rpc/celo?key=demo"
         ],
         "chainId": "0xa4ec",
         "nativeCurrency": "CELO",
@@ -414,7 +425,8 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://rpc.ankr.com/chiliz"
+          "https://rpc.ankr.com/chiliz",
+          "https://rpc.swiftnodes.io/rpc/chiliz?key=demo"
         ],
         "chainId": "88888",
         "nativeCurrency": "CHZ",
@@ -439,7 +451,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://core.drpc.org/",
-          "https://rpc.coredao.org"
+          "https://rpc.coredao.org",
+          "https://rpc.swiftnodes.io/rpc/core?key=demo"
         ],
         "chainId": "0x45c",
         "nativeCurrency": "CORE",
@@ -466,7 +479,8 @@ const blockchains = [
         "rpcUrls": [
           "https://cronos.drpc.org/",
           "https://evm-cronos.crypto.org",
-          "https://cronos.org/rpc"
+          "https://cronos.org/rpc",
+          "https://rpc.swiftnodes.io/rpc/cronos?key=demo"
         ],
         "chainId": "0x19",
         "nativeCurrency": "CRO",
@@ -492,7 +506,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://dymension.drpc.org/",
-          "https://dym.rpc.silknodes.io"
+          "https://dym.rpc.silknodes.io",
+          "https://rpc.swiftnodes.io/rpc/dymension?key=demo"
         ],
         "chainId": "0x44c",
         "nativeCurrency": "DYM",
@@ -542,7 +557,8 @@ const blockchains = [
           "https://eth.drpc.org",
           "https://eth.meowrpc.com",
           "https://ethereum.publicnode.com",
-          "https://cloudflare-eth.com"
+          "https://cloudflare-eth.com",
+          "https://rpc.swiftnodes.io/rpc/eth?key=demo"
         ],
         "chainId": "0x1",
         "nativeCurrency": "ETH",
@@ -579,7 +595,8 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://etc.rivet.link"
+          "https://etc.rivet.link",
+          "https://rpc.swiftnodes.io/rpc/etc?key=demo"
         ],
         "chainId": "61",
         "nativeCurrency": "ETC",
@@ -604,7 +621,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://evmos.drpc.org/",
-          "https://evmos-evm.publicnode.com"
+          "https://evmos-evm.publicnode.com",
+          "https://rpc.swiftnodes.io/rpc/evmos?key=demo"
         ],
         "chainId": "0x2329",
         "nativeCurrency": "EVMOS",
@@ -683,7 +701,8 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://flare-api.flare.network/ext/C/rpc"
+          "https://flare-api.flare.network/ext/C/rpc",
+          "https://rpc.swiftnodes.io/rpc/flare?key=demo"
         ],
         "chainId": "14",
         "nativeCurrency": "FLR",
@@ -751,7 +770,8 @@ const blockchains = [
         "rpcUrls": [
           "https://fuse.drpc.org/",
           "https://rpc.fuse.io",
-          "https://fuse-mainnet.chainstacklabs.com"
+          "https://fuse-mainnet.chainstacklabs.com",
+          "https://rpc.swiftnodes.io/rpc/fuse?key=demo"
         ],
         "chainId": "0x7a",
         "nativeCurrency": "FUSE",
@@ -769,7 +789,8 @@ const blockchains = [
           "https://gnosis.drpc.org",
           "https://rpc.gnosischain.com",
           "https://gnosis.api.onfinality.io/public",
-          "https://rpc.ankr.com/gnosis"
+          "https://rpc.ankr.com/gnosis",
+          "https://rpc.swiftnodes.io/rpc/gnosis?key=demo"
         ],
         "chainId": "0x64",
         "nativeCurrency": "XDAI",
@@ -834,7 +855,8 @@ const blockchains = [
           "https://harmony-0.drpc.org",
           "https://api.harmony.one",
           "https://api.s0.b.hmny.io",
-          "https://harmony-mainnet.chainstacklabs.com"
+          "https://harmony-mainnet.chainstacklabs.com",
+          "https://rpc.swiftnodes.io/rpc/harmony?key=demo"
         ],
         "chainId": "0x63564c40",
         "nativeCurrency": "ONE",
@@ -884,7 +906,8 @@ const blockchains = [
         "network": "zkEVM Mainnet",
         "rpcUrls": [
           "https://immutable-zkevm.drpc.org/",
-          "https://rpc.immutable.com"
+          "https://rpc.immutable.com",
+          "https://rpc.swiftnodes.io/rpc/immutable-zkevm?key=demo"
         ],
         "chainId": "0x343b",
         "nativeCurrency": "IMX",
@@ -910,7 +933,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://babel-api.mainnet.iotex.io",
-          "https://iotex-mainnet.drpc.org"
+          "https://iotex-mainnet.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/iotex?key=demo"
         ],
         "chainId": "4689",
         "nativeCurrency": "IOTX",
@@ -950,7 +974,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://kava.drpc.org/",
-          "https://evm.kava.io"
+          "https://evm.kava.io",
+          "https://rpc.swiftnodes.io/rpc/kava?key=demo"
         ],
         "chainId": "0x8ae",
         "nativeCurrency": "KAVA",
@@ -1016,7 +1041,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://linea.drpc.org",
-          "https://rpc.linea.build"
+          "https://rpc.linea.build",
+        "https://rpc.swiftnodes.io/rpc/linea?key=demo"
         ],
         "chainId": "0xe708",
         "nativeCurrency": "ETH",
@@ -1091,7 +1117,8 @@ const blockchains = [
         "network": "Pacfic Mainnet",
         "rpcUrls": [
           "https://manta-pacific.drpc.org",
-          "https://pacific-rpc.manta.network/http"
+          "https://pacific-rpc.manta.network/http",
+        "https://rpc.swiftnodes.io/rpc/manta?key=demo"
         ],
         "chainId": "0xa9",
         "nativeCurrency": "ETH",
@@ -1117,7 +1144,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://mantle.drpc.org",
-          "https://rpc.mantle.xyz"
+          "https://rpc.mantle.xyz",
+          "https://rpc.swiftnodes.io/rpc/mantle?key=demo"
         ],
         "chainId": "0x1388",
         "nativeCurrency": "MNT",
@@ -1143,7 +1171,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://metis.drpc.org/",
-          "https://andromeda.metis.io/?owner=1088"
+          "https://andromeda.metis.io/?owner=1088",
+          "https://rpc.swiftnodes.io/rpc/metis?key=demo"
         ],
         "chainId": "0x440",
         "nativeCurrency": "METIS",
@@ -1159,7 +1188,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://mode.drpc.org/",
-          "https://mainnet.mode.network"
+          "https://mainnet.mode.network",
+          "https://rpc.swiftnodes.io/rpc/mode?key=demo"
         ],
         "chainId": "0x868b",
         "nativeCurrency": "ETH",
@@ -1187,7 +1217,8 @@ const blockchains = [
           "https://rpc.monad.xyz",
           "https://rpc1.monad.xyz",
           "https://rpc3.monad.xyz",
-          "https://monad-mainnet.drpc.org"
+          "https://monad-mainnet.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/monad?key=demo"
         ],
         "chainId": "0x8f",
         "nativeCurrency": "MON",
@@ -1212,7 +1243,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://moonbeam.drpc.org/",
-          "https://rpc.api.moonbeam.network"
+          "https://rpc.api.moonbeam.network",
+          "https://rpc.swiftnodes.io/rpc/moonbeam?key=demo"
         ],
         "chainId": "0x504",
         "nativeCurrency": "GLMR",
@@ -1240,7 +1272,8 @@ const blockchains = [
           "https://moonriver.drpc.org/",
           "https://rpc.moonriver.moonbeam.network",
           "https://moonriver.api.onfinality.io/public",
-          "https://rpc.api.moonriver.moonbeam.network"
+          "https://rpc.api.moonriver.moonbeam.network",
+          "https://rpc.swiftnodes.io/rpc/moonriver?key=demo"
         ],
         "chainId": "0x505",
         "nativeCurrency": "MOVR",
@@ -1409,7 +1442,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://optimism.drpc.org",
-          "https://mainnet.optimism.io"
+          "https://mainnet.optimism.io",
+          "https://rpc.swiftnodes.io/rpc/optimism?key=demo"
         ],
         "chainId": "0xa",
         "nativeCurrency": "ETH",
@@ -1518,7 +1552,8 @@ const blockchains = [
           "https://matic-mainnet.chainstacklabs.com",
           "https://polygon-rpc.com",
           "https://polygon.api.onfinality.io/public",
-          "https://polygon-bor.publicnode.com"
+          "https://polygon-bor.publicnode.com",
+        "https://rpc.swiftnodes.io/rpc/polygon?key=demo"
         ],
         "chainId": "0x89",
         "nativeCurrency": "POL",
@@ -1548,7 +1583,8 @@ const blockchains = [
         "network": "zkEVM Mainnet",
         "rpcUrls": [
           "https://polygon-zkevm.drpc.org",
-          "https://zkevm-rpc.com"
+          "https://zkevm-rpc.com",
+          "https://rpc.swiftnodes.io/rpc/polygon-zkevm?key=demo"
         ],
         "chainId": "0x44d",
         "nativeCurrency": "ETH",
@@ -1641,7 +1677,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://rootstock.drpc.org",
-          "https://public-node.rsk.co"
+          "https://public-node.rsk.co",
+          "https://rpc.swiftnodes.io/rpc/rootstock?key=demo"
         ],
         "chainId": "0x1e",
         "nativeCurrency": "RBTC",
@@ -1667,7 +1704,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://scroll.drpc.org",
-          "https://rpc.scroll.io"
+          "https://rpc.scroll.io",
+          "https://rpc.swiftnodes.io/rpc/scroll?key=demo"
         ],
         "chainId": "0x82750",
         "nativeCurrency": "ETH",
@@ -1694,7 +1732,8 @@ const blockchains = [
         "rpcUrls": [
           "https://www.shibrpc.com",
           "https://rpc.shibrpc.com",
-          "https://shibarium.drpc.org"
+          "https://shibarium.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/shibarium?key=demo"
         ],
         "chainId": "109",
         "nativeCurrency": "BONE",
@@ -1772,7 +1811,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://sonic.drpc.org",
-          "https://mainnet.sonic.org/rpc"
+          "https://mainnet.sonic.org/rpc",
+          "https://rpc.swiftnodes.io/rpc/sonic?key=demo"
         ],
         "chainId": "0x92",
         "nativeCurrency": "S",
@@ -1822,7 +1862,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://taiko.drpc.org/",
-          "https://rpc.mainnet.taiko.xyz"
+          "https://rpc.mainnet.taiko.xyz",
+        "https://rpc.swiftnodes.io/rpc/taiko?key=demo"
         ],
         "chainId": "0x28c58",
         "nativeCurrency": "ETH",
@@ -1850,7 +1891,8 @@ const blockchains = [
           "https://evm.telos.detroitledger.tech/evm",
           "https://telos.drpc.org/",
           "https://mainnet.telos.net/evm",
-          "https://rpc1.eu.telos.net/evm"
+          "https://rpc1.eu.telos.net/evm",
+          "https://rpc.swiftnodes.io/rpc/telos?key=demo"
         ],
         "chainId": "0x28",
         "nativeCurrency": "TLOS",
@@ -2097,7 +2139,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://zeta-chain.drpc.org/",
-          "https://zetachain-evm.blockpi.network/v1/rpc/public"
+          "https://zetachain-evm.blockpi.network/v1/rpc/public",
+          "https://rpc.swiftnodes.io/rpc/zetachain?key=demo"
         ],
         "chainId": "0x1b58",
         "nativeCurrency": "ZETA",
@@ -2107,7 +2150,8 @@ const blockchains = [
         "network": "Testnet",
         "rpcUrls": [
           "https://zeta-chain-testnet.drpc.org",
-          "https://zetachain-athens-evm.blockpi.network/v1/rpc/public"
+          "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
+          "https://rpc.swiftnodes.io/rpc/zetachain?key=demo"
         ],
         "chainId": "0x1b58",
         "nativeCurrency": "ZETA",
@@ -2147,7 +2191,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://zksync.drpc.org",
-          "https://mainnet.era.zksync.io"
+          "https://mainnet.era.zksync.io",
+        "https://rpc.swiftnodes.io/rpc/zksync?key=demo"
         ],
         "chainId": "0x144",
         "nativeCurrency": "ETH",
@@ -2173,7 +2218,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://zora.drpc.org/",
-          "https://rpc.zora.co"
+          "https://rpc.zora.co",
+          "https://rpc.swiftnodes.io/rpc/zora?key=demo"
         ],
         "chainId": "0x76adf1",
         "nativeCurrency": "ETH",
@@ -2357,7 +2403,8 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
-          "https://soneium.drpc.org"
+          "https://soneium.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/soneium?key=demo"
         ],
         "chainId": "0x74c",
         "nativeCurrency": "ETH",
@@ -2439,7 +2486,8 @@ const blockchains = [
         "rpcUrls": [
           "https://sei.drpc.org",
           "https://evm-rpc.sei-apis.com",
-          "https://node.histori.xyz/sei-mainnet/8ry9f6t9dct1se2hlagxnd9n2a"
+          "https://node.histori.xyz/sei-mainnet/8ry9f6t9dct1se2hlagxnd9n2a",
+          "https://rpc.swiftnodes.io/rpc/sei?key=demo"
         ],
         "chainId": "1329",
         "nativeCurrency": "SEI",
@@ -2711,7 +2759,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://rpc.plasma.to",
-          "https://plasma.drpc.org"
+          "https://plasma.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/plasma?key=demo"
         ],
         "chainId": "9745",
         "nativeCurrency": "XPL",
@@ -2803,7 +2852,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://fullnode.mainnet.aptoslabs.com/v1",
-          "https://aptos.drpc.org"
+          "https://aptos.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/eth?key=demo"
         ],
         "chainId": "1",
         "nativeCurrency": "APT",
@@ -2907,7 +2957,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://rpc.frax.com",
-          "https://fraxtal.drpc.org"
+          "https://fraxtal.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/fraxtal?key=demo"
         ],
         "chainId": "0xfc",
         "nativeCurrency": "frxETH",
@@ -3084,7 +3135,8 @@ const blockchains = [
         "rpcUrls": [
           "https://canto.gravitychain.io",
           "https://jsonrpc.canto.nodestake.top",
-          "https://canto.drpc.org"
+          "https://canto.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/canto?key=demo"
         ],
         "chainId": "0x1E14",
         "nativeCurrency": "CANTO",
@@ -3234,7 +3286,8 @@ const blockchains = [
         "rpcUrls": [
           "https://public-en.node.kaia.io",
           "https://rpc.ankr.com/klaytn",
-          "https://klaytn.drpc.org"
+          "https://klaytn.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/kaia?key=demo"
         ],
         "chainId": "0x2019",
         "nativeCurrency": "KAIA",
@@ -3285,7 +3338,8 @@ const blockchains = [
         "rpcUrls": [
           "https://opbnb-mainnet-rpc.bnbchain.org",
           "https://opbnb.publicnode.com",
-          "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
+          "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
+          "https://rpc.swiftnodes.io/rpc/opbnb?key=demo"
         ],
         "chainId": "0xCC",
         "nativeCurrency": "BNB",
@@ -3360,7 +3414,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://mainnet.unichain.org",
-          "https://unichain.drpc.org"
+          "https://unichain.drpc.org",
+          "https://rpc.swiftnodes.io/rpc/unichain?key=demo"
         ],
         "chainId": "0x82",
         "nativeCurrency": "ETH",
@@ -3450,7 +3505,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://api.wemix.com",
-          "https://wemix-mainnet.rpc.thirdweb.com"
+          "https://wemix-mainnet.rpc.thirdweb.com",
+          "https://rpc.swiftnodes.io/rpc/wemix?key=demo"
         ],
         "chainId": "0x457",
         "nativeCurrency": "WEMIX",
