@@ -51,13 +51,61 @@ export function findBlockchainFromSlug(blockchains, slug) {
  */
 export function getAllNetworkSlugs(blockchains) {
   const slugs = [];
-  
+
   for (const blockchain of blockchains) {
     for (const network of blockchain.networks) {
       const slug = generateNetworkSlug(blockchain.name, network.network);
       slugs.push(slug);
     }
   }
-  
+
   return slugs;
+}
+
+/**
+ * Convert a hex chain ID (e.g. "0xa4b1") to its decimal form (e.g. 42161)
+ */
+export function hexToDecimal(hexChainId) {
+  return parseInt(hexChainId, 16);
+}
+
+/**
+ * Build a list of FAQ question/answer pairs for a network page.
+ * Used for both the on-page FAQ section and the FAQPage schema,
+ * so the two never drift apart.
+ */
+export function getNetworkFaqs(blockchain, network) {
+  const title = `${blockchain.name} ${network.network}`;
+  const faqs = [];
+
+  if (network.rpcUrls.length === 1) {
+    faqs.push({
+      question: `What is the RPC URL for ${title}?`,
+      answer: `The public RPC URL for ${title} is ${network.rpcUrls[0]}.`,
+    });
+  } else {
+    faqs.push({
+      question: `What is the RPC URL for ${title}?`,
+      answer: `There are ${network.rpcUrls.length} public RPC endpoints for ${title}, including ${network.rpcUrls[0]}. See the full list in the table above.`,
+    });
+  }
+
+  if (network.chainId) {
+    faqs.push({
+      question: `What is the Chain ID for ${title}?`,
+      answer: `The Chain ID for ${title} is ${hexToDecimal(network.chainId)} (${network.chainId} in hexadecimal).`,
+    });
+  }
+
+  faqs.push({
+    question: `What is the native currency of ${title}?`,
+    answer: `The native currency of ${title} is ${network.nativeCurrency}.`,
+  });
+
+  faqs.push({
+    question: `How do I add ${title} to MetaMask?`,
+    answer: `Use the "Add to Wallet" button on this page to add ${title} to MetaMask automatically, or follow our step-by-step guide for ${blockchain.name}.`,
+  });
+
+  return faqs;
 } 

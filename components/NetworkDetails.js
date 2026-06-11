@@ -5,6 +5,7 @@ import CopyRpcUrl from './CopyRpcUrl';
 import DRPCBox from './drpcbox';
 import Link from 'next/link';
 import { generateNetworkSlug, generateBlockchainSlug } from '@/libs/networkUtils';
+import { NetworkIntro, NetworkCodeSnippet, NetworkFaq } from './NetworkContent';
 
 const NetworkDetails = ({ blockchain, network }) => {
   const [rpcStatus, setRpcStatus] = useState({});
@@ -69,7 +70,9 @@ const NetworkDetails = ({ blockchain, network }) => {
             )}
             <span>{blockchain.name} {network.network} RPC Endpoints</span>
           </h1>
-          
+
+          <NetworkIntro blockchain={blockchain} network={network} />
+
           {/* Navigation links to other networks */}
           {otherNetworks.length > 0 && (
             <div className="mb-4">
@@ -180,6 +183,9 @@ const NetworkDetails = ({ blockchain, network }) => {
               </table>
             </div>
           </div>
+
+          <NetworkCodeSnippet blockchain={blockchain} network={network} />
+          <NetworkFaq blockchain={blockchain} network={network} />
         </div>
       </div>
     </>
