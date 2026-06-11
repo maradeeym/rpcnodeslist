@@ -3,10 +3,11 @@ import blockchains from '@/app/rpcdb';
 import config from '@/config';
 import AddBlockchainGuide from '@/components/AddBlockchainGuide';
 import AddToWalletButtons from '@/components/AddToWalletButtons';
+import { findBlockchainFromSlug } from '@/libs/networkUtils';
 
 export async function generateMetadata({ params }) {
-  const blockchainName = decodeURIComponent(params.addToMetamask);
-  const blockchain = blockchains.find(bc => bc.name.toLowerCase() === blockchainName.toLowerCase());
+  const blockchainSlug = decodeURIComponent(params.addToMetamask);
+  const blockchain = findBlockchainFromSlug(blockchains, blockchainSlug);
 
   if (!blockchain) {
     return {
@@ -20,14 +21,14 @@ export async function generateMetadata({ params }) {
     description: `Find out how to add ${blockchain.name} Mainnet and Testnet RPC APIs to Metamask or other wallets.`,
     keywords: `add ${blockchain.name} to metamask, add ${blockchain.name} to wallet, ${blockchain.name} rpc, ${blockchain.name} rpc node, ${blockchain.name} rpc nodes,`,
     alternates: {
-      canonical: `https://${config.domainName}/add-to-wallet/${blockchain.name.toLowerCase()}`
+      canonical: `https://${config.domainName}/add-to-wallet/${blockchainSlug}`
     },
   };
 }
 
 const AddToMetamaskPage = ({ params }) => {
-  const blockchainName = decodeURIComponent(params.addToMetamask);
-  const blockchain = blockchains.find(bc => bc.name.toLowerCase() === blockchainName.toLowerCase());
+  const blockchainSlug = decodeURIComponent(params.addToMetamask);
+  const blockchain = findBlockchainFromSlug(blockchains, blockchainSlug);
 
   if (!blockchain) {
     return <div>Blockchain not found</div>;

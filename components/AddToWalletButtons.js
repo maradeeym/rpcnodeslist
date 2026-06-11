@@ -1,5 +1,6 @@
 import React from 'react';
 import blockchains from '@/app/rpcdb';
+import { generateBlockchainSlug } from '@/libs/networkUtils';
 
 const AddToWalletButtons = () => {
   return (
@@ -8,7 +9,7 @@ const AddToWalletButtons = () => {
         {blockchains.map((blockchain, index) => (
           <a
             key={index}
-            href={`/add-to-wallet/${blockchain.name}`}
+            href={`/add-to-wallet/${generateBlockchainSlug(blockchain.name)}`}
             className="btn btn-outline btn-sm"
           >
             Add {blockchain.name} to Wallet

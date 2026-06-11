@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import CopyRpcUrl from './CopyRpcUrl';
 import DRPCBox from './drpcbox';
 import Link from 'next/link';
-import { generateNetworkSlug } from '@/libs/networkUtils';
+import { generateNetworkSlug, generateBlockchainSlug } from '@/libs/networkUtils';
 
 const NetworkDetails = ({ blockchain, network }) => {
   const [rpcStatus, setRpcStatus] = useState({});
@@ -87,7 +87,16 @@ const NetworkDetails = ({ blockchain, network }) => {
               </div>
             </div>
           )}
-          
+
+          <div className="mb-4">
+            <Link
+              href={`/add-to-wallet/${generateBlockchainSlug(blockchain.name)}`}
+              className="link link-primary"
+            >
+              How to add {blockchain.name} to MetaMask or other wallets &rarr;
+            </Link>
+          </div>
+
           <DRPCBox />
           
           <div className="mb-4 sm:mb-6">

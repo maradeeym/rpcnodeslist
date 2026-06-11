@@ -3,10 +3,17 @@
  */
 
 /**
+ * Generate a URL slug from a blockchain name
+ */
+export function generateBlockchainSlug(blockchainName) {
+  return blockchainName.toLowerCase().replace(/ /g, '-');
+}
+
+/**
  * Generate a URL slug from blockchain name and network name
  */
 export function generateNetworkSlug(blockchainName, networkName) {
-  return `${blockchainName.toLowerCase().replace(/ /g, '-')}-${networkName.toLowerCase().replace(/ /g, '-')}`;
+  return `${generateBlockchainSlug(blockchainName)}-${networkName.toLowerCase().replace(/ /g, '-')}`;
 }
 
 /**
@@ -29,6 +36,13 @@ export function findNetworkFromSlug(blockchains, slug) {
   }
 
   return { blockchain: targetBlockchain, network: targetNetwork };
+}
+
+/**
+ * Find a blockchain from a given blockchain slug
+ */
+export function findBlockchainFromSlug(blockchains, slug) {
+  return blockchains.find(blockchain => generateBlockchainSlug(blockchain.name) === slug) || null;
 }
 
 /**
