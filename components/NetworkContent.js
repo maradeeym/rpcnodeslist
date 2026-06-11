@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import { hexToDecimal, getNetworkFaqs } from '@/libs/networkUtils';
 
 export const NetworkIntro = ({ blockchain, network }) => {
@@ -20,6 +21,8 @@ export const NetworkIntro = ({ blockchain, network }) => {
 };
 
 export const NetworkCodeSnippet = ({ blockchain, network }) => {
+  const [copied, setCopied] = useState(false);
+
   if (!network.chainId) return null;
 
   const title = `${blockchain.name} ${network.network}`;
@@ -31,14 +34,28 @@ const provider = new ethers.JsonRpcProvider("${rpcUrl}");
 const network = await provider.getNetwork();
 console.log(network.chainId); // ${hexToDecimal(network.chainId)}n`;
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
+
   return (
     <div className="mb-6">
       <h2 className="text-lg sm:text-xl font-semibold mb-2">
         Connect to {title} with ethers.js
       </h2>
-      <pre className="bg-slate-900 text-slate-100 text-sm rounded-lg p-4 overflow-x-auto">
-        <code>{code}</code>
-      </pre>
+      <div className="relative">
+        <pre className="bg-slate-900 text-slate-100 text-sm rounded-lg p-4 overflow-x-auto">
+          <code>{code}</code>
+        </pre>
+        <button
+          onClick={handleCopy}
+          className="btn btn-xs absolute top-2 right-2 bg-slate-700 hover:bg-slate-600 text-slate-100 border-slate-600"
+        >
+          {copied ? 'Copied!' : 'Copy'}
+        </button>
+      </div>
     </div>
   );
 };
