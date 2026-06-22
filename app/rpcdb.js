@@ -30,7 +30,7 @@ const blockchains = [
           "https://testnet-idx.algonode.cloud"
         ],
         "chainId": "",
-        "nativeCurrency": "ALGO",
+        "nativeCurrency": "ALGO"
       }
     ]
   },
@@ -313,6 +313,15 @@ const blockchains = [
         "chainId": "",
         "nativeCurrency": "BTC",
         "blockExplorer": "https://blockstream.info/testnet/"
+      },
+      {
+        "network": "Electrs Mainnet",
+        "rpcUrls": [
+          "https://bitcoin-mainnet-electrs.gateway.tatum.io"
+        ],
+        "chainId": "",
+        "nativeCurrency": "BTC",
+        "blockExplorer": "https://btcscan.org/"
       }
     ]
   },
@@ -325,6 +334,15 @@ const blockchains = [
         "rpcUrls": [
           "https://rest.bitcoin.com/v2/",
           "https://bch-mainnet-rostrum.gateway.tatum.io"
+        ],
+        "chainId": "",
+        "nativeCurrency": "BCH",
+        "blockExplorer": "https://blockchair.com/bitcoin-cash"
+      },
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://bch-mainnet.gateway.tatum.io"
         ],
         "chainId": "",
         "nativeCurrency": "BCH",
@@ -1056,6 +1074,15 @@ const blockchains = [
         "chainId": "",
         "nativeCurrency": "KSM",
         "blockExplorer": "https://kusama.subscan.io/"
+      },
+      {
+        "network": "Asset Hub",
+        "rpcUrls": [
+          "https://kusama-assethub.gateway.tatum.io"
+        ],
+        "chainId": "",
+        "nativeCurrency": "KSM",
+        "blockExplorer": "https://assethub-kusama.subscan.io/"
       }
     ]
   },
@@ -1068,7 +1095,7 @@ const blockchains = [
         "rpcUrls": [
           "https://linea.drpc.org",
           "https://rpc.linea.build",
-        "https://rpc.swiftnodes.io/rpc/linea?key=demo"
+          "https://rpc.swiftnodes.io/rpc/linea?key=demo"
         ],
         "chainId": "0xe708",
         "nativeCurrency": "ETH",
@@ -1129,8 +1156,7 @@ const blockchains = [
       },
       {
         "network": "Testnet",
-        "rpcUrls": [
-        ],
+        "rpcUrls": [],
         "chainId": "",
         "nativeCurrency": "LTC",
         "blockExplorer": "https://litecoinspace.org/testnet"
@@ -1146,7 +1172,7 @@ const blockchains = [
         "rpcUrls": [
           "https://manta-pacific.drpc.org",
           "https://pacific-rpc.manta.network/http",
-        "https://rpc.swiftnodes.io/rpc/manta?key=demo"
+          "https://rpc.swiftnodes.io/rpc/manta?key=demo"
         ],
         "chainId": "0xa9",
         "nativeCurrency": "ETH",
@@ -1255,12 +1281,12 @@ const blockchains = [
       {
         "network": "Testnet",
         "rpcUrls": [
-          "https://monad-testnet.drpc.org",
+          "https://monad-testnet.drpc.org"
         ],
         "chainId": "0x279f",
         "nativeCurrency": "MON",
         "blockExplorer": "https://testnet.monadscan.com"
-      },
+      }
     ]
   },
   {
@@ -1572,6 +1598,15 @@ const blockchains = [
         "chainId": "",
         "nativeCurrency": "DOT",
         "blockExplorer": "https://westend.subscan.io/"
+      },
+      {
+        "network": "Asset Hub",
+        "rpcUrls": [
+          "https://polkadot-assethub.gateway.tatum.io"
+        ],
+        "chainId": "",
+        "nativeCurrency": "DOT",
+        "blockExplorer": "https://assethub-polkadot.subscan.io/"
       }
     ]
   },
@@ -1587,8 +1622,8 @@ const blockchains = [
           "https://polygon-rpc.com",
           "https://polygon.api.onfinality.io/public",
           "https://polygon-bor.publicnode.com",
-        "https://rpc.swiftnodes.io/rpc/polygon?key=demo",
-        "https://polygon-mainnet.gateway.tatum.io"
+          "https://rpc.swiftnodes.io/rpc/polygon?key=demo",
+          "https://polygon-mainnet.gateway.tatum.io"
         ],
         "chainId": "0x89",
         "nativeCurrency": "POL",
@@ -1904,7 +1939,7 @@ const blockchains = [
         "rpcUrls": [
           "https://taiko.drpc.org/",
           "https://rpc.mainnet.taiko.xyz",
-        "https://rpc.swiftnodes.io/rpc/taiko?key=demo"
+          "https://rpc.swiftnodes.io/rpc/taiko?key=demo"
         ],
         "chainId": "0x28c58",
         "nativeCurrency": "ETH",
@@ -2239,8 +2274,8 @@ const blockchains = [
         "rpcUrls": [
           "https://zksync.drpc.org",
           "https://mainnet.era.zksync.io",
-        "https://rpc.swiftnodes.io/rpc/zksync?key=demo",
-        "https://zksync-mainnet.gateway.tatum.io"
+          "https://rpc.swiftnodes.io/rpc/zksync?key=demo",
+          "https://zksync-mainnet.gateway.tatum.io"
         ],
         "chainId": "0x144",
         "nativeCurrency": "ETH",
@@ -2587,7 +2622,7 @@ const blockchains = [
         "chainId": "998",
         "nativeCurrency": "HYPE",
         "blockExplorer": "https://app.hyperliquid-testnet.xyz/explorer"
-      },
+      }
     ]
   },
   {
@@ -2613,7 +2648,7 @@ const blockchains = [
         "chainId": "80087",
         "nativeCurrency": "OG",
         "blockExplorer": "https://chainscan-galileo.0g.ai"
-      },
+      }
     ]
   },
   {
@@ -2623,7 +2658,7 @@ const blockchains = [
       {
         "network": "Poseidon Testnet",
         "rpcUrls": [
-          "https://ozean-poseidon-testnet.drpc.org",
+          "https://ozean-poseidon-testnet.drpc.org"
         ],
         "chainId": "7849306",
         "nativeCurrency": "USDX",
@@ -3579,5 +3614,82 @@ const blockchains = [
         "blockExplorer": "https://testnet.explorer.wemix.com/"
       }
     ]
+  },
+  {
+    "name": "Cardano",
+    "logo": "https://assets.coingecko.com/coins/images/975/large/cardano.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://cardano-mainnet.gateway.tatum.io"
+        ],
+        "chainId": "",
+        "nativeCurrency": "ADA",
+        "blockExplorer": "https://cardanoscan.io/"
+      }
+    ]
+  },
+  {
+    "name": "Casper",
+    "logo": "https://assets.coingecko.com/coins/images/1529/large/casper.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://casper-mainnet.gateway.tatum.io"
+        ],
+        "chainId": "",
+        "nativeCurrency": "CSPR",
+        "blockExplorer": "https://cspr.live/"
+      }
+    ]
+  },
+  {
+    "name": "Cosmos",
+    "logo": "https://assets.coingecko.com/coins/images/1481/large/cosmos_hub.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://cosmos-mainnet.gateway.tatum.io"
+        ],
+        "chainId": "cosmoshub-4",
+        "nativeCurrency": "ATOM",
+        "blockExplorer": "https://www.mintscan.io/cosmos"
+      }
+    ]
+  },
+  {
+    "name": "Lumia",
+    "logo": "https://assets.coingecko.com/coins/images/38477/large/lumia.jpeg",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://lumia-mainnet.gateway.tatum.io"
+        ],
+        "chainId": "0x3b9aca00",
+        "nativeCurrency": "LUMIA",
+        "blockExplorer": "https://explorer.lumia.org/"
+      }
+    ]
+  },
+  {
+    "name": "Mantra Chain",
+    "logo": "https://assets.coingecko.com/coins/images/37344/large/mantra.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://mantrachain-mainnet.gateway.tatum.io"
+        ],
+        "chainId": "mantra-1",
+        "nativeCurrency": "OM",
+        "blockExplorer": "https://explorer.mantrachain.io/"
+      }
+    ]
   }
-];module.exports = blockchains;
+];
+
+module.exports = blockchains;
