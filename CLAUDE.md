@@ -1,10 +1,12 @@
-# CLAUDE.md — AI Assistant Guide for rpcnodeslist
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
 **RPC Node List** (`rpcnodelist.com`) is a Next.js web application that serves as a directory of blockchain RPC endpoints for web3 developers. It allows users to browse networks, check RPC endpoint health, and add networks to MetaMask.
 
-The codebase is built on the **ShipFast** SaaS boilerplate and extends it with blockchain-specific functionality.
+The codebase is built on the **ShipFast** SaaS boilerplate and extends it with blockchain-specific functionality. In practice, the product that ships is just the public RPC directory — `app/rpcdb.js` plus the pages/components that read it. The auth/payments/dashboard machinery below is inherited boilerplate that is **not wired up** (see "Auth & SaaS features are dormant" under Known Limitations) — don't assume it works, and don't spend time on it unless the task specifically asks for it.
 
 ---
 
@@ -15,10 +17,10 @@ The codebase is built on the **ShipFast** SaaS boilerplate and extends it with b
 | Framework | Next.js 14 (App Router) |
 | Styling | Tailwind CSS + DaisyUI |
 | Database | MongoDB via Mongoose |
-| Auth | NextAuth v4 |
-| Payments | Stripe |
+| Auth | NextAuth v4 (present in code, **disabled** — see limitations) |
+| Payments | Stripe (present in code, unused by the live UI) |
 | Email | Mailgun + Nodemailer |
-| Analytics | Vercel Analytics, Plausible, Beam |
+| Analytics | Vercel Analytics, Beam Analytics (`next-plausible` is a dependency but unused in code) |
 | Support | Crisp Chat |
 
 ---
@@ -29,7 +31,7 @@ The codebase is built on the **ShipFast** SaaS boilerplate and extends it with b
 rpcnodeslist/
 ├── app/                        # Next.js App Router
 │   ├── api/                    # API route handlers
-│   │   ├── auth/[...nextauth]/ # NextAuth handler
+│   │   ├── auth/[...nextauth]/ # NextAuth handler (dormant, see Known Limitations)
 │   │   ├── check-rpc/          # RPC endpoint health check
 │   │   ├── lead/               # Email lead capture
 │   │   ├── stripe/             # Stripe checkout & portal
@@ -88,14 +90,26 @@ This is the heart of the application. It exports an array of blockchain objects:
 ## URL & Routing Conventions
 
 - Network pages: `/{blockchainSlug}-{networkSlug}` (e.g., `/ethereum-mainnet`, `/arbitrum-nova`)
-- Slug generation logic lives in `libs/networkUtils.js`:
-  - `generateNetworkSlug(blockchainName, networkName)` — creates the URL slug
-  - `findNetworkFromSlug(blockchains, slug)` — reverse lookup
-  - `getAllNetworkSlugs(blockchains)` — generates all static paths
+- Wallet guide pages: `/add-to-wallet/{blockchainSlug}` (one per blockchain, via `app/add-to-wallet/[addToMetamask]/page.js`)
+- Slug generation and lookup logic lives in `libs/networkUtils.js`:
+  - `generateBlockchainSlug(blockchainName)` / `generateNetworkSlug(blockchainName, networkName)` — build slugs
+  - `findNetworkFromSlug(blockchains, slug)` / `findBlockchainFromSlug(blockchains, slug)` — reverse lookups used by the two dynamic routes
+  - `getAllNetworkSlugs(blockchains)` — full slug list (currently unused for static params, see below)
+  - `hexToDecimal(hexChainId)`, `getNetworkFaqs(blockchain, network)` — helpers for the on-page FAQ + FAQPage schema
 
 - **Legacy redirects**: `next.config.js` automatically creates permanent (301) redirects from `/{blockchain}` → `/{blockchain}-mainnet` (or first network if no mainnet exists).
 
-- The dynamic route `app/[networkSlug]/page.js` uses `generateStaticParams()` for static generation at build time.
+- **No `generateStaticParams()`**: `app/[networkSlug]/page.js` and `app/add-to-wallet/[addToMetamask]/page.js` are server components that only export `generateMetadata()`; pages are rendered per-request (SSR/dynamic), not statically generated at build time. `components/generateDynamicPaths.js` is a separate, parallel implementation of the slug logic (duplicated, not imported from `networkUtils.js`) used only by `next-sitemap.config.js`'s `additionalPaths` to list every network + wallet-guide URL in the sitemap.
+
+---
+
+## Rendering Architecture (network & home pages)
+
+- `app/[networkSlug]/page.js` and `app/add-to-wallet/[addToMetamask]/page.js` are thin **server components**: they resolve the slug via `networkUtils.js`, export `generateMetadata()` for SEO, and hand the resolved `blockchain`/`network` objects to a client component to render.
+- `app/page.js` (home) and `components/NetworkDetails.js` are `"use client"` components:
+  - The homepage loads the **entire** `rpcdb.js` array into the browser and filters it client-side as the user types in the search box — there's no server-side search/pagination.
+  - `NetworkDetails.js` fires one `POST /api/check-rpc` request per RPC URL in parallel (`Promise.all`) on mount to populate the online/offline (✅/🔴) indicators, and composes `CopyRpcUrl.js`, `drpcbox.js` (dRPC promo box), and `NetworkContent.js` (`NetworkIntro`, `NetworkCodeSnippet`, `NetworkFaq` — the intro copy, ethers.js snippet, and FAQ/FAQPage schema block).
+- The "Add to Wallet" button calls `window.ethereum.request({ method: 'wallet_addEthereumChain', ... })` directly from the browser — no backend involvement.
 
 ---
 
@@ -104,14 +118,14 @@ This is the heart of the application. It exports an array of blockchain objects:
 | File | Purpose |
 |---|---|
 | `api.js` | Axios client with 401 redirect to login |
-| `mongo.js` | MongoDB connection singleton |
+| `mongo.js` | MongoDB connection singleton (used only by NextAuth's Mongo adapter) |
 | `mongoose.js` | Mongoose connection helper |
-| `next-auth.js` | NextAuth config (Google OAuth + Email) |
+| `next-auth.js` | NextAuth config — **the entire `authOptions` export is commented out** (dead code today, see Known Limitations) |
 | `stripe.js` | Stripe client initialization |
 | `mailgun.js` | Mailgun email sending helper |
-| `networkUtils.js` | Slug generation and network lookup utilities |
+| `networkUtils.js` | Slug generation, network/blockchain lookup, and FAQ-building utilities |
 | `seo.js` | SEO metadata helpers |
-| `gpt.js` | GPT integration (if used) |
+| `gpt.js` | GPT integration (unused elsewhere in the app) |
 
 ---
 
@@ -247,8 +261,10 @@ Both models use the `toJSON` plugin which removes `_id`/`__v` and adds `id`.
 
 ## Known Limitations / Things to Be Aware Of
 
-1. **RPC cache has no TTL** — the in-memory cache in `/api/check-rpc` never expires. A server restart clears it.
-2. **Non-EVM health checks not supported** — `eth_blockNumber` is used universally; non-EVM chains (Algorand, etc.) will always show as failed.
-3. **No test suite** — changes should be manually verified.
-4. **ShipFast boilerplate remnants** — some config values (e.g., Mailgun `fromNoReply` still references `shipfa.st`) may need updating for production.
-5. **Stripe plans in config.js** — the plan features listed are placeholder values from the original boilerplate and don't reflect actual product features.
+1. **Auth & SaaS features are dormant.** `libs/next-auth.js` exports `authOptions` from inside a block comment — the whole Google OAuth / email magic-link / MongoDB adapter config is commented out, so `authOptions` is `undefined` at runtime. `app/api/auth/[...nextauth]/route.js` and `app/dashboard/layout.js` still import and call it, and the live `components/Header.js` has no sign-in link at all (its CTA is a GitHub link to edit `rpcdb.js` directly). Treat `/dashboard`, Stripe checkout/portal, and login as **non-functional boilerplate**, not real features, unless a task explicitly asks you to (re)implement them.
+2. **RPC cache has no TTL** — the in-memory cache in `/api/check-rpc` never expires. A server restart clears it.
+3. **Non-EVM health checks not supported** — `eth_blockNumber` is used universally; non-EVM chains (Algorand, etc.) will always show as failed.
+4. **No test suite** — changes should be manually verified (start `npm run dev` and check the affected network/homepage in a browser).
+5. **Sitemap slug logic is duplicated** — `components/generateDynamicPaths.js` reimplements slug generation from `libs/networkUtils.js` instead of importing it. If you change slug format, update both.
+6. **ShipFast boilerplate remnants** — some config values (e.g., Mailgun `fromNoReply` still references `shipfa.st`) may need updating for production.
+7. **Stripe plans in config.js** — the plan features listed are placeholder values from the original boilerplate and don't reflect actual product features.
