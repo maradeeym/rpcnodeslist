@@ -2,21 +2,254 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  scroll-behavior: smooth !important;
+/* ── Design tokens ─────────────────────────────────────────── */
+:root {
+  --color-canvas:  #FBFBFA;
+  --color-surface: #FFFFFF;
+  --color-border:  #EAEAEA;
+  --color-ink:     #111111;
+  --color-muted:   #787774;
+
+  --color-pale-red-bg:   #FDEBEC;
+  --color-pale-red-text: #9F2F2D;
+  --color-pale-blue-bg:  #E1F3FE;
+  --color-pale-blue-text:#1F6C9F;
+  --color-pale-green-bg: #EDF3EC;
+  --color-pale-green-text:#346538;
+  --color-pale-yellow-bg:#FBF3DB;
+  --color-pale-yellow-text:#956400;
 }
 
-/* It makes the HTML progress bar filling smooth when value change. */
+/* ── Base ───────────────────────────────────────────────────── */
+html, body {
+  scroll-behavior: smooth !important;
+  background-color: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override DaisyUI canvas */
+[data-theme="light"] body,
+[data-theme="light"] .bg-base-200 {
+  background-color: var(--color-canvas) !important;
+}
+
+/* ── Scroll-entry animation ─────────────────────────────────── */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.entry {
+  opacity: 0;
+}
+.entry.visible {
+  animation: fadeSlideIn 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered children */
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 80ms; }
+.stagger > *:nth-child(3) { animation-delay: 160ms; }
+.stagger > *:nth-child(4) { animation-delay: 240ms; }
+.stagger > *:nth-child(5) { animation-delay: 320ms; }
+.stagger > *:nth-child(6) { animation-delay: 400ms; }
+
+/* ── Ambient background blob ─────────────────────────────────── */
+.ambient-blob {
+  position: fixed;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(251,191,36,0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: blobDrift 25s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes blobDrift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-40px, 30px) scale(1.05); }
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.card-minimal {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: box-shadow 200ms ease;
+}
+.card-minimal:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.btn-ink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #111111;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 200ms ease;
+}
+.btn-ink:hover  { background: #333333; }
+.btn-ink:active { transform: scale(0.98); }
+
+.btn-ghost-minimal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.375rem 0.875rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 200ms ease, background 200ms ease;
+  white-space: nowrap;
+}
+.btn-ghost-minimal:hover {
+  border-color: #787774;
+  background: #F7F6F3;
+}
+
+/* ── Status dots ─────────────────────────────────────────────── */
+.dot-pending {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #D4D4D0;
+  animation: pulse-dot 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.dot-online  { width: 8px; height: 8px; border-radius: 50%; background: #4CAF50; flex-shrink: 0; }
+.dot-offline { width: 8px; height: 8px; border-radius: 50%; background: #EF4444; flex-shrink: 0; }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* ── Table ───────────────────────────────────────────────────── */
+.table-minimal {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.table-minimal th {
+  text-align: left;
+  padding: 0.625rem 1rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  font-size: 0.6875rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+.table-minimal td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-ink);
+  vertical-align: middle;
+}
+.table-minimal tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Strip accordion (FAQ) ───────────────────────────────────── */
+.accordion-strip details {
+  border-bottom: 1px solid var(--color-border);
+}
+.accordion-strip details:first-child {
+  border-top: 1px solid var(--color-border);
+}
+.accordion-strip details summary {
+  padding: 1rem 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--color-ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.accordion-strip details summary::-webkit-details-marker { display: none; }
+.accordion-strip details summary::after {
+  content: '+';
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--color-muted);
+  flex-shrink: 0;
+  transition: transform 150ms ease;
+}
+.accordion-strip details[open] summary::after {
+  content: '\2212';
+}
+.accordion-strip .faq-answer {
+  padding: 0 0 1rem;
+  font-size: 0.9375rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+/* ── Code block ──────────────────────────────────────────────── */
+.code-block {
+  background: #0F1117;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  position: relative;
+}
+.code-block code {
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: #E2E8F0;
+}
+
+/* ── Kbd ─────────────────────────────────────────────────────── */
+kbd {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: #F7F6F3;
+  padding: 0.125rem 0.375rem;
+  color: var(--color-ink);
+}
+
+/* ── Tags ────────────────────────────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.625rem;
+}
+
+/* Legacy DaisyUI overrides — keep btn capitalization */
+@layer base {
+  .btn { @apply !capitalize; }
+}
+
+/* Progress bar smooth */
 progress::-webkit-progress-value {
   transition: 0.6s width ease-out;
-}
-
-@layer base {
-  .btn-gradient {
-    @apply !bg-gradient !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
-  }
-  .btn {
-    @apply !capitalize;
-  }
 }

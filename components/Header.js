@@ -6,172 +6,146 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/app/icon.png";
 import config from "@/config";
-import Modal from "@/components/Modal"; // Import Modal
 
-const links = [
-  // FAQ link removed as there is no FAQ section
-];
-
-// A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
-// The header is responsive, and on mobile, the links are hidden behind a burger button.
 const Header = () => {
-  const searchParams =  useSearchParams();
+  const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // Add state for modal
 
-  const CTA = (
-    <a href="https://github.com/maradeeym/rpcnodeslist/blob/main/app/rpcdb.js" target="_blank" rel="noopener noreferrer" className="btn btn-info mx-4 text-white">
-      Add your RPC
-    </a>
-  );
-
-  // setIsOpen(false) when the route changes (i.e: when the user clicks on a link on mobile)
   useEffect(() => {
     setIsOpen(false);
   }, [searchParams]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isOpen]);
+
   return (
-    <header className="bg-base-200 sticky top-0 z-50">
+    <header
+      style={{
+        background: "rgba(251,251,250,0.85)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        borderBottom: "1px solid #EAEAEA",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
+      }}
+    >
       <nav
-        className="flex items-center justify-between px-4 py-4 mx-auto max-w-screen-2xl"
+        className="flex items-center justify-between px-6 py-3 mx-auto"
+        style={{ maxWidth: "72rem" }}
         aria-label="Global"
       >
-        {/* Your logo/name on large screens */}
-        <div className="flex lg:flex-1">
-          <Link
-            className="flex items-center gap-2 shrink-0 "
-            href="/"
-            title={`${config.appName} hompage`}
+        {/* Logo */}
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 shrink-0"
+          title={`${config.appName} homepage`}
+        >
+          <Image
+            src={logo}
+            alt={`${config.appName} logo`}
+            width={28}
+            height={28}
+            placeholder="blur"
+            priority
+            className="rounded-md"
+          />
+          <span
+            style={{
+              fontFamily: "var(--font-sans)",
+              fontWeight: 700,
+              fontSize: "0.9375rem",
+              color: "#111111",
+              letterSpacing: "-0.01em",
+            }}
           >
-            <Image
-              src={logo}
-              alt={`${config.appName} logo`}
-              className="w-8"
-              placeholder="blur"
-              priority={true}
-              width={32}
-              height={32}
-            />
-            <span className="font-extrabold text-lg">{config.appName}</span>
-          </Link>
-        </div>
-        {/* Burger button to open menu on mobile */}
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-            onClick={() => setIsOpen(true)}
+            RPC Node List
+          </span>
+        </Link>
+
+        {/* Desktop CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="https://github.com/maradeeym/rpcnodeslist/blob/main/app/rpcdb.js"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ink"
+            style={{ fontSize: "0.8125rem", padding: "0.5rem 1rem" }}
           >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-base-content"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
+            Add your RPC
+          </a>
         </div>
 
-        {/* Your links on large screens */}
-        <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center">
-          {links.map((link) => (
-            <Link
-              href={link.href}
-              key={link.href}
-              className="link link-hover"
-              title={link.label}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        {/* CTA on large screens */}
-        {CTA}
-
+        {/* Mobile burger */}
+        <button
+          type="button"
+          className="flex md:hidden items-center justify-center p-2 rounded-lg"
+          style={{ border: "1px solid #EAEAEA", background: "transparent" }}
+          onClick={() => setIsOpen(true)}
+          aria-label="Open menu"
+        >
+          <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+            <path d="M0 1h18M0 7h18M0 13h18" stroke="#111111" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        </button>
       </nav>
 
-      {/* Mobile menu, show/hide based on menu state. */}
-      <div className={`relative z-50 ${isOpen ? "" : "hidden"}`}>
-        <div
-          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
-        >
-          {/* Your logo/name on small screens */}
-          <div className="flex items-center justify-between">
-            <Link
-              className="flex items-center gap-2 shrink-0 "
-              title={`${config.appName} hompage`}
-              href="/"
-            >
-              <Image
-                src={logo}
-                alt={`${config.appName} logo`}
-                className="w-8"
-                placeholder="blur"
-                priority={true}
-                width={32}
-                height={32}
-              />
-              <span className="font-extrabold text-lg">{config.appName}</span>
-            </Link>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5"
-              onClick={() => setIsOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
+      {/* Mobile drawer */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          <div
+            className="absolute inset-0"
+            style={{ background: "rgba(0,0,0,0.12)" }}
+            onClick={() => setIsOpen(false)}
+          />
+          <div
+            className="absolute right-0 top-0 bottom-0 flex flex-col p-6"
+            style={{
+              width: "min(320px, 90vw)",
+              background: "#FBFBFA",
+              borderLeft: "1px solid #EAEAEA",
+            }}
+          >
+            {/* Drawer header */}
+            <div className="flex items-center justify-between mb-8">
+              <Link
+                href="/"
+                className="flex items-center gap-2"
+                onClick={() => setIsOpen(false)}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-
-          {/* Your links on small screens */}
-          <div className="flow-root mt-6">
-            <div className="py-4">
-              <div className="flex flex-col gap-y-4 items-start">
-                {links.map((link) => (
-                  <Link
-                    href={link.href}
-                    key={link.href}
-                    className="link link-hover"
-                    title={link.label}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
+                <Image src={logo} alt="logo" width={24} height={24} className="rounded-md" />
+                <span style={{ fontWeight: 700, fontSize: "0.9375rem", color: "#111111" }}>
+                  RPC Node List
+                </span>
+              </Link>
+              <button
+                onClick={() => setIsOpen(false)}
+                style={{ color: "#787774", padding: "0.25rem" }}
+                aria-label="Close menu"
+              >
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M1 1l16 16M17 1L1 17" stroke="#111111" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+              </button>
             </div>
-            <div className="divider"></div>
-            {/* Your CTA on small screens */}
+
+            <div className="mt-auto">
+              <a
+                href="https://github.com/maradeeym/rpcnodeslist/blob/main/app/rpcdb.js"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ink w-full justify-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Add your RPC
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Modal Component */}
-      <Modal
-      isModalOpen={isModalOpen} 
-      setIsModalOpen={setIsModalOpen} 
-      />
+      )}
     </header>
   );
 };

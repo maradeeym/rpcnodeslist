@@ -45,6 +45,7 @@ const nextConfig = {
       "pbs.twimg.com",
       "images.unsplash.com",
       "logos-world.net",
+      "coin-images.coingecko.com",
     ],
   },
   redirects,

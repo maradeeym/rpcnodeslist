@@ -7,6 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans:  ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
+        mono:  ['var(--font-mono)', 'Menlo', 'monospace'],
+      },
+      colors: {
+        canvas:  '#FBFBFA',
+        surface: '#FFFFFF',
+        border:  '#EAEAEA',
+        ink:     '#111111',
+        muted:   '#787774',
+      },
       backgroundImage: {
         gradient:
           "linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)",

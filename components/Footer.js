@@ -3,80 +3,106 @@ import Image from "next/image";
 import config from "@/config";
 import logo from "@/app/icon.png";
 
-// Add the Footer to the bottom of your landing page and more.
-// The support link is connected to the config.js file. If there's no config.mailgun.supportEmail, the link won't be displayed.
-
 const Footer = () => {
   return (
-    <footer className="bg-base-200 border-t border-base-content/10">
-      <div className="max-w-7xl mx-auto px-8 py-24">
-        <div className=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-          <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-            <Link
-              href="/#"
-              aria-current="page"
-              className="flex gap-2 justify-center md:justify-start items-center"
-            >
+    <footer
+      style={{
+        borderTop: "1px solid #EAEAEA",
+        background: "#FBFBFA",
+      }}
+    >
+      <div
+        className="mx-auto px-6 py-16"
+        style={{ maxWidth: "72rem" }}
+      >
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-10">
+          {/* Brand */}
+          <div style={{ maxWidth: "22rem" }}>
+            <Link href="/" className="flex items-center gap-2 mb-3">
               <Image
                 src={logo}
                 alt={`${config.appName} logo`}
-                priority={true}
-                className="w-6 h-6"
-                width={24}
-                height={24}
+                width={22}
+                height={22}
+                className="rounded-md"
+                priority
               />
-              <strong className="font-extrabold tracking-tight text-base md:text-lg">
+              <span style={{ fontWeight: 700, fontSize: "0.9375rem", color: "#111111" }}>
                 {config.appName}
-              </strong>
+              </span>
             </Link>
-
-            <p className="mt-3 text-sm text-base-content/80">
+            <p style={{ fontSize: "0.875rem", color: "#787774", lineHeight: "1.6" }}>
               {config.appDescription}
             </p>
-            <p className="mt-3 text-sm text-base-content/60">
-              Copyright © {new Date().getFullYear()} - All rights reserved
+            <p style={{ fontSize: "0.8125rem", color: "#B0ADAB", marginTop: "0.75rem" }}>
+              &copy; {new Date().getFullYear()} RPC Node List
             </p>
           </div>
-          <div className="flex-grow flex flex-wrap justify-center -mb-10 md:mt-0 mt-10 text-center">
-            <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-              <div className="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">
-                LINKS
-              </div>
 
-              <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
-                {config.mailgun.supportEmail && (
+          {/* Links */}
+          <div className="flex gap-16">
+            <div>
+              <p
+                style={{
+                  fontSize: "0.6875rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#787774",
+                  marginBottom: "0.875rem",
+                }}
+              >
+                Links
+              </p>
+              <div className="flex flex-col gap-2.5">
+                {config.mailgun?.supportEmail && (
                   <a
                     href={`mailto:${config.mailgun.supportEmail}`}
-                    target="_blank"
-                    className="link link-hover"
-                    aria-label="Contact Support"
+                    style={{ fontSize: "0.875rem", color: "#111111", textDecoration: "none" }}
+                    className="hover:text-gray-500 transition-colors"
                   >
                     Support
                   </a>
                 )}
-                <Link href="/#pricing" className="link link-hover">
-                  Pricing
-                </Link>
-                <Link href="/blog" className="link link-hover">
-                  Blog
-                </Link>
-                <a href="/#" target="_blank" className="link link-hover">
-                  Affiliates
+                <a
+                  href="https://github.com/maradeeym/rpcnodeslist/blob/main/app/rpcdb.js"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontSize: "0.875rem", color: "#111111", textDecoration: "none" }}
+                  className="hover:text-gray-500 transition-colors"
+                >
+                  Add your RPC
                 </a>
               </div>
             </div>
 
-            <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-              <div className="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">
-                LEGAL
-              </div>
-
-              <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
-                <Link href="/tos" className="link link-hover">
-                  Terms of services
+            <div>
+              <p
+                style={{
+                  fontSize: "0.6875rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#787774",
+                  marginBottom: "0.875rem",
+                }}
+              >
+                Legal
+              </p>
+              <div className="flex flex-col gap-2.5">
+                <Link
+                  href="/tos"
+                  style={{ fontSize: "0.875rem", color: "#111111", textDecoration: "none" }}
+                  className="hover:text-gray-500 transition-colors"
+                >
+                  Terms of Service
                 </Link>
-                <Link href="/privacy-policy" className="link link-hover">
-                  Privacy policy
+                <Link
+                  href="/privacy-policy"
+                  style={{ fontSize: "0.875rem", color: "#111111", textDecoration: "none" }}
+                  className="hover:text-gray-500 transition-colors"
+                >
+                  Privacy Policy
                 </Link>
               </div>
             </div>

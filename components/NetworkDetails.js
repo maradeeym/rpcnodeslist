@@ -1,195 +1,357 @@
 "use client";
-import React, { Suspense, useState, useEffect } from 'react';
-import Header from '@/components/Header';
-import CopyRpcUrl from './CopyRpcUrl';
-import DRPCBox from './drpcbox';
-import Link from 'next/link';
-import { generateNetworkSlug, generateBlockchainSlug } from '@/libs/networkUtils';
-import { NetworkIntro, NetworkCodeSnippet, NetworkFaq } from './NetworkContent';
+import React, { Suspense, useState, useEffect, useRef } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CopyRpcUrl from "./CopyRpcUrl";
+import HyperliquidBox from "./HyperliquidBox";
+import Link from "next/link";
+import { generateNetworkSlug, generateBlockchainSlug } from "@/libs/networkUtils";
+import { NetworkIntro, NetworkCodeSnippet, NetworkFaq } from "./NetworkContent";
 
+/* ── Scroll-entry hook ─────────────────────────────────── */
+function useScrollEntry(ref) {
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add("visible"); observer.disconnect(); } },
+      { threshold: 0.05 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [ref]);
+}
+
+function FadeIn({ children, delay = 0, className = "" }) {
+  const ref = useRef(null);
+  useScrollEntry(ref);
+  return (
+    <div ref={ref} className={`entry ${className}`} style={{ animationDelay: `${delay}ms` }}>
+      {children}
+    </div>
+  );
+}
+
+/* ── Status dot ────────────────────────────────────────── */
+function StatusDot({ status }) {
+  if (status === undefined) return <span className="dot-pending" />;
+  if (status) return <span className="dot-online" />;
+  return <span className="dot-offline" />;
+}
+
+/* ── Main component ────────────────────────────────────── */
 const NetworkDetails = ({ blockchain, network }) => {
   const [rpcStatus, setRpcStatus] = useState({});
 
   useEffect(() => {
     const checkRpcStatus = async () => {
-      const status = {};
-      const requests = [];
-
-      for (const url of network.rpcUrls) {
-        requests.push(
-          fetch('/api/check-rpc', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
+      const results = {};
+      await Promise.all(
+        network.rpcUrls.map((url) =>
+          fetch("/api/check-rpc", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ url }),
           })
-            .then(response => response.json())
-            .then(data => {
-              status[url] = data.status === 'ok';
-            })
-            .catch(() => {
-              status[url] = false;
-            })
-        );
-      }
-
-      await Promise.all(requests);
-      setRpcStatus(status);
+            .then((r) => r.json())
+            .then((d) => { results[url] = d.status === "ok"; })
+            .catch(() => { results[url] = false; })
+        )
+      );
+      setRpcStatus(results);
     };
-
     checkRpcStatus();
   }, [network]);
 
   if (!blockchain || !network) {
-    return <p>Network not found</p>;
+    return <p style={{ padding: "2rem", color: "#787774" }}>Network not found.</p>;
   }
 
-  // Generate links to other networks of the same blockchain
   const otherNetworks = blockchain.networks
-    .filter(n => n.network !== network.network)
-    .map(n => {
-      const slug = generateNetworkSlug(blockchain.name, n.network);
-      return { name: n.network, slug };
-    });
+    .filter((n) => n.network !== network.network)
+    .map((n) => ({ name: n.network, slug: generateNetworkSlug(blockchain.name, n.network) }));
+
+  const blockchainSlug = generateBlockchainSlug(blockchain.name);
 
   return (
     <>
       <Suspense>
         <Header />
       </Suspense>
-      <div className="p-4 sm:p-6 bg-base-200">
-        <div className="flex flex-col mb-6 sm:mb-8 bg-base-100 shadow-lg rounded-lg p-4 max-w-screen-2xl mx-auto w-full">
-          <h1 className="text-xl sm:text-2xl font-bold mb-4 flex items-center gap-3">
-            {blockchain.logo && (
-              <img
-                src={blockchain.logo}
-                alt={`${blockchain.name} logo`}
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
-              />
-            )}
-            <span>{blockchain.name} {network.network} RPC Endpoints</span>
-          </h1>
 
-          <NetworkIntro blockchain={blockchain} network={network} />
+      {/* Ambient blob */}
+      <div className="ambient-blob" aria-hidden="true" />
 
-          {/* Navigation links to other networks */}
+      <main style={{ position: "relative", zIndex: 1, background: "#FBFBFA", minHeight: "100vh" }}>
+        <div style={{ maxWidth: "72rem", margin: "0 auto", padding: "2.5rem 1.5rem 5rem" }}>
+
+          {/* ── Breadcrumb ──────────────────────────────── */}
+          <FadeIn>
+            <nav style={{ marginBottom: "2rem" }}>
+              <Link
+                href="/"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.375rem",
+                  fontSize: "0.8125rem",
+                  color: "#787774",
+                  textDecoration: "none",
+                }}
+              >
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M7.5 2.5L4 6l3.5 3.5" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                All blockchains
+              </Link>
+            </nav>
+          </FadeIn>
+
+          {/* ── Page header ─────────────────────────────── */}
+          <FadeIn delay={60}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.75rem" }}>
+              {blockchain.logo && (
+                <img
+                  src={blockchain.logo}
+                  alt={`${blockchain.name} logo`}
+                  width={48}
+                  height={48}
+                  style={{ borderRadius: "50%", flexShrink: 0 }}
+                />
+              )}
+              <div>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.625rem", flexWrap: "wrap" }}>
+                  <h1
+                    style={{
+                      fontFamily: "var(--font-serif)",
+                      fontSize: "clamp(1.5rem, 4vw, 2.25rem)",
+                      fontWeight: 500,
+                      letterSpacing: "-0.025em",
+                      lineHeight: 1.15,
+                      color: "#111111",
+                    }}
+                  >
+                    {blockchain.name} {network.network}
+                  </h1>
+                  <span
+                    className="tag"
+                    style={{ background: "#EDF3EC", color: "#346538", marginTop: "0.15rem" }}
+                  >
+                    RPC Endpoints
+                  </span>
+                </div>
+                {network.chainId && (
+                  <p style={{ fontSize: "0.8125rem", color: "#787774", marginTop: "0.25rem" }}>
+                    Chain ID:{" "}
+                    <kbd>{network.chainId}</kbd>
+                    {" "}
+                    &middot; {network.nativeCurrency}
+                  </p>
+                )}
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* ── Other networks ──────────────────────────── */}
           {otherNetworks.length > 0 && (
-            <div className="mb-4">
-              <h3 className="text-md font-semibold mb-2">Other {blockchain.name} Networks:</h3>
-              <div className="flex flex-wrap gap-2">
-                {otherNetworks.map((net, idx) => (
-                  <Link 
-                    key={idx} 
+            <FadeIn delay={120}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
+                <span style={{ fontSize: "0.8125rem", color: "#787774" }}>
+                  Other {blockchain.name} networks:
+                </span>
+                {otherNetworks.map((net, i) => (
+                  <Link
+                    key={i}
                     href={`/${net.slug}`}
-                    className="badge badge-primary badge-outline p-2"
+                    style={{
+                      fontSize: "0.8125rem",
+                      color: "#111111",
+                      textDecoration: "none",
+                      padding: "0.2rem 0.625rem",
+                      border: "1px solid #EAEAEA",
+                      borderRadius: "9999px",
+                      background: "#FFFFFF",
+                      transition: "border-color 150ms ease",
+                    }}
                   >
                     {net.name}
                   </Link>
                 ))}
               </div>
-            </div>
+            </FadeIn>
           )}
 
-          <div className="mb-4">
+          {/* ── Add to wallet link ──────────────────────── */}
+          <FadeIn delay={160}>
             <Link
-              href={`/add-to-wallet/${generateBlockchainSlug(blockchain.name)}`}
-              className="link link-primary"
+              href={`/add-to-wallet/${blockchainSlug}`}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.375rem",
+                fontSize: "0.875rem",
+                color: "#787774",
+                textDecoration: "none",
+                marginBottom: "2rem",
+              }}
             >
-              How to add {blockchain.name} to MetaMask or other wallets &rarr;
+              How to add {blockchain.name} to MetaMask or other wallets
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Link>
-          </div>
+          </FadeIn>
 
-          <DRPCBox />
-          
-          <div className="mb-4 sm:mb-6">
-            <div className="overflow-x-auto">
-              <table className="table-auto w-full mb-4 border-collapse border border-gray-300">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="border px-2 sm:px-4 py-2">Blockchain</th>
-                    <th className="border px-2 sm:px-4 py-2">RPC URL</th>
-                    <th className="border px-2 sm:px-4 py-2">Chain ID</th>
-                    <th className="border px-2 sm:px-4 py-2">Native Currency</th>
-                    <th className="border px-2 sm:px-4 py-2">Block Explorer</th>
-                    <th className="border px-2 sm:px-4 py-2">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {network.rpcUrls.map((url, urlIdx) => (
-                    <tr key={urlIdx} className="bg-green-50">
-                      <td className="border text-center px-2 sm:px-4 py-2">
-                        <div className="flex items-center justify-center">
-                          {rpcStatus[url] === undefined ? (
-                            <span className="mr-2 animate-pulse">⏳</span> // Awaiting symbol
-                          ) : rpcStatus[url] ? (
-                            <span className="mr-2 animate-pulse">✅</span> // Online icon
-                          ) : (
-                            <span className="mr-2">🔴</span> // Offline icon
-                          )}
-                          {blockchain.name}
-                        </div>
-                      </td>
-                      <td className="border text-center px-2 sm:px-4 py-2">
-                        <CopyRpcUrl url={url} />
-                      </td>
-                      <td className="border text-center px-2 sm:px-4 py-2">{network.chainId}</td>
-                      <td className="border text-center px-2 sm:px-4 py-2">{network.nativeCurrency}</td>
-                      <td className="border text-center px-2 sm:px-4 py-2">
-                        {network.blockExplorer && (
-                          <a
-                            href={network.blockExplorer}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-500 hover:underline"
-                          >
-                            {network.blockExplorer}
-                          </a>
-                        )}
-                      </td>
-                      <td className="border text-center px-2 sm:px-4 py-2">
-                        <button
-                          onClick={() => {
-                            if (typeof window.ethereum !== 'undefined') {
-                              window.ethereum.request({
-                                method: 'wallet_addEthereumChain',
-                                params: [{
-                                  chainId: `0x${parseInt(network.chainId).toString(16)}`,
-                                  chainName: `${blockchain.name} ${network.network}`,
-                                  nativeCurrency: {
-                                    name: network.nativeCurrency,
-                                    symbol: network.nativeCurrency,
-                                    decimals: 18
-                                  },
-                                  rpcUrls: [url],
-                                  blockExplorerUrls: network.blockExplorer ? [network.blockExplorer] : []
-                                }]
-                              }).catch((error) => {
-                                console.error(error);
-                                alert('Failed to add network to wallet.');
-                              });
-                            } else {
-                              alert('Please install a Web3 wallet like MetaMask to use this feature.');
-                            }
-                          }}
-                          className="btn btn-accent btn-sm whitespace-nowrap flex items-center justify-center w-full"
-                        >
-                          <span className="flex-shrink-0">Add to Wallet</span>
-                        </button>
-                      </td>
+          {/* ── Intro ───────────────────────────────────── */}
+          <FadeIn delay={200}>
+            <NetworkIntro blockchain={blockchain} network={network} />
+          </FadeIn>
+
+          {/* ── Hyperliquid affiliate box ────────────────── */}
+          {blockchain.name === "Hyperliquid" && (
+            <FadeIn delay={220}>
+              <HyperliquidBox />
+            </FadeIn>
+          )}
+
+          {/* ── RPC Table ───────────────────────────────── */}
+          <FadeIn delay={260}>
+            <div
+              className="card-minimal"
+              style={{ marginBottom: "2.5rem", overflow: "hidden" }}
+            >
+              <div style={{ overflowX: "auto" }}>
+                <table className="table-minimal">
+                  <thead>
+                    <tr>
+                      <th>Status</th>
+                      <th>RPC Endpoint</th>
+                      {network.chainId && <th>Chain ID</th>}
+                      <th>Currency</th>
+                      {network.blockExplorer && <th>Explorer</th>}
+                      <th>Wallet</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+                  </thead>
+                  <tbody>
+                    {network.rpcUrls.map((url, idx) => (
+                      <tr key={idx}>
+                        {/* Status */}
+                        <td>
+                          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                            <StatusDot status={rpcStatus[url]} />
+                            <span
+                              style={{
+                                fontSize: "0.75rem",
+                                color: rpcStatus[url] === undefined
+                                  ? "#787774"
+                                  : rpcStatus[url] ? "#346538" : "#9F2F2D",
+                              }}
+                            >
+                              {rpcStatus[url] === undefined ? "Checking" : rpcStatus[url] ? "Online" : "Offline"}
+                            </span>
+                          </div>
+                        </td>
 
-          <NetworkCodeSnippet blockchain={blockchain} network={network} />
-          <NetworkFaq blockchain={blockchain} network={network} />
+                        {/* RPC URL */}
+                        <td style={{ minWidth: "220px", maxWidth: "360px" }}>
+                          <CopyRpcUrl url={url} />
+                        </td>
+
+                        {/* Chain ID */}
+                        {network.chainId && (
+                          <td>
+                            <kbd>{network.chainId}</kbd>
+                          </td>
+                        )}
+
+                        {/* Currency */}
+                        <td>
+                          <span
+                            className="tag"
+                            style={{ background: "#E1F3FE", color: "#1F6C9F" }}
+                          >
+                            {network.nativeCurrency}
+                          </span>
+                        </td>
+
+                        {/* Explorer */}
+                        {network.blockExplorer && (
+                          <td>
+                            <a
+                              href={network.blockExplorer}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                fontSize: "0.8125rem",
+                                color: "#787774",
+                                textDecoration: "none",
+                                display: "inline-flex",
+                                alignItems: "center",
+                                gap: "0.25rem",
+                              }}
+                            >
+                              Explorer
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                <path d="M2 8L8 2M4 2h4v4" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>
+                            </a>
+                          </td>
+                        )}
+
+                        {/* Add to wallet */}
+                        <td>
+                          <button
+                            className="btn-ghost-minimal"
+                            onClick={() => {
+                              if (typeof window.ethereum !== "undefined") {
+                                window.ethereum
+                                  .request({
+                                    method: "wallet_addEthereumChain",
+                                    params: [{
+                                      chainId: `0x${parseInt(network.chainId).toString(16)}`,
+                                      chainName: `${blockchain.name} ${network.network}`,
+                                      nativeCurrency: {
+                                        name: network.nativeCurrency,
+                                        symbol: network.nativeCurrency,
+                                        decimals: 18,
+                                      },
+                                      rpcUrls: [url],
+                                      blockExplorerUrls: network.blockExplorer ? [network.blockExplorer] : [],
+                                    }],
+                                  })
+                                  .catch((err) => console.error(err));
+                              } else {
+                                alert("Install a Web3 wallet like MetaMask to use this feature.");
+                              }
+                            }}
+                          >
+                            Add to wallet
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* ── Code snippet ────────────────────────────── */}
+          <FadeIn delay={320}>
+            <NetworkCodeSnippet blockchain={blockchain} network={network} />
+          </FadeIn>
+
+          {/* ── FAQ ─────────────────────────────────────── */}
+          <FadeIn delay={380}>
+            <NetworkFaq blockchain={blockchain} network={network} />
+          </FadeIn>
+
         </div>
-      </div>
+      </main>
+
+      <Footer />
     </>
   );
 };
 
-export default NetworkDetails; 
+export default NetworkDetails;
