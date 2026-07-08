@@ -15,7 +15,7 @@ The codebase is built on the **ShipFast** SaaS boilerplate and extends it with b
 | Layer | Technology |
 |---|---|
 | Framework | Next.js 14 (App Router) |
-| Styling | Tailwind CSS + DaisyUI |
+| Styling | Custom design system in `app/globals.css` (see "Styling & Design System" below); Tailwind + DaisyUI are configured but largely unused by the live UI |
 | Database | MongoDB via Mongoose |
 | Auth | NextAuth v4 (present in code, **disabled** — see limitations) |
 | Payments | Stripe (present in code, unused by the live UI) |
@@ -107,9 +107,22 @@ This is the heart of the application. It exports an array of blockchain objects:
 
 - `app/[networkSlug]/page.js` and `app/add-to-wallet/[addToMetamask]/page.js` are thin **server components**: they resolve the slug via `networkUtils.js`, export `generateMetadata()` for SEO, and hand the resolved `blockchain`/`network` objects to a client component to render.
 - `app/page.js` (home) and `components/NetworkDetails.js` are `"use client"` components:
-  - The homepage loads the **entire** `rpcdb.js` array into the browser and filters it client-side as the user types in the search box — there's no server-side search/pagination.
-  - `NetworkDetails.js` fires one `POST /api/check-rpc` request per RPC URL in parallel (`Promise.all`) on mount to populate the online/offline (✅/🔴) indicators, and composes `CopyRpcUrl.js`, `drpcbox.js` (dRPC promo box), and `NetworkContent.js` (`NetworkIntro`, `NetworkCodeSnippet`, `NetworkFaq` — the intro copy, ethers.js snippet, and FAQ/FAQPage schema block).
+  - The homepage loads the **entire** `rpcdb.js` array into the browser and filters it client-side as the user types in the search box — there's no server-side search/pagination. Blockchains render as a bento grid of cards (`BlockchainCard`), each listing its networks as links.
+  - `NetworkDetails.js` fires one `POST /api/check-rpc` request per RPC URL in parallel (`Promise.all`) on mount to populate the online/offline/pending status dots (`StatusDot`, styled via `.dot-online`/`.dot-offline`/`.dot-pending` in `globals.css` — not emoji), and composes `CopyRpcUrl.js`, `NetworkContent.js` (`NetworkIntro`, `NetworkCodeSnippet`, `NetworkFaq` — the intro copy, ethers.js snippet, and FAQ/FAQPage schema block), and conditionally `HyperliquidBox.js` (an affiliate CTA box rendered **only** when `blockchain.name === "Hyperliquid"`).
+  - Both `app/page.js` and `NetworkDetails.js` use a shared `useScrollEntry`/`FadeIn` pattern (an `IntersectionObserver` hook, duplicated in both files rather than extracted) to fade/slide sections in as the user scrolls — driven by the `.entry`/`.entry.visible` CSS classes.
 - The "Add to Wallet" button calls `window.ethereum.request({ method: 'wallet_addEthereumChain', ... })` directly from the browser — no backend involvement.
+
+---
+
+## Styling & Design System
+
+The UI was redesigned (see git history: "Redesign site with minimalist editorial UI") around a custom, hand-rolled design system rather than DaisyUI components:
+
+- **Fonts** are loaded via `next/font/google` in `app/layout.js` and exposed as CSS custom properties: `--font-sans` (Plus Jakarta Sans, body), `--font-serif` (Newsreader, headings/titles), `--font-mono` (JetBrains Mono, code/chain IDs).
+- **Colors and primitives** are mostly hard-coded inline (`style={{ color: "#111111" }}`, etc.) rather than Tailwind utility classes — e.g. ink `#111111`, muted text `#787774`, canvas background `#FBFBFA`, border `#EAEAEA`. Tailwind's `theme.extend.colors` in `tailwind.config.js` defines matching tokens (`canvas`, `surface`, `border`, `ink`, `muted`), but components largely don't reference them.
+- **Reusable visual patterns live as plain CSS classes in `app/globals.css`**, not Tailwind/DaisyUI classes: `.card-minimal` (bordered card), `.btn-ink` / `.btn-ghost-minimal` (buttons), `.table-minimal` (RPC table), `.accordion-strip` (FAQ `<details>` accordion), `.code-block` (dark code snippet), `.tag` (pill badges), `.dot-online` / `.dot-offline` / `.dot-pending` (status indicators), `.ambient-blob` (decorative background blur), `.entry` / `.stagger` (scroll-in animation).
+- Tailwind + DaisyUI remain installed and configured (`tailwind.config.js` still lists 30 DaisyUI themes), but the live, redesigned components (`Header.js`, `Footer.js`, `NetworkDetails.js`, `NetworkContent.js`, `app/page.js`, `HyperliquidBox.js`) use inline `style={}` objects and the custom classes above almost exclusively. Don't assume a DaisyUI class (`btn`, `card`, `modal`) will pick up the current visual style — check `globals.css` first and match the existing inline-style/custom-class convention when touching these files.
+- `next.config.js` whitelists image domains for `next/image`; `coin-images.coingecko.com` was added for the Hyperliquid affiliate box logo.
 
 ---
 
@@ -186,7 +199,7 @@ No test framework is configured — there are no unit/integration tests.
 - **Server components**: Default in App Router — no directive needed
 - **Imports**: Use `@/` path alias (e.g., `import config from "@/config"`)
 - **Toasts**: Use `react-hot-toast` for user-facing feedback
-- **Styling**: Tailwind utility classes + DaisyUI component classes (e.g., `btn`, `card`, `modal`)
+- **Styling**: In the redesigned RPC-directory components (home, network, header, footer), match the existing pattern of inline `style={}` objects plus the custom classes defined in `app/globals.css` — see "Styling & Design System" above. Older/dormant boilerplate components (dashboard, pricing, testimonials, etc.) still use Tailwind + DaisyUI classes (`btn`, `card`, `modal`); don't mix the two conventions within one component.
 
 ---
 
@@ -268,3 +281,5 @@ Both models use the `toJSON` plugin which removes `_id`/`__v` and adds `id`.
 5. **Sitemap slug logic is duplicated** — `components/generateDynamicPaths.js` reimplements slug generation from `libs/networkUtils.js` instead of importing it. If you change slug format, update both.
 6. **ShipFast boilerplate remnants** — some config values (e.g., Mailgun `fromNoReply` still references `shipfa.st`) may need updating for production.
 7. **Stripe plans in config.js** — the plan features listed are placeholder values from the original boilerplate and don't reflect actual product features.
+8. **Dead pre-redesign components** — `components/RpcList.js`, `BlockchainDetails.js`, `BlockchainButtons.js`, and `BlockchainFilter.js` are not imported anywhere; they appear to be an earlier implementation of the network-listing/RPC-table UI that `app/page.js` and `NetworkDetails.js` superseded. Don't extend them assuming they're live — check for real imports first.
+9. **Two styling conventions coexist** — the live RPC-directory surfaces use the custom `globals.css` design system (inline styles + custom classes), while other boilerplate components still use Tailwind/DaisyUI classes. See "Styling & Design System" above before editing any component.
