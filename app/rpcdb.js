@@ -3688,6 +3688,15 @@ const blockchains = [
     "logo": "https://assets.coingecko.com/coins/images/6422/large/HOOD.png",
     "networks": [
       {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.mainnet.chain.robinhood.com"
+        ],
+        "chainId": "0x1237",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://robinhoodchain.blockscout.com"
+      },
+      {
         "network": "Testnet",
         "rpcUrls": [
           "https://rpc.testnet.chain.robinhood.com"
