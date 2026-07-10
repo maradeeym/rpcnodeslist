@@ -3685,7 +3685,7 @@ const blockchains = [
   },
   {
     "name": "Robinhood Chain",
-    "logo": "https://assets.coingecko.com/coins/images/6422/large/HOOD.png",
+    "logo": "https://coin-images.coingecko.com/asset_platforms/images/102132299/large/robinhood.png?1782921203",
     "networks": [
       {
         "network": "Mainnet",
