@@ -47,8 +47,8 @@ export default function RootLayout({ children }) {
         <head>
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
           <script
-            src="https://beamanalytics.b-cdn.net/beam.min.js"
-            data-token="58e656ee-c2f8-4e22-b70a-127399633c24"
+            src="https://analytics.ahrefs.com/analytics.js"
+            data-key="94bFn+cRR8fKcufCAwcmyg"
             async
           />
         </head>
