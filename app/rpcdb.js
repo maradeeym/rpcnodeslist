@@ -563,8 +563,7 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://dymension.drpc.org/",
-          "https://dym.rpc.silknodes.io",
-          "https://rpc.swiftnodes.io/rpc/dymension?key=demo"
+          "https://dym.rpc.silknodes.io"
         ],
         "chainId": "0x44c",
         "nativeCurrency": "DYM",
@@ -673,6 +672,7 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
+          "https://rpc.swiftnodes.io/rpc/etc?key=demo",
           "https://etc.rivet.link",
           "https://rpc.swiftnodes.io/rpc/etc?key=demo",
           "https://ethereum-classic-mainnet.gateway.tatum.io"
@@ -3535,6 +3535,7 @@ const blockchains = [
       {
         "network": "Mainnet",
         "rpcUrls": [
+          "https://rpc.swiftnodes.io/rpc/opbnb?key=demo",
           "https://opbnb-mainnet-rpc.bnbchain.org",
           "https://opbnb.publicnode.com",
           "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
