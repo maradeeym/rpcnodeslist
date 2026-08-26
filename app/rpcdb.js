@@ -3399,6 +3399,7 @@ const blockchains = [
   {
     "name": "Dogecoin",
     "logo": "https://assets.coingecko.com/coins/images/5/large/dogecoin.png",
+    "benchmark": "https://openchainbench.com/benchmarks/dogecoin-rpc",
     "networks": [
       {
         "network": "Mainnet",
