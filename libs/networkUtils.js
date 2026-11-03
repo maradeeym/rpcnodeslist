@@ -63,10 +63,10 @@ export function getAllNetworkSlugs(blockchains) {
 }
 
 /**
- * Convert a hex chain ID (e.g. "0xa4b1") to its decimal form (e.g. 42161)
+ * Convert a prefixed hex or decimal chain ID to its decimal form.
  */
 export function hexToDecimal(hexChainId) {
-  return parseInt(hexChainId, 16);
+  return parseInt(hexChainId, /^\d+$/.test(hexChainId) ? 10 : 16);
 }
 
 /**
@@ -91,9 +91,12 @@ export function getNetworkFaqs(blockchain, network) {
   }
 
   if (network.chainId) {
+    const hexSuffix = /^\d+$/.test(network.chainId)
+      ? ""
+      : ` (${network.chainId} in hexadecimal)`;
     faqs.push({
       question: `What is the Chain ID for ${title}?`,
-      answer: `The Chain ID for ${title} is ${hexToDecimal(network.chainId)} (${network.chainId} in hexadecimal).`,
+      answer: `The Chain ID for ${title} is ${hexToDecimal(network.chainId)}${hexSuffix}.`,
     });
   }
 
