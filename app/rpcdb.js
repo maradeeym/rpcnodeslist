@@ -2771,7 +2771,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://rpc-qnd.inkonchain.com",
-          "https://ink.drpc.org"
+          "https://ink.drpc.org",
+          "https://api.blockvectra.com/v1/ink_mainnet/public"
         ],
         "chainId": "57073",
         "nativeCurrency": "ETH",
@@ -3155,7 +3156,8 @@ const blockchains = [
         "rpcUrls": [
           "https://rpc.frax.com",
           "https://fraxtal.drpc.org",
-          "https://rpc.swiftnodes.io/rpc/fraxtal?key=demo"
+          "https://rpc.swiftnodes.io/rpc/fraxtal?key=demo",
+          "https://api.blockvectra.com/v1/fraxtal_mainnet/public"
         ],
         "chainId": "0xfc",
         "nativeCurrency": "frxETH",
@@ -3622,7 +3624,8 @@ const blockchains = [
           "https://mainnet.unichain.org",
           "https://unichain.drpc.org",
           "https://rpc.swiftnodes.io/rpc/unichain?key=demo",
-          "https://unichain-mainnet.gateway.tatum.io"
+          "https://unichain-mainnet.gateway.tatum.io",
+          "https://api.blockvectra.com/v1/unichain_mainnet/public"
         ],
         "chainId": "0x82",
         "nativeCurrency": "ETH",
