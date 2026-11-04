@@ -3855,6 +3855,22 @@ const blockchains = [
         "blockExplorer": "https://explorer.dukong.mantrachain.io/"
       }
     ]
+  },
+  {
+    "name": "Katana",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://rpc.katana.network/",
+          "https://rpc.katanarpc.com/",
+          "https://api.blockvectra.com/v1/katana_mainnet/public"
+        ],
+        "chainId": "0xb67d2",
+        "nativeCurrency": "ETH",
+        "blockExplorer": "https://katanascan.com/"
+      }
+    ]
   }
 ];
 
