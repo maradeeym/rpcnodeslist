@@ -3843,6 +3843,22 @@ const blockchains = [
         "blockExplorer": "https://explorer.dukong.mantrachain.io/"
       }
     ]
+  },
+  {
+    "name": "Betium",
+    "logo": "https://raw.githubusercontent.com/paytonbullett/betium-crypto-app/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://crypto.bullettsocial.space/rpc",
+          "https://crypto.bullettsocial.space"
+        ],
+        "chainId": "0xe74ef",
+        "nativeCurrency": "BETM",
+        "blockExplorer": "https://crypto.bullettsocial.space"
+      }
+    ]
   }
 ];
 
