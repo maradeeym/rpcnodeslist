@@ -3700,6 +3700,7 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://rpc.mainnet.chain.robinhood.com",
+          "https://robinhood-mainnet.gateway.tatum.io",
           "https://api.blockvectra.com/v1/robinhood_mainnet/public"
         ],
         "chainId": "0x1237",
@@ -3710,6 +3711,7 @@ const blockchains = [
         "network": "Testnet",
         "rpcUrls": [
           "https://rpc.testnet.chain.robinhood.com",
+          "https://robinhood-testnet.gateway.tatum.io",
           "https://api.blockvectra.com/v1/robinhood_testnet/public"
         ],
         "chainId": "0xB626",
