@@ -563,8 +563,7 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://dymension.drpc.org/",
-          "https://dym.rpc.silknodes.io",
-          "https://rpc.swiftnodes.io/rpc/dymension?key=demo"
+          "https://dym.rpc.silknodes.io"
         ],
         "chainId": "0x44c",
         "nativeCurrency": "DYM",
