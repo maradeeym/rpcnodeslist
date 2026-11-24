@@ -1333,7 +1333,8 @@ const blockchains = [
           "https://rpc1.monad.xyz",
           "https://rpc3.monad.xyz",
           "https://monad-mainnet.drpc.org",
-          "https://rpc.swiftnodes.io/rpc/monad?key=demo"
+          "https://rpc.swiftnodes.io/rpc/monad?key=demo",
+          "https://monad-mainnet.gateway.tatum.io"
         ],
         "chainId": "0x8f",
         "nativeCurrency": "MON",
@@ -1987,6 +1988,14 @@ const blockchains = [
         "chainId": "0xdede",
         "nativeCurrency": "S",
         "blockExplorer": "https://testnet.sonicscan.org"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://sonic-testnet.gateway.tatum.io"
+        ],
+        "chainId": "0x3909",
+        "nativeCurrency": "S"
       }
     ]
   },
@@ -2903,6 +2912,14 @@ const blockchains = [
         "chainId": "6342",
         "nativeCurrency": "ETH",
         "blockExplorer": "https://megaexplorer.xyz"
+      },
+      {
+        "network": "Timothy Testnet",
+        "rpcUrls": [
+          "https://megaeth-timothy.gateway.tatum.io"
+        ],
+        "chainId": "0x18c7",
+        "nativeCurrency": "ETH"
       }
     ]
   },
@@ -3181,7 +3198,8 @@ const blockchains = [
         "network": "Mainnet",
         "rpcUrls": [
           "https://rpc.xlayer.tech",
-          "https://xlayerrpc.okx.com"
+          "https://xlayerrpc.okx.com",
+          "https://xlayer-mainnet.gateway.tatum.io"
         ],
         "chainId": "0xc4",
         "nativeCurrency": "OKB",
@@ -3817,7 +3835,7 @@ const blockchains = [
         "rpcUrls": [
           "https://lumia-mainnet.gateway.tatum.io"
         ],
-        "chainId": "0x3b9aca00",
+        "chainId": "0x3b4c8eb9",
         "nativeCurrency": "LUMIA",
         "blockExplorer": "https://explorer.lumia.org/"
       },
@@ -3826,7 +3844,7 @@ const blockchains = [
         "rpcUrls": [
           "https://lumia-beam.gateway.tatum.io"
         ],
-        "chainId": "0x3b9aca01",
+        "chainId": "0x7902e4a9",
         "nativeCurrency": "LUMIA",
         "blockExplorer": "https://beam-explorer.lumia.org/"
       }
@@ -3880,11 +3898,75 @@ const blockchains = [
         "rpcUrls": [
           "https://rpc.katana.network/",
           "https://rpc.katanarpc.com/",
-          "https://api.blockvectra.com/v1/katana_mainnet/public"
+          "https://api.blockvectra.com/v1/katana_mainnet/public",
+          "https://katana-mainnet.gateway.tatum.io"
         ],
         "chainId": "0xb67d2",
         "nativeCurrency": "ETH",
         "blockExplorer": "https://katanascan.com/"
+      },
+      {
+        "network": "Bokuto Testnet",
+        "rpcUrls": [
+          "https://katana-bokuto.gateway.tatum.io"
+        ],
+        "chainId": "0xb405d",
+        "nativeCurrency": "ETH"
+      }
+    ]
+  },
+  {
+    "name": "Plume",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://plume-mainnet.gateway.tatum.io"
+        ],
+        "chainId": "0x18232",
+        "nativeCurrency": "PLUME"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://plume-testnet.gateway.tatum.io"
+        ],
+        "chainId": "0x18233",
+        "nativeCurrency": "PLUME"
+      }
+    ]
+  },
+  {
+    "name": "Moca Chain",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://mocachain-mainnet.gateway.tatum.io"
+        ],
+        "chainId": "0x8f0",
+        "nativeCurrency": "MOCA"
+      },
+      {
+        "network": "Testnet",
+        "rpcUrls": [
+          "https://mocachain-testnet.gateway.tatum.io"
+        ],
+        "chainId": "0x366a8",
+        "nativeCurrency": "MOCA"
+      }
+    ]
+  },
+  {
+    "name": "Monacoin",
+    "networks": [
+      {
+        "network": "Mainnet",
+        "rpcUrls": [
+          "https://monacoin-mainnet.gateway.tatum.io"
+        ],
+        "chainId": "",
+        "nativeCurrency": "MONA"
       }
     ]
   }
